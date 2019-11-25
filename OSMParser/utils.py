@@ -13,6 +13,28 @@ crs_4326  = CRS.from_epsg(4326) # epsg 4326 is wgs84
 crs_25832  = CRS.from_epsg(25832) # epsg 25832 is etrs89
 transformer = Transformer.from_crs(crs_4326, crs_25832)
 
+
+def giveHeading(x1,y1,x2,y2):
+        x = [x1,x2]
+        y = [y1,y2]
+        x_arr=np.array(x)-x[0]
+        y_arr=np.array(y)-y[0]
+        #rotate to initial approximately 0
+        #umrechnen in polarkoordinaten des ersten abstandes
+        if x_arr[1] > 0:
+                    phi = np.arctan(y_arr[1]/x_arr[1])
+        elif x_arr[1] == 0:
+                    if y_arr[1] > 0:
+                            phi = np.pi/2
+                    else:
+                            phi = -np.pi/2
+        else:
+                    if y_arr[1] >= 0:
+                            phi = np.arctan(y_arr[1]/x_arr[1])+np.pi
+                    else:
+                            phi = np.arctan(y_arr[1]/x_arr[1])-np.pi
+        return phi
+
 def checkDistance(x,y,x2,y2):
     x_m = (x+x2)/2.0
     y_m = (y+y2)/2.0
