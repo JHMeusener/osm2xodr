@@ -8,6 +8,7 @@ Created on Wed Nov  6 13:22:51 2019
 
 import numpy as np
 from pyproj import CRS, Transformer
+from PIL import Image
 
 crs_4326  = CRS.from_epsg(4326) # epsg 4326 is wgs84
 crs_25832  = CRS.from_epsg(25832) # epsg 25832 is etrs89
@@ -34,6 +35,7 @@ def giveHeading(x1,y1,x2,y2):
                     else:
                             phi = np.arctan(y_arr[1]/x_arr[1])-np.pi
         return phi
+
 
 def checkDistance(x,y,x2,y2):
     x_m = (x+x2)/2.0
@@ -79,6 +81,8 @@ def getCurves(xTriplett,yTriplett, r=5):
     c = S/(2*x_t)
     if c > 500:
         print("Sanity check --> U-Turn?")
+        print("x: " + str(xTriplett))
+        print("y: "+str(yTriplett))
         print(c)
         c = 9
         #1/0
@@ -125,7 +129,9 @@ def getCurves(xTriplett,yTriplett, r=5):
     C1params = [0,0,-c,0]
     C2params = [0,0,c,0]
 
-    return [line1x,line1y], -phi, [C1start,C1params], C1Heading, length, [C2start,C2params], C2Heading, [line2x,line2y],2*theta
+    return line1x,line1y, -phi, C1start,C1params[2], C1Heading, length, C2start,C2params[2], C2Heading, line2x,line2y,2*theta
+
+    #return [line1x,line1y], -phi, [C1start,C1params], C1Heading, length, [C2start,C2params], C2Heading, [line2x,line2y],2*theta
 
 def drehen(x,y,phi, drehpunkt = [0,0], offset = False):
         x = np.array(x)-drehpunkt[0]
@@ -170,7 +176,48 @@ global referenceLon
 referenceLat = None
 referenceLon = None
 
+
+global topoParameter
+global topomap
+def convertTopoMap(topomappath, osmpath):
+        global topomap
+        global topoParameter
+        topomap =  np.array(Image.open(topomappath))[:,:,0] #y,x,rgba
+        topoParameter = giveMaxMinLongLat(osmpath)
+
+def giveHeight(x,y):
+        try:
+                global topoParameter
+                global topomap
+                x_lookup= int(topomap.shape[1]*(x-topoParameter[0])/(topoParameter[1]-topoParameter[0]))
+                y_lookup = int(topomap.shape[0]*(y-topoParameter[2])/(topoParameter[3]-topoParameter[2]))
+                x_lookup = max(0,min(topomap.shape[1]-1,x_lookup))
+                y_lookup = max(0,min(topomap.shape[0]-1,y_lookup))
+                return topomap[y_lookup,x_lookup]
+        except:
+                return 0.0
+
+def giveMaxMinLongLat(osmpath):
+        minlat = 0
+        maxlat = 0
+        minlon = 0
+        maxlon = 0
+        with open(osmpath, "r") as f:
+                for line in f:
+                        if "minlat=" in line:
+                               minlat = float(line.split("minlat='")[1].split("'")[0])
+                        if "maxlat=" in line:
+                               maxlat = float(line.split("maxlat='")[1].split("'")[0])
+                        if "maxlon=" in line:
+                               maxlon = float(line.split("maxlon='")[1].split("'")[0])
+                        if "minlon=" in line:
+                               minlon = float(line.split("minlon='")[1].split("'")[0])
+                xmin,ymin = convertLongitudeLatitude(minlon,minlat)
+                xmax,ymax = convertLongitudeLatitude(maxlon,maxlat)
+                return xmin, xmax, ymin, ymax
+
 def convertLongitudeLatitude(longitude,latitude):
+        #return longitude, latitude
         global referenceLat
         global referenceLon
 
