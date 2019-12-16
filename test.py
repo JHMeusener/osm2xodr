@@ -91,8 +91,38 @@ def test_2WayTCrossing():
             TestEntity(2,None,lon=1, lat=1.001, nodes=0),
             TestEntity(3,None,lon=1.001, lat=1.001, nodes=0)
             ]
-    ways = [TestEntity(1,{"highway":"residential","lanes":"3", "lanes:forward":"2", "lanes:backward":"1","oneway":"no"}, nodes=[1,2]),
-            TestEntity(2,{"highway":"residential","lanes":"3", "lanes:forward":"1", "lanes:backward":"2","oneway":"no"}, nodes=[3,2])
+    ways = [TestEntity(1,{"highway":"residential","lanes":"5", "lanes:forward":"3", "lanes:backward":"2","oneway":"no"}, nodes=[1,2]),
+            TestEntity(2,{"highway":"residential","lanes":"5", "lanes:forward":"2", "lanes:backward":"3","oneway":"no"}, nodes=[3,2])
+            ]
+    _test_nodes(nodes, ways)
+
+def test_2WayTCrossing2():
+    nodes = [TestEntity(1,None,lon=1, lat=1, nodes=0), 
+            TestEntity(2,None,lon=1, lat=1.001, nodes=0),
+            TestEntity(3,None,lon=1.001, lat=1.001, nodes=0)
+            ]
+    ways = [TestEntity(1,{"highway":"residential","lanes":"5", "lanes:forward":"3", "lanes:backward":"2","oneway":"no"}, nodes=[1,2]),
+            TestEntity(2,{"highway":"residential","lanes":"5", "lanes:forward":"3", "lanes:backward":"2","oneway":"no"}, nodes=[2,3])
+            ]
+    _test_nodes(nodes, ways)
+
+def test_2WayTCrossing3():
+    nodes = [TestEntity(1,None,lon=1, lat=1, nodes=0), 
+            TestEntity(2,None,lon=1, lat=1.001, nodes=0),
+            TestEntity(3,None,lon=1.001, lat=1.001, nodes=0)
+            ]
+    ways = [TestEntity(1,{"highway":"residential","lanes":"5", "lanes:forward":"2", "lanes:backward":"3","oneway":"no"}, nodes=[2,1]),
+            TestEntity(2,{"highway":"residential","lanes":"5", "lanes:forward":"3", "lanes:backward":"2","oneway":"no"}, nodes=[2,3])
+            ]
+    _test_nodes(nodes, ways)
+
+def test_2WayTCrossing4():
+    nodes = [TestEntity(1,None,lon=1, lat=1, nodes=0), 
+            TestEntity(2,None,lon=1, lat=1.001, nodes=0),
+            TestEntity(3,None,lon=1.001, lat=1.001, nodes=0)
+            ]
+    ways = [TestEntity(1,{"highway":"residential","lanes":"5", "lanes:forward":"2", "lanes:backward":"3","oneway":"no"}, nodes=[1,2]),
+            TestEntity(2,{"highway":"residential","lanes":"5", "lanes:forward":"3", "lanes:backward":"2","oneway":"no"}, nodes=[3,2])
             ]
     _test_nodes(nodes, ways)
 
@@ -102,13 +132,16 @@ def testSimpleRoad():
             TestEntity(3,None,lon=1.001, lat=1.002, nodes=0),
             TestEntity(4,None,lon=1.001, lat=1.003, nodes=0)
             ]
-        ways = [TestEntity(1,{"highway":"residential","lanes":"3", "lanes:forward":"2", "lanes:backward":"1","oneway":"no"}, nodes=[1,2,3,4])]
+        ways = [TestEntity(1,{"highway":"residential","lanes":"5", "lanes:forward":"3", "lanes:backward":"2","oneway":"no"}, nodes=[1,2,3,4])]
         _test_nodes(nodes, ways)
 
-#p = '/home/jhm/Desktop/Arbeit/campusFreudenberg.osm'
-#im = '/home/jhm/Desktop/Arbeit/OSM2XODR/osm2xodr/topomap.png'
-#parseAll(p, bildpfad=im)
+p = '/home/jhm/Desktop/Arbeit/campusFreudenberg.osm'
+im = '/home/jhm/Desktop/Arbeit/OSM2XODR/osm2xodr/topomap.png'
+parseAll(p, bildpfad=im)
 
-test_2WayTCrossing()
+#test_2WayTCrossing()
+#test_2WayTCrossing4()
+#test_2WayTCrossing2()
+#test_2WayTCrossing3()
 with open('/home/jhm/Desktop/Arbeit/testout.xodr','w') as f:
         f.write(writeOdrive())

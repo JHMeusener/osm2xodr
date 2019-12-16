@@ -71,21 +71,15 @@ class openDriveRoad:
         string = ""
         for predecessorLink in self.RoadLinksPredecessor:
             for successorLink in self.RoadLinksSuccessor:
-                _, predecessor,  contactPoint = link.giveODriveJunction(self)
+                _, predecessor,  contactPoint = successorLink.giveODriveJunction(self)
                 string += '''
                 <connection id="{0}" incomingRoad="{1}" connectingRoad="{2}" contactPoint="{3}">
                 '''.format(str(idx), predecessor, self.id, contactPoint)
-                for laneLink in link.openDriveLaneLinks:
+                for laneLink in successorLink.openDriveLaneLinks:
                     string += laneLink.giveOdriveJunctionString(self)
                 string += '''
                 </connection>
                 '''
-
-        if len(self.RoadLinksPredecessor) > 1:  # 
-                string += link.giveODriveJunction(self)
-        if len(self.RoadLinksSuccessor) > 1:  # 
-            for link in self.RoadLinksSuccessor:
-                string += link.giveODriveJunction(self)
         return string
  
 
@@ -239,6 +233,7 @@ class openDriveJunction:
                  {1}
             </junction>
             '''.format(str(self.id), connString)
+            return string
 
         
 class openDriveLaneLink:
@@ -289,6 +284,7 @@ class openDriveRoadLink:
         #oDriveRoad.RoadLinksPredecessor.append(self)
 
     def evaluateLaneLinks(self):
+        return
         if len(self.openDriveLaneLinks) == 0 and len(self.oDriveRoadPredecessor.lanes) > 0 and len(self.oDriveRoadPredecessor.lanes)==len(self.oDriveRoad.lanes):
             for lane in self.oDriveRoadPredecessor.lanesLeft:
                 contactID = lane.id if self.contactPointRoad != self.contactPointPredecessor else -lane.id
