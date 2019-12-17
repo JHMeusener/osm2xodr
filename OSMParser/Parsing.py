@@ -68,7 +68,9 @@ class rNode:
                                 # always + to - if ways go away from each other
                                 for connection in lanelist:
                                     lanelink = openDriveLaneLink(r1,r2,connection[0] if r1.wayIsOpposite else -connection[0], connection[1] if r2.wayIsOpposite else -connection[1])
-                                    r1.RoadLinksSuccessor[0].openDriveLaneLinks.append(lanelink)
+                                    for rlink in r1.RoadLinksSuccessor:
+                                        if r2.id == rlink.oDriveRoad.id or r2.id == rlink.oDriveRoadPredecessor.id:
+                                            rlink.openDriveLaneLinks.append(lanelink)
                                     
                 if Way2 in self.Connections:
                         for direction, wayConnections in self.Connections[Way2].items():
@@ -76,8 +78,10 @@ class rNode:
                                 lanelist = wayConnections[Way] #Waydirection ist schon beachtet. Einzig Roaddirection muss noch einmal beachtete werden
                                 for connection in lanelist:
                                     lanelink = openDriveLaneLink(r2,r1,connection[0] if r2.wayIsOpposite else -connection[0], connection[1] if r1.wayIsOpposite else -connection[1])
-                                    r1.RoadLinksSuccessor[0].openDriveLaneLinks.append(lanelink)
-                print(r1.RoadLinksSuccessor[0].openDriveLaneLinks)
+                                    for rlink in r1.RoadLinksSuccessor:
+                                        if r2.id == rlink.oDriveRoad.id or r2.id == rlink.oDriveRoadPredecessor.id:
+                                            rlink.openDriveLaneLinks.append(lanelink)
+                #print(r1.RoadLinksSuccessor[0].openDriveLaneLinks)
 
     def _givePossibleTurnIdxs(self, Way):
         '''Gives the Indexes of the registered Ways with >0 outgoing Lanes'''
@@ -463,25 +467,45 @@ class rNode:
                     if self in PredecessorRoadSet:
                         if PredecessorRoadSet.index(self) == 0:  # Predecessor to Predecessor link
                             # create RoadLink and LaneLinks
-                            rl = openDriveRoadLink(PredecessorRoadSet[3],r1,'start', 'start')
-                            r1.RoadLinksPredecessor.append(rl)
-                            PredecessorRoadSet[3].RoadLinksPredecessor.append(rl)
+                            noExistingRoadLink = True
+                            for rlp in r1.RoadLinksPredecessor:
+                                if rlp.oDriveRoad.id == PredecessorRoadSet[3].id or rlp.oDriveRoadPredecessor.id == PredecessorRoadSet[3].id:
+                                    noExistingRoadLink = False
+                            if noExistingRoadLink:
+                                rl = openDriveRoadLink(PredecessorRoadSet[3],r1,'start', 'start')
+                                r1.RoadLinksPredecessor.append(rl)
+                                PredecessorRoadSet[3].RoadLinksPredecessor.append(rl)
                         if PredecessorRoadSet.index(self) == 9: # Successor to Predecessor Link
                             #create RoadLink and LaneLinks
-                            rl = openDriveRoadLink(PredecessorRoadSet[6],r1,'end', 'start')
-                            r1.RoadLinksPredecessor.append(rl)
-                            PredecessorRoadSet[6].RoadLinksSuccessor.append(rl)
+                            noExistingRoadLink = True
+                            for rlp in r1.RoadLinksPredecessor:
+                                if rlp.oDriveRoad.id == PredecessorRoadSet[6].id or rlp.oDriveRoadPredecessor.id == PredecessorRoadSet[6].id:
+                                    noExistingRoadLink = False
+                            if noExistingRoadLink:
+                                rl = openDriveRoadLink(PredecessorRoadSet[6],r1,'end', 'start')
+                                r1.RoadLinksPredecessor.append(rl)
+                                PredecessorRoadSet[6].RoadLinksSuccessor.append(rl)
             if rNode2:
                 for SuccessorRoadSet in rNode2.openDriveElements.values():
                     if self in SuccessorRoadSet:
                         if SuccessorRoadSet.index(self) == 0: #Predecessor to Successor Link
-                            rl = openDriveRoadLink(r4,SuccessorRoadSet[3],'start', 'end')
-                            r4.RoadLinksSuccessor.append(rl)
-                            SuccessorRoadSet[3].RoadLinksPredecessor.append(rl)
+                            noExistingRoadLink = True
+                            for rlp in r4.RoadLinksSuccessor:
+                                if rlp.oDriveRoad.id == SuccessorRoadSet[3].id or rlp.oDriveRoadPredecessor.id == SuccessorRoadSet[3].id:
+                                    noExistingRoadLink = False
+                            if noExistingRoadLink:
+                                rl = openDriveRoadLink(r4,SuccessorRoadSet[3],'start', 'end')
+                                r4.RoadLinksSuccessor.append(rl)
+                                SuccessorRoadSet[3].RoadLinksPredecessor.append(rl)
                         if SuccessorRoadSet.index(self) == 9: # Successor to Successor Link
-                            rl = openDriveRoadLink(r4,SuccessorRoadSet[6],'end', 'end')
-                            r4.RoadLinksSuccessor.append(rl)
-                            SuccessorRoadSet[6].RoadLinksSuccessor.append(rl)
+                            noExistingRoadLink = True
+                            for rlp in r4.RoadLinksSuccessor:
+                                if rlp.oDriveRoad.id == SuccessorRoadSet[6].id or rlp.oDriveRoadPredecessor.id == SuccessorRoadSet[6].id:
+                                    noExistingRoadLink = False
+                            if noExistingRoadLink:
+                                rl = openDriveRoadLink(r4,SuccessorRoadSet[6],'end', 'end')
+                                r4.RoadLinksSuccessor.append(rl)
+                                SuccessorRoadSet[6].RoadLinksSuccessor.append(rl)
 
 class OSMPreWay:
     allWays = {}

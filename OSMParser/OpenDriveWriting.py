@@ -69,18 +69,27 @@ class openDriveRoad:
     
     def giveODriveJunctionString(self, idx):
         string = ""
-        for predecessorLink in self.RoadLinksPredecessor:
-            for successorLink in self.RoadLinksSuccessor:
-                _, predecessor,  contactPoint = successorLink.giveODriveJunction(self)
-                string += '''
-                <connection id="{0}" incomingRoad="{1}" connectingRoad="{2}" contactPoint="{3}">
-                '''.format(str(idx), predecessor, self.id, contactPoint)
-                for laneLink in successorLink.openDriveLaneLinks:
-                    string += laneLink.giveOdriveJunctionString(self)
+        plusidx = 0
+        for roadlink in self.RoadLinksPredecessor + self.RoadLinksSuccessor:
+                plusidx += 1
+                roadlink.evaluateLaneLinks()
+                typestring, predecessor,  contactPoint = roadlink.giveODriveJunction(self)
+                try: predecessor = predecessor.id
+                except: pass
+                if typestring == "predecessorIs":
+                    string += '''
+                    <connection id="{0}" incomingRoad="{1}" connectingRoad="{2}" contactPoint="{3}">
+                    '''.format(str(idx+plusidx), predecessor, self.id, contactPoint)
+                else:
+                    string += '''
+                    <connection id="{0}" incomingRoad="{2}" connectingRoad="{1}" contactPoint="{3}">
+                    '''.format(str(idx), predecessor, self.id, contactPoint)
+                for laneLink in roadlink.openDriveLaneLinks:
+                    string += laneLink.giveOdriveJunctionString(predecessor)
                 string += '''
                 </connection>
                 '''
-        return string
+        return string,plusidx
  
 
     def giveODriveString(self):
@@ -224,9 +233,10 @@ class openDriveJunction:
     def giveODriveString(self):
             connString = ""
             idx = 0
-            for incomingRoad in self.r1Roads:
-                connString += incomingRoad.giveODriveJunctionString(idx)
-                idx +=1
+            for i in range(len(self.r1Roads+self.r4Roads)):
+                    connStringAddition, plusidx = (self.r1Roads+self.r4Roads)[i].giveODriveJunctionString(idx)
+                    idx +=1+plusidx
+                    connString += connStringAddition
 
             string = '''
             <junction name="" id="{0}">
@@ -242,35 +252,61 @@ class openDriveLaneLink:
         except: pass
         try: PredecessorLane = PredecessorLane.id
         except: pass
+        self.predecessorIsSuccessorsPredecessor = False
+        self.successorIsPredecessorsSuccessor = False
         self.predecessor = PredecessorRoad
         self.successor = SuccessorRoad
+        #test if successorIsPredecessorsSuccessor
+        for prelink in self.predecessor.RoadLinksSuccessor:
+            if prelink.oDriveRoad.id == self.successor.id or prelink.oDriveRoadPredecessor.id == self.successor.id:
+                self.successorIsPredecessorsSuccessor = True
+        #test if predecessorIsSuccessorsPredecessor
+        for suclink in self.successor.RoadLinksPredecessor:
+            if suclink.oDriveRoad.id == self.predecessor.id or suclink.oDriveRoadPredecessor.id == self.predecessor.id:
+                self.predecessorIsSuccessorsPredecessor = True
         self.predecessorLane = PredecessorLane
         self.successorLane = SuccessorLane
-        try: self.predecessor.lanes[PredecessorLane].linksSuccessor[SuccessorRoad].append(self)
-        except: 
-            self.predecessor.lanes[PredecessorLane].linksSuccessor[SuccessorRoad] = [self]
-        try: self.successor.lanes[SuccessorLane].linksPredecessor[PredecessorRoad].append(self)
-        except: 
-            self.successor.lanes[SuccessorLane].linksPredecessor[PredecessorRoad] = [self]
+        if self.successorIsPredecessorsSuccessor:
+            try: self.predecessor.lanes[PredecessorLane].linksSuccessor[SuccessorRoad].append(self)
+            except: 
+                self.predecessor.lanes[PredecessorLane].linksSuccessor[SuccessorRoad] = [self]
+        else:
+            try: self.predecessor.lanes[PredecessorLane].linksPredecessor[SuccessorRoad].append(self)
+            except: 
+                self.predecessor.lanes[PredecessorLane].linksPredecessor[SuccessorRoad] = [self]
+        if self.predecessorIsSuccessorsPredecessor:
+            try: self.successor.lanes[SuccessorLane].linksPredecessor[PredecessorRoad].append(self)
+            except: 
+                self.successor.lanes[SuccessorLane].linksPredecessor[PredecessorRoad] = [self]
+        else:
+            try: self.successor.lanes[SuccessorLane].linksSuccessor[PredecessorRoad].append(self)
+            except: 
+                self.successor.lanes[SuccessorLane].linksSuccessor[PredecessorRoad] = [self]
             
 
     def giveODriveString(self, questionLane, questionRoad):
         if questionRoad == self.predecessor:
             if questionLane.id == self.predecessorLane:
                 return '''
-                \t\t\t<successor id ="{0}"/>'''.format(self.successorLane)
+                \t\t<successor id ="{0}"/>
+                '''.format(self.successorLane)
         if questionRoad == self.successor:
             if questionLane.id == self.successorLane:
                 return '''
-                \t\t\t<predecessor id="{0}"/>'''.format(self.predecessorLane)
+                \t\t<predecessor id="{0}"/>
+                '''.format(self.predecessorLane)
         else:
             return ""
 
     def giveOdriveJunctionString(self, oDriveRoad):
-        if oDriveRoad.id == self.predecessor:
-            return '\t\t\t<laneLink from="{0}" to="{1}"/>'.format(str(self.predecessorLane),str(self.successorLane))
-        if oDriveRoad.id == self.successor:
-            return '\t\t\t<laneLink from="{0}" to="{1}"/>'.format(str(self.successorLane),str(self.predecessorLane))
+        try: oDriveRoad = oDriveRoad.id
+        except: pass
+        if oDriveRoad == self.predecessor.id:
+            return '''\t<laneLink from="{0}" to="{1}"/>
+                '''.format(str(self.predecessorLane),str(self.successorLane))
+        if oDriveRoad == self.successor.id:
+            return '''\t<laneLink from="{0}" to="{1}"/>
+                '''.format(str(self.successorLane),str(self.predecessorLane))
         return ""
     
 class openDriveRoadLink:
@@ -284,18 +320,52 @@ class openDriveRoadLink:
         #oDriveRoad.RoadLinksPredecessor.append(self)
 
     def evaluateLaneLinks(self):
-        return
+        # connect one way streets (should be easy):
+        if len(self.openDriveLaneLinks) == 0 and len(self.oDriveRoadPredecessor.lanes) == 2 and len(self.oDriveRoadPredecessor.lanes)==len(self.oDriveRoad.lanes):
+            for lane in self.oDriveRoadPredecessor.lanes.values():
+                if lane.id == 0:
+                    continue
+                for laneTo in self.oDriveRoad.lanes.values():
+                    if laneTo.id == 0:
+                        continue
+                    link = openDriveLaneLink(self.oDriveRoadPredecessor, self.oDriveRoad, lane.id, laneTo.id)
+                    self.openDriveLaneLinks.append(link)
+        # connect more difficult lanes:
         if len(self.openDriveLaneLinks) == 0 and len(self.oDriveRoadPredecessor.lanes) > 0 and len(self.oDriveRoadPredecessor.lanes)==len(self.oDriveRoad.lanes):
             for lane in self.oDriveRoadPredecessor.lanesLeft:
-                contactID = lane.id if self.contactPointRoad != self.contactPointPredecessor else -lane.id
-                contactID = -contactID if self.oDriveRoadPredecessor.wayIsOpposite != self.oDriveRoad.wayIsOpposite and (self.oDriveRoad.geometrietyp == 'line' and self.oDriveRoadPredecessor.geometrietyp == 'line') else contactID
-                link = openDriveLaneLink(self.oDriveRoadPredecessor, self.oDriveRoad, lane.id, contactID)
-                self.openDriveLaneLinks.append(link)
+                try:
+                    contactID = lane.id if self.contactPointRoad != self.contactPointPredecessor else -lane.id
+                    if (self.oDriveRoad.geometrietyp == 'poly3' and self.oDriveRoadPredecessor.geometrietyp == 'line') or (self.oDriveRoad.geometrietyp == 'line' and self.oDriveRoadPredecessor.geometrietyp == 'poly3'):
+                        if self.contactPointPredecessor == "end" and self.contactPointRoad == "end":
+                            if self.oDriveRoad.wayIsOpposite == self.oDriveRoad.wayIsOpposite: #Contact Polyline to Line with switching directions
+                                #contactID = -contactID
+                                pass
+                    link = openDriveLaneLink(self.oDriveRoadPredecessor, self.oDriveRoad, lane.id, contactID)
+                    self.openDriveLaneLinks.append(link)
+                except:
+                    print('''
+
+                    Could not Connect Road {0} to Road {1}: 
+                    Road {0} has Lanes: {2}
+                    Road {1} has Lanes: {3}
+                    I am trying to Connect Lane {4} to Lane {5} since Contactpoints are: {6} to {7}
+                    '''.format(self.oDriveRoadPredecessor.id, self.oDriveRoad.id, str(self.oDriveRoadPredecessor.lanes.keys()),
+                    str(self.oDriveRoad.lanes.keys()), str(lane.id), str(contactID), self.contactPointPredecessor, self.contactPointRoad))
             for lane in self.oDriveRoadPredecessor.lanesRight:
-                contactID = lane.id if self.contactPointRoad != self.contactPointPredecessor else -lane.id
-                contactID = -contactID if self.oDriveRoadPredecessor.wayIsOpposite != self.oDriveRoad.wayIsOpposite and (self.oDriveRoad.geometrietyp == 'line' and self.oDriveRoadPredecessor.geometrietyp == 'line') else contactID
-                link = openDriveLaneLink(self.oDriveRoadPredecessor, self.oDriveRoad, lane.id, contactID)
-                self.openDriveLaneLinks.append(link)
+                try:
+                    contactID = lane.id if self.contactPointRoad != self.contactPointPredecessor else -lane.id
+                    #contactID = -contactID if self.oDriveRoadPredecessor.wayIsOpposite != self.oDriveRoad.wayIsOpposite and (self.oDriveRoad.geometrietyp == 'line' and self.oDriveRoadPredecessor.geometrietyp == 'line') else contactID
+                    link = openDriveLaneLink(self.oDriveRoadPredecessor, self.oDriveRoad, lane.id, contactID)
+                    self.openDriveLaneLinks.append(link)
+                except:
+                    print('''
+
+                    Could not Connect Road {0} to Road {1}: 
+                    Road {0} has Lanes: {2}
+                    Road {1} has Lanes: {3}
+                    I am trying to Connect Lane {4} to Lane {5} since Contactpoints are: {6} to {7}
+                    '''.format(self.oDriveRoadPredecessor.id, self.oDriveRoad.id, str(self.oDriveRoadPredecessor.lanes.keys()),
+                    str(self.oDriveRoad.lanes.keys()), str(lane.id), str(contactID), self.contactPointPredecessor, self.contactPointRoad))
 
     def giveODriveJunction(self, oDriveRoadQuestion):
         if oDriveRoadQuestion.id == self.oDriveRoadPredecessor.id:
@@ -317,14 +387,14 @@ class openDriveRoadLink:
                 roadOrJunction = "road" if self.oDriveRoadPredecessor.odriveJunction == "-1" else "junction"
                 orderID = str(self.oDriveRoadPredecessor.id) if self.oDriveRoadPredecessor.odriveJunction == "-1" else str(self.oDriveRoadPredecessor.odriveJunction)
             if roadOrJunction == "road":
-                dic =  {'string':'\t\t<{0} elementType="road" elementId="{1}" contactPoint="{2}" />'.format(order, orderID, contactpoint),
+                dic =  {'string':'<{0} elementType="road" elementId="{1}" contactPoint="{2}" />'.format(order, orderID, contactpoint),
                         'contact':contactpoint,
                         'order':order,
                         'id':orderID,
                         'isJunction':roadOrJunction}
                 return dic['string']
             else:
-                dic =  {'string':'\t\t<{0} elementType="junction" elementId="{1}" />'.format(order, orderID),
+                dic =  {'string':'<{0} elementType="junction" elementId="{1}" />'.format(order, orderID),
                         'contact':contactpoint,
                         'order':order,
                         'id':orderID,

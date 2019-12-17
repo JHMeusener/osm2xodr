@@ -139,9 +139,13 @@ p = '/home/jhm/Desktop/Arbeit/campusFreudenberg.osm'
 im = '/home/jhm/Desktop/Arbeit/OSM2XODR/osm2xodr/topomap.png'
 parseAll(p, bildpfad=im)
 
-#test_2WayTCrossing()
+#test_2WayTCrossing2()
 #test_2WayTCrossing4()
 #test_2WayTCrossing2()
 #test_2WayTCrossing3()
+#test_3WayTCrossing2()
+#test_simple3WayoneWayLaneTCrossing2()
+#test_merge3to2()
+#test_simple3WayoneWayLaneTCrossing()
 with open('/home/jhm/Desktop/Arbeit/testout.xodr','w') as f:
         f.write(writeOdrive())
