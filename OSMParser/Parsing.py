@@ -267,7 +267,7 @@ class rNode:
         if not Way:
             hdg = giveHeading(self.x, self.y, xend, yend)
             l2length = ((self.x-xend)**2+(self.y-yend)**2)**0.5
-            r4 = openDriveRoad(l2length, self.x, self.y, hdg, endWayDirection, geoparam = None)
+            r4 = openDriveRoad(l2length, self.x, self.y, hdg, endWayDirection, geoparam = None, OSMWayTags= Way2.tags)
             r4.heighta = str(giveHeight(self.x,self.y))
             r4.heightb = str(-(giveHeight(xend,yend) - int(giveHeight(self.x,self.y)))/l2length)
             self.openDriveElements[self._connectionID(Way2,None)] = [None,None,beginningWayDirection,None,None,None,r4,endWayDirection,Way2,rNode2]
@@ -276,7 +276,7 @@ class rNode:
         if not Way2:
             hdg = giveHeading(xstart,ystart, self.x, self.y)
             l1length = ((xstart-self.x)**2+(ystart-self.y)**2)**0.5
-            r1 = openDriveRoad(l1length, xstart, ystart, hdg, beginningWayDirection, geoparam = None)
+            r1 = openDriveRoad(l1length, xstart, ystart, hdg, beginningWayDirection, geoparam = None, OSMWayTags= Way.tags)
             r1.heighta = str(giveHeight(self.x,self.y))
             r1.heightb = str((giveHeight(xstart,ystart) - int(giveHeight(self.x,self.y)))/l1length)
             self.openDriveElements[self._connectionID(Way,None)] = [rNode1,Way,beginningWayDirection,r1,None,None,None,endWayDirection,None,None]
@@ -295,13 +295,13 @@ class rNode:
         #create roads
         l1length = ((xstart-line1x[1])**2+(ystart-line1y[1])**2)**0.5
         l2length = ((line2x[0]-xend)**2+(line2y[0]-yend)**2)**0.5
-        r1 = openDriveRoad(l1length, xstart, ystart, phi, beginningWayDirection, geoparam = None)
+        r1 = openDriveRoad(l1length, xstart, ystart, phi, beginningWayDirection, geoparam = None, OSMWayTags= Way.tags)
         if len(self.wayList) > 1:
-            r2 = openDriveRoad(lengthC, C1start[0], C1start[1], C1Heading, not endWayDirection, geoparam = C1param)
+            r2 = openDriveRoad(lengthC, C1start[0], C1start[1], C1Heading, not endWayDirection, geoparam = C1param, OSMWayTags= Way2.tags)
         else:
-            r2 = openDriveRoad(lengthC, C1start[0], C1start[1], C1Heading, not beginningWayDirection, geoparam = C1param)
-        r3 = openDriveRoad(lengthC, C1start[0], C1start[1], C2Heading, endWayDirection, geoparam = C2param)
-        r4 = openDriveRoad(l2length, line2x[0], line2y[0], phi-theta, endWayDirection, geoparam = None)
+            r2 = openDriveRoad(lengthC, C1start[0], C1start[1], C1Heading, not beginningWayDirection, geoparam = C1param, OSMWayTags= Way.tags)
+        r3 = openDriveRoad(lengthC, C1start[0], C1start[1], C2Heading, endWayDirection, geoparam = C2param, OSMWayTags= Way2.tags)
+        r4 = openDriveRoad(l2length, line2x[0], line2y[0], phi-theta, endWayDirection, geoparam = None, OSMWayTags= Way2.tags)
 
         r1.heighta = str(giveHeight(xstart, ystart))
         r1.heightb = str(-(giveHeight(xstart,ystart) - int(giveHeight(line1x[1],line1y[1])))/l1length)
@@ -329,12 +329,12 @@ class rNode:
                     #create roads lanes
                     if Way:
                         for laneId in range(1,Way.laneNumberDirection+1):
-                                r1.lanesRight.append(openDriveLane(-laneId if beginningWayDirection else laneId, r1, Way))
+                                r1.lanesRight.append(openDriveLane(-laneId if beginningWayDirection else laneId, r1))
                         if len(r1.lanesRight) > 0: r1.lanesRight[-1].roadmark = "solid"
                         for laneId in range(1,Way.laneNumberOpposite+1):
-                                r1.lanesLeft.append(openDriveLane(laneId if beginningWayDirection else -laneId, r1, Way))
+                                r1.lanesLeft.append(openDriveLane(laneId if beginningWayDirection else -laneId, r1))
                         if len(r1.lanesLeft) > 0: r1.lanesLeft[-1].roadmark = "solid"
-                        r1.laneMiddle.append(openDriveLane(0, r1, Way))
+                        r1.laneMiddle.append(openDriveLane(0, r1))
                         r1.laneMiddle[0].roadmark = "solid"
                         if len(r1.lanesLeft) == 1 and len(r1.lanesRight) == 1:
                             r1.laneMiddle[0].roadmark = "broken"
@@ -342,12 +342,12 @@ class rNode:
                         #create roads lanes
                     if r2:
                         for laneId in range(1,Way.laneNumberDirection+1):
-                                r2.lanesRight.append(openDriveLane(laneId if beginningWayDirection else -laneId, r2, Way))
+                                r2.lanesRight.append(openDriveLane(laneId if beginningWayDirection else -laneId, r2))
                         if len(r2.lanesRight) > 0: r2.lanesRight[-1].roadmark = "solid"
                         for laneId in range(1,Way.laneNumberOpposite+1):
-                                r2.lanesLeft.append(openDriveLane(-laneId if beginningWayDirection else laneId, r2, Way))
+                                r2.lanesLeft.append(openDriveLane(-laneId if beginningWayDirection else laneId, r2))
                         if len(r2.lanesLeft) > 0: r2.lanesLeft[-1].roadmark = "solid"
-                        r2.laneMiddle.append(openDriveLane(0, r2, Way))
+                        r2.laneMiddle.append(openDriveLane(0, r2))
                         r2.laneMiddle[0].roadmark = "solid"
                         if len(r2.lanesLeft) == 1 and len(r2.lanesRight) == 1:
                             r2.laneMiddle[0].roadmark = "broken"
@@ -355,11 +355,11 @@ class rNode:
                         #create roads lanes
                     if r3:
                         for laneId in range(1,Way2.laneNumberDirection+1):
-                                r3.lanesRight.append(openDriveLane(-laneId if endWayDirection else laneId, r3, Way2))
+                                r3.lanesRight.append(openDriveLane(-laneId if endWayDirection else laneId, r3))
                         if len(r3.lanesRight) > 0: r3.lanesRight[-1].roadmark = "solid"
                         for laneId in range(1,Way2.laneNumberOpposite+1):
-                                r3.lanesLeft.append(openDriveLane(laneId if endWayDirection else -laneId, r3, Way2))
-                        r3.laneMiddle.append(openDriveLane(0, r3, Way2))
+                                r3.lanesLeft.append(openDriveLane(laneId if endWayDirection else -laneId, r3))
+                        r3.laneMiddle.append(openDriveLane(0, r3))
                         if len(r3.lanesLeft) > 0: r3.lanesLeft[-1].roadmark = "solid"
                         r3.laneMiddle[0].roadmark = "solid"
                         if len(r3.lanesLeft) == 1 and len(r3.lanesRight) == 1:
@@ -368,11 +368,11 @@ class rNode:
                         ## Gerade zum nachfolger
                         #create roads lanes
                         for laneId in range(1,Way2.laneNumberDirection+1):
-                                r4.lanesRight.append(openDriveLane(-laneId if endWayDirection else laneId, r4, Way2))
+                                r4.lanesRight.append(openDriveLane(-laneId if endWayDirection else laneId, r4))
                         if len(r4.lanesRight) > 0: r4.lanesRight[-1].roadmark = "solid"
                         for laneId in range(1,Way2.laneNumberOpposite+1):
-                                r4.lanesLeft.append(openDriveLane(laneId if endWayDirection else -laneId, r4, Way2))
-                        r4.laneMiddle.append(openDriveLane(0, r4, Way2))
+                                r4.lanesLeft.append(openDriveLane(laneId if endWayDirection else -laneId, r4))
+                        r4.laneMiddle.append(openDriveLane(0, r4))
                         if len(r4.lanesLeft) > 0: r4.lanesLeft[-1].roadmark = "solid"
                         r4.laneMiddle[0].roadmark = "solid"
                         if len(r4.lanesLeft) == 1 and len(r4.lanesRight) == 1:
@@ -381,42 +381,42 @@ class rNode:
 
             else:   #lane und Junction creation for Junction
                         for laneId in range(1,Way.laneNumberDirection+1):
-                                r1.lanesRight.append(openDriveLane(-laneId if beginningWayDirection else laneId, r1, Way))
+                                r1.lanesRight.append(openDriveLane(-laneId if beginningWayDirection else laneId, r1))
                         if len(r1.lanesRight) > 0: r1.lanesRight[-1].roadmark = "solid"
                         for laneId in range(1,Way.laneNumberOpposite+1):
-                                r1.lanesLeft.append(openDriveLane(laneId if beginningWayDirection else -laneId, r1, Way))
+                                r1.lanesLeft.append(openDriveLane(laneId if beginningWayDirection else -laneId, r1))
                         if len(r1.lanesLeft) > 0: r1.lanesLeft[-1].roadmark = "solid"
-                        r1.laneMiddle.append(openDriveLane(0, r1, Way))
+                        r1.laneMiddle.append(openDriveLane(0, r1))
                         r1.laneMiddle[0].roadmark = "solid"
                         if len(r1.lanesLeft) == 1 and len(r1.lanesRight) == 1:
                             r1.laneMiddle[0].roadmark = "broken"
                         ## entgegengesetzte Kurve
                         #create roads lanes
                         for laneId in range(1,Way2.laneNumberDirection+1):
-                                r2.lanesRight.append(openDriveLane(laneId if endWayDirection else -laneId, r2, Way2))
+                                r2.lanesRight.append(openDriveLane(laneId if endWayDirection else -laneId, r2))
                                 if len(r2.lanesRight) > 0: r2.lanesRight[-1].roadmark = "none"
                         for laneId in range(1,Way2.laneNumberOpposite+1):
-                                r2.lanesLeft.append(openDriveLane(-laneId if endWayDirection else laneId, r2, Way2))
+                                r2.lanesLeft.append(openDriveLane(-laneId if endWayDirection else laneId, r2))
                                 if len(r2.lanesLeft) > 0: r2.lanesLeft[-1].roadmark = "none"
-                        r2.laneMiddle.append(openDriveLane(0, r2, Way))
+                        r2.laneMiddle.append(openDriveLane(0, r2))
                         r2.laneMiddle[0].roadmark = "none"
                         ## Kurve zum nachfolger
                         #create roads lanes
                         for laneId in range(1,Way2.laneNumberDirection+1):
-                                r3.lanesRight.append(openDriveLane(-laneId if endWayDirection else laneId, r3, Way2))
+                                r3.lanesRight.append(openDriveLane(-laneId if endWayDirection else laneId, r3))
                                 if len(r3.lanesRight) > 0: r3.lanesRight[-1].roadmark = "none"
                         for laneId in range(1,Way2.laneNumberOpposite+1):
-                                r3.lanesLeft.append(openDriveLane(laneId if endWayDirection else -laneId, r3, Way2))
+                                r3.lanesLeft.append(openDriveLane(laneId if endWayDirection else -laneId, r3))
                                 if len(r3.lanesLeft) > 0: r3.lanesLeft[-1].roadmark = "none"
-                        r3.laneMiddle.append(openDriveLane(0, r3, Way2))
+                        r3.laneMiddle.append(openDriveLane(0, r3))
                         r3.laneMiddle[0].roadmark = "none"
                         ## Gerade zum nachfolger
                         for laneId in range(1,Way2.laneNumberDirection+1):
-                                r4.lanesRight.append(openDriveLane(-laneId if endWayDirection else laneId, r4, Way2))
+                                r4.lanesRight.append(openDriveLane(-laneId if endWayDirection else laneId, r4))
                         if len(r4.lanesRight) > 0: r4.lanesRight[-1].roadmark = "solid"
                         for laneId in range(1,Way2.laneNumberOpposite+1):
-                                r4.lanesLeft.append(openDriveLane(laneId if endWayDirection else -laneId, r4, Way2))
-                        r4.laneMiddle.append(openDriveLane(0, r4, Way2))
+                                r4.lanesLeft.append(openDriveLane(laneId if endWayDirection else -laneId, r4))
+                        r4.laneMiddle.append(openDriveLane(0, r4))
                         if len(r4.lanesLeft) > 0: r4.lanesLeft[-1].roadmark = "solid"
                         r4.laneMiddle[0].roadmark = "solid"
                         if len(r4.lanesLeft) == 1 and len(r4.lanesRight) == 1:
@@ -735,7 +735,7 @@ def parseAll(pfad, bildpfad = None):
     #create rNodedict with counter
     for entity in parse_file(pfad):
         if isinstance(entity, Node):
-            if minLongitude <entity.lon< maxLongitude and minLatitude <entity.lat< maxLatitude:   # approximate longitude and latitude of Wuppertal
+            #if minLongitude <entity.lon< maxLongitude and minLatitude <entity.lat< maxLatitude:   # approximate longitude and latitude of Wuppertal
                  rNode(entity)
     #create streetrNodedict and count rNodeuse
     for entity in parse_file(pfad):

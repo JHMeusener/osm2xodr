@@ -44,7 +44,7 @@ class openDriveRoad:
         openDriveRoad.roadids += 1
         return str(openDriveRoad.roadids-1)
     
-    def __init__(self, length, x, y, hdg, wayIsOpposite, geoparam = None):
+    def __init__(self, length, x, y, hdg, wayIsOpposite, geoparam = None, OSMWayTags = None):
         self.id = openDriveRoad.giveId(self)
         self.geometrietyp = 'line' if geoparam is None else 'poly3'
         self.geoparam = geoparam
@@ -52,6 +52,7 @@ class openDriveRoad:
         self.x = x
         self.y = y
         self.name = ""
+        self.speed = "50"
         self.hdg = hdg
         self.heighta = ""
         self.heightb = ""
@@ -63,7 +64,11 @@ class openDriveRoad:
         self.RoadLinksSuccessor = []
         self.lanes = {}
         openDriveRoad.roaddictionary[self.id] = self
-        self.OSMWay = None
+        self.OSMWayTags = OSMWayTags
+        try: 
+            self.name = self.OSMWayTags["name"]
+            self.speed = self.OSMWayTags["maxspeed"]
+        except: pass
         #self.OSMJunctionId = OSMNode.allOSMNodes[str(self.OSMnodeid)].idJunction
         self.odriveJunction = '-1'   ## nur die geraden sind die junctions - die Kurven sind einzellanes
     
@@ -122,6 +127,11 @@ class openDriveRoad:
             <elevation s="0.0" a="{0}" b="{1}" c="0.00" d="0.00"/>
         </elevationProfile>'''.format(self.heighta, self.heightb)
 
+        speed = '''
+        <type s="0.0" type="town">
+             <speed max="{0}" unit="m/s"/>
+        </type>'''.format(float(self.speed)/3.6) #km/h to m/s
+
         string =  '''    
         <road name="{3}" length="{0}" id="{1}" junction="{2}">
             <link>
@@ -129,9 +139,10 @@ class openDriveRoad:
                 {0}
                 {1}'''.format(roadlinksPre,roadlinksSuc) + '''
             </link>
+            {4}
              <planView>
                 <geometry s="0.0" x="{0}" y="{1}" hdg="{2}" length="{3}">
-                '''.format(self.x, self.y, self.hdg, self.length) + geo + '''
+                '''.format(self.x, self.y, self.hdg, self.length, speed) + geo + '''
                 </geometry>
              </planView>
              {3}
@@ -151,11 +162,10 @@ class openDriveRoad:
 
         
 class openDriveLane:
-    def __init__(self, laneid, OpendriveRoad, OSMWay=None):
+    def __init__(self, laneid, OpendriveRoad):
         self.id = laneid
         self.road = OpendriveRoad
         self.road.lanes[self.id] = self
-        self.OSMway = OSMWay
         self.type = 'driving'
         self.width = "2.75e+00"
         self.roadmark = "broken"
@@ -177,8 +187,6 @@ class openDriveLane:
             for sucroad, val in self.linksSuccessor.items():
                 if len(val) == 1:
                     successor = val[0].giveODriveString(self,self.road)
-        #predecessor = '''<predecessor id="{0}"/>'''.format(self.OSMway.)
-
         return '''
                         <lane id="{0}" type="driving" level= "0">
                             <link>{1}{2}
