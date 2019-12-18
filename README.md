@@ -1,5 +1,5 @@
 # osm2xodr
-converter for OpenStreetMaps (.osm) to OpenDrive (.xodr) format (just the drivable roads right now - you can edit the code for other osm-ways).
+converter for OpenStreetMaps (.osm) to OpenDrive (.xodr) format (just the drivable roads right now - you can edit the code for other osm-ways - its in the function "parseAll()").
 
 just adjust the filenames/paths in the main.py and run it
 needs osmread, numpy, PIL and pyproj
