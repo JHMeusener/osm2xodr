@@ -79,12 +79,12 @@ def getCurves(xTriplett,yTriplett, r=5):
     r = min(r, checkDistance(x_arr[0],y_arr[0],x_arr[1],y_arr[1])[2], checkDistance(x_arr[2],y_arr[2],x_arr[1],y_arr[1])[2] )
     x_t = (r**2/(1+S**2))**0.5
     c = S/(2*x_t)
-    if c > 500:
+    if abs(c) > 400:
         print("Sanity check --> U-Turn?")
         print("x: " + str(xTriplett))
         print("y: "+str(yTriplett))
         print(c)
-        c = 9
+        c = 400 if c > 400 else -400
         #1/0
     # b = Sx_t - x c_t²
     b = S*x_t - (c*x_t**2)
@@ -128,6 +128,10 @@ def getCurves(xTriplett,yTriplett, r=5):
     C2Heading = (0-phi-theta)%(2*np.pi)
     C1params = [0,0,-c,0]
     C2params = [0,0,c,0]
+    if length > 150:
+            print("Sanity: length in Turnradius waayyyyy too long")
+            length = 10
+
 
     return line1x,line1y, -phi, C1start,C1params[2], C1Heading, length, C2start,C2params[2], C2Heading, line2x,line2y,2*theta
 
@@ -182,8 +186,16 @@ global topomap
 def convertTopoMap(topomappath, osmpath):
         global topomap
         global topoParameter
-        topomap =  np.array(Image.open(topomappath))[:,:,0] #y,x,rgba
-        topoParameter = giveMaxMinLongLat(osmpath)
+        try: topomap =  np.array(Image.open(topomappath))[:,:,0] #y,x,rgba
+        except:
+                print("Could not open Topomap")
+                topomap =  np.array((100,100))
+        try: topoParameter = giveMaxMinLongLat(osmpath)
+        except:
+                print("Could not find Topoparameter in OSM-Map")
+                topoParameter = [0,0,0,0]
+
+        
 
 def giveHeight(x,y):
         try:
@@ -204,14 +216,22 @@ def giveMaxMinLongLat(osmpath):
         maxlon = 0
         with open(osmpath, "r") as f:
                 for line in f:
-                        if "minlat=" in line:
+                        if "minlat='" in line:
                                minlat = float(line.split("minlat='")[1].split("'")[0])
-                        if "maxlat=" in line:
+                        if "maxlat='" in line:
                                maxlat = float(line.split("maxlat='")[1].split("'")[0])
-                        if "maxlon=" in line:
+                        if "maxlon='" in line:
                                maxlon = float(line.split("maxlon='")[1].split("'")[0])
-                        if "minlon=" in line:
-                               minlon = float(line.split("minlon='")[1].split("'")[0])
+                        if "minlon='" in line:
+                              minlon = float(line.split("minlon='")[1].split("'")[0])
+                        if 'minlat="' in line:
+                              minlat = float(line.split('minlat="')[1].split('"')[0])
+                        if 'maxlat="' in line:
+                              maxlat = float(line.split('maxlat="')[1].split('"')[0])
+                        if 'maxlon="' in line:
+                              maxlon = float(line.split('maxlon="')[1].split('"')[0])
+                        if 'minlon="' in line:
+                               minlon = float(line.split('minlon="')[1].split('"')[0])
                 xmin,ymin = convertLongitudeLatitude(minlon,minlat)
                 xmax,ymax = convertLongitudeLatitude(maxlon,maxlat)
                 return xmin, xmax, ymin, ymax

@@ -233,6 +233,7 @@ class rNode:
         self.createOpenDriveExternalRoadLinks()
 
     def _createOpenDriveElements(self, Way,Way2):
+        global minimalCurveRadius
         ''' für jede Way Way2 / Way2 Way Verbindung einmal r1rNode, r1Way, r1WayDirection, r1, r2, r3, r4, r4WayDirection, r4Way, r4rNode   in self.openDriveElements[WayWay2]'''
         if Way is None and Way2 is None:
             return
@@ -282,7 +283,7 @@ class rNode:
             self.openDriveElements[self._connectionID(Way,None)] = [rNode1,Way,beginningWayDirection,r1,None,None,None,endWayDirection,None,None]
             return
         
-        line1x,line1y, phi, C1start,C1param, C1Heading, lengthC, C2start,C2param, C2Heading, line2x,line2y,theta = getCurves([xstart,self.x,xend],[ystart, self.y, yend], r=8)
+        line1x,line1y, phi, C1start,C1param, C1Heading, lengthC, C2start,C2param, C2Heading, line2x,line2y,theta = getCurves([xstart,self.x,xend],[ystart, self.y, yend], r=minimalCurveRadius)
         while phi < 0:        # bringe Heading ins positive
             phi += np.pi*2
         while theta < 0:
@@ -726,17 +727,28 @@ class OSMWay:
         self.laneNumberDirection = laneNumberDirection
         self.laneNumberOpposite = laneNumberOpposite
 
-def parseAll(pfad, bildpfad = None):
+def parseAll(pfad, bildpfad = None, minCurveRadius = 9):
+    global minimalCurveRadius
+    minimalCurveRadius = minCurveRadius
     convertTopoMap(bildpfad, pfad)
-    minLongitude = -1
-    maxLongitude = 9
-    minLatitude = -1
-    maxLatitude = 55
+    x_1 = -1
+    y_1 = -1
     #create rNodedict with counter
     for entity in parse_file(pfad):
         if isinstance(entity, Node):
+            x,y = convertLongitudeLatitude(entity.lon, entity.lat)
+            if x_1 == -1:
+                x_1 = x
+            elif  not x_1-15000 < x < x_1+15000:
+                print("Node {0} too far away (x= {1}) from the first seen Node (x={2})".format(str(entity.id),str(x),str(x_1)))
+                continue
+            if y_1 == -1:
+                y_1 = y
+            elif  not y_1-15000 < y < y_1+15000:
+                print("Node {0} too far away (y= {1}) from the first seen Node (y={2})".format(str(entity.id),str(y),str(y_1)))
+                continue
             #if minLongitude <entity.lon< maxLongitude and minLatitude <entity.lat< maxLatitude:   # approximate longitude and latitude of Wuppertal
-                 rNode(entity)
+            rNode(entity)
     #create streetrNodedict and count rNodeuse
     for entity in parse_file(pfad):
         if isinstance(entity, Way):

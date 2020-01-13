@@ -127,10 +127,14 @@ class openDriveRoad:
             <elevation s="0.0" a="{0}" b="{1}" c="0.00" d="0.00"/>
         </elevationProfile>'''.format(self.heighta, self.heightb)
 
-        speed = '''
+        try: speed = '''
         <type s="0.0" type="town">
              <speed max="{0}" unit="m/s"/>
         </type>'''.format(float(self.speed)/3.6) #km/h to m/s
+        except: speed = '''
+        <type s="0.0" type="town">
+             <speed max="1.0" unit="m/s"/>
+        </type>'''
 
         string =  '''    
         <road name="{3}" length="{0}" id="{1}" junction="{2}">
