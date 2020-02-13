@@ -6,4 +6,6 @@ needs osmread, numpy, PIL and pyproj
 
 If a topographymap is used, adjust the min/max latitudes/longitudes in the osm-header according to the map-coordinates
 
+
+This code was created as a part of
 <p align="center"><img src="https://github.com/JHMeusener/osm2xodr/blob/master/Projekt%20und%20F%C3%B6rderlogos%20EN_28.11.2019.jpg" /></p>
