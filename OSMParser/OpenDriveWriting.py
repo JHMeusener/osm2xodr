@@ -309,16 +309,17 @@ class openDriveLaneLink:
     def giveODriveString(self, questionLane, questionRoad):
         if questionRoad == self.predecessor:
             if questionLane.id == self.predecessorLane:
-                return '''
-                \t\t<successor id ="{0}"/>
-                '''.format(self.successorLane)
+                if self.successor.odriveJunction == '-1':
+                    return '''
+                    \t\t<successor id ="{0}"/>
+                    '''.format(self.successorLane)
         if questionRoad == self.successor:
             if questionLane.id == self.successorLane:
-                return '''
-                \t\t<predecessor id="{0}"/>
-                '''.format(self.predecessorLane)
-        else:
-            return ""
+                if self.predecessor.odriveJunction == '-1':
+                    return '''
+                    \t\t<predecessor id="{0}"/>
+                    '''.format(self.predecessorLane)
+        return ""
 
     def giveOdriveJunctionString(self, oDriveRoad):
         try: oDriveRoad = oDriveRoad.id

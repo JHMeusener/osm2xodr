@@ -230,7 +230,7 @@ def convertLongitudeLatitude(longitude,latitude):
         global referenceLat
         global referenceLon
 
-        x,y = next(transformer.itransform([(longitude,latitude)]))
+        x,y = next(transformer.itransform([(latitude,longitude)]))
 
         '''if referenceLat is None:
             referenceLat = latitude
