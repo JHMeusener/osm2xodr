@@ -9,6 +9,8 @@ Created on Wed Nov  6 13:22:51 2019
 import numpy as np
 from pyproj import CRS, Transformer
 from PIL import Image
+from osmread import parse_file, Way, Node
+
 
 crs_4326  = CRS.from_epsg(4326) # epsg 4326 is wgs84
 crs_25832  = CRS.from_epsg(25832) # epsg 25832 is etrs89
@@ -79,12 +81,12 @@ def getCurves(xTriplett,yTriplett, r=5):
     r = min(r, checkDistance(x_arr[0],y_arr[0],x_arr[1],y_arr[1])[2], checkDistance(x_arr[2],y_arr[2],x_arr[1],y_arr[1])[2] )
     x_t = (r**2/(1+S**2))**0.5
     c = S/(2*x_t)
-    if c > 500:
+    if abs(c) > 10.0:
         print("Sanity check --> U-Turn?")
         print("x: " + str(xTriplett))
         print("y: "+str(yTriplett))
         print(c)
-        c = 9
+        c = c/abs(c) * 10.0
         #1/0
     # b = Sx_t - x c_t²
     b = S*x_t - (c*x_t**2)
@@ -182,48 +184,80 @@ global topomap
 def convertTopoMap(topomappath, osmpath):
         global topomap
         global topoParameter
-        topomap =  np.array(Image.open(topomappath))[:,:,0] #y,x,rgba
+        try:
+                topomap =  np.array(Image.open(topomappath))[:,:,0] #y,x,rgba
+        except:
+                topomap =  np.array(Image.open(topomappath))[:,:] #y,x,rgba
+        topomap=np.rot90(topomap)
+        topomap=np.rot90(topomap)
         topoParameter = giveMaxMinLongLat(osmpath)
         return topoParameter
-        
-def giveHeight(x,y):
-        try:
+
+global maximumheight, minimumheight
+maximumheight = 0.0
+minimumheight = 0.0
+def setHeights(minimum, maximum):
+        global maximumheight, minimumheight
+        minimumheight = minimum
+        maximumheight  = maximum
+
+def giveHeight(x,y,minRemoved = False):
                 global topoParameter
                 global topomap
-                x_lookup= int(topomap.shape[1]*(x-topoParameter[0])/(topoParameter[1]-topoParameter[0]))
-                y_lookup = int(topomap.shape[0]*(y-topoParameter[2])/(topoParameter[3]-topoParameter[2]))
-                x_lookup = max(0,min(topomap.shape[1]-1,x_lookup))
-                y_lookup = max(0,min(topomap.shape[0]-1,y_lookup))
-                return topomap[y_lookup,x_lookup]
-        except:
-                return 0.0
+                global maximumheight, minimumheight
+                if not minRemoved:
+                        x_lookup= int(topomap.shape[1]*(x-topoParameter[0])/(topoParameter[1]-topoParameter[0]))
+                        y_lookup = int(topomap.shape[0]*(1.0-(y-topoParameter[2])/(topoParameter[3]-topoParameter[2])))
+                else:
+                        x_lookup= int(topomap.shape[1]*x/(topoParameter[1]-topoParameter[0]))
+                        y_lookup = int(topomap.shape[0]*(1.0-(y/(topoParameter[3]-topoParameter[2]))))
+                x_lookup = min(max(topomap.shape[1]-x_lookup-1,0),topomap.shape[1]-1)
+                y_lookup = min(max(topomap.shape[0]-1-y_lookup,0),topomap.shape[0]-1)
+                height = topomap[y_lookup,x_lookup]-np.min(topomap)
+                height = height/np.max(topomap) 
+                height = height * (maximumheight-minimumheight) + minimumheight
+                return height
+        
 
-def giveMaxMinLongLat(osmpath):
-        minlat = 0
-        maxlat = 0
-        minlon = 0
-        maxlon = 0
-        with open(osmpath, "r") as f:
-                for line in f:
-                        if "minlat='" in line:
-                               minlat = float(line.split("minlat='")[1].split("'")[0])
-                        if "maxlat='" in line:
-                               maxlat = float(line.split("maxlat='")[1].split("'")[0])
-                        if "maxlon='" in line:
-                               maxlon = float(line.split("maxlon='")[1].split("'")[0])
-                        if "minlon='" in line:
-                               minlon = float(line.split("minlon='")[1].split("'")[0])
-                        if 'minlat="' in line:
-                               minlat = float(line.split('minlat="')[1].split('"')[0])
-                        if 'maxlat="' in line:
-                               maxlat = float(line.split('maxlat="')[1].split('"')[0])
-                        if 'maxlon="' in line:
-                               maxlon = float(line.split('maxlon="')[1].split('"')[0])
-                        if 'minlon="' in line:
-                               minlon = float(line.split('minlon="')[1].split('"')[0])
-                xmin,ymin = convertLongitudeLatitude(minlon,minlat)
-                xmax,ymax = convertLongitudeLatitude(maxlon,maxlat)
-                return xmin, xmax, ymin, ymax
+def giveMaxMinLongLat(osmpath, trustOSMHeaderMinMax = False):
+        minlat = 999999.0
+        maxlat = 0.0
+        minlon = 999999.0
+        maxlon = 0.0
+        for entity in parse_file(osmpath):
+                if isinstance(entity, Node):
+                        if minlat > entity.lat:  
+                                minlat = entity.lat
+                        if maxlat < entity.lat:
+                                maxlat = entity.lat
+                        if minlon > entity.lon:
+                                minlon = entity.lon
+                        if maxlon < entity.lon:
+                                maxlon = entity.lon
+
+        if trustOSMHeaderMinMax:
+                with open(osmpath, "r") as f:
+                        for line in f:
+                                if "minlat='" in line:
+                                        minlat = float(line.split("minlat='")[1].split("'")[0])
+                                if "maxlat='" in line:
+                                        maxlat = float(line.split("maxlat='")[1].split("'")[0])
+                                if "maxlon='" in line:
+                                        maxlon = float(line.split("maxlon='")[1].split("'")[0])
+                                if "minlon='" in line:
+                                        minlon = float(line.split("minlon='")[1].split("'")[0])
+                                if 'minlat="' in line:
+                                        minlat = float(line.split('minlat="')[1].split('"')[0])
+                                if 'maxlat="' in line:
+                                        maxlat = float(line.split('maxlat="')[1].split('"')[0])
+                                if 'maxlon="' in line:
+                                        maxlon = float(line.split('maxlon="')[1].split('"')[0])
+                                if 'minlon="' in line:
+                                        minlon = float(line.split('minlon="')[1].split('"')[0])
+        print("minlon = {},minlat= {},maxlon = {},maxlat = {}".format(minlon,minlat,maxlon,maxlat))
+        xmin,ymin = convertLongitudeLatitude(minlon,minlat)
+        xmax,ymax = convertLongitudeLatitude(maxlon,maxlat)
+        return xmin, xmax, ymin, ymax
 
 def convertLongitudeLatitude(longitude,latitude):
         #return longitude, latitude

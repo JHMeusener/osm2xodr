@@ -129,7 +129,7 @@ class openDriveRoad:
         elevation = '''
         <elevationProfile>
             <elevation s="0.0" a="{0}" b="{1}" c="0.00" d="0.00"/>
-        </elevationProfile>'''.format("0.0","0.0")#self.heighta, self.heightb)
+        </elevationProfile>'''.format(self.heighta, self.heightb)
 
         speed = '''
         <type s="0.0" type="town">
@@ -228,7 +228,7 @@ class openDriveJunction:
         else:
             j = openDriveJunction(OSMWay, OSMNode)
             return j
-    
+
     @staticmethod
     def reset():
         openDriveJunction.junctionids = 1
@@ -236,8 +236,8 @@ class openDriveJunction:
     
     def __init__(self, OSMWay, rNode):
         '''One Junction for every Way in a JunctionNode'''
-        self.id = str(openDriveJunction.junctionids)
-        openDriveJunction.junctionids += 1
+        self.id = str(openDriveRoad.roadids)
+        openDriveRoad.roadids += 1
         self.OSMWay = OSMWay
         self.openDriveRoads = []
         self.openDriveRoadLinks = []
@@ -288,6 +288,15 @@ class openDriveLaneLink:
                 self.predecessorIsSuccessorsPredecessor = True
         self.predecessorLane = PredecessorLane
         self.successorLane = SuccessorLane
+        #sanitycheck for non-existant Lanes in this connection
+        if PredecessorLane not in self.predecessor.lanes.keys():
+            print("Sanity Check for Laneconnection: Connecting to non existant predecessor lane! (roadID= {}) Changing laneconnection.".format(self.predecessor.id))
+            self.predecessorLane = -self.predecessorLane
+            if self.predecessorLane not in self.predecessor.lanes.keys(): self.predecessorLane = self.predecessor.lanes.keys()[0]
+        if SuccessorLane not in self.successor.lanes.keys():
+            print("Sanity Check for Laneconnection: Connecting to non existant predecessor lane! (roadID= {}) Changing laneconnection.".format(self.successor.id))
+            self.successorLane = -self.successorLane
+            if self.successorLane not in self.successor.lanes.keys():self.successorLane = self.successor.lanes.keys()[0]
         if self.successorIsPredecessorsSuccessor:
             try: self.predecessor.lanes[PredecessorLane].linksSuccessor[SuccessorRoad].append(self)
             except: 
@@ -324,10 +333,10 @@ class openDriveLaneLink:
     def giveOdriveJunctionString(self, oDriveRoad):
         try: oDriveRoad = oDriveRoad.id
         except: pass
-        if oDriveRoad == self.predecessor.id:
+        if oDriveRoad == self.successor.id:
             return '''\t<laneLink from="{0}" to="{1}"/>
                 '''.format(str(self.predecessorLane),str(self.successorLane))
-        if oDriveRoad == self.successor.id:
+        if oDriveRoad == self.predecessor.id:
             return '''\t<laneLink from="{0}" to="{1}"/>
                 '''.format(str(self.successorLane),str(self.predecessorLane))
         return ""

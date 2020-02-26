@@ -1,0 +1,2026 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version='0.6' generator='JOSM'>
+  <bounds minlat='51.2386527' minlon='7.1587622' maxlat='51.2396939' maxlon='7.1599531' origin='CGImap 0.7.5 (16169 thorn-03.openstreetmap.org)' />
+  <bounds minlat='51.2382967' minlon='7.1597815' maxlat='51.2392304' maxlon='7.1615624' origin='CGImap 0.7.5 (15088 thorn-01.openstreetmap.org)' />
+  <bounds minlat='51.238908' minlon='7.161262' maxlat='51.2396804' maxlon='7.1633434' origin='CGImap 0.7.5 (15088 thorn-01.openstreetmap.org)' />
+  <bounds minlat='51.2391297' minlon='7.1625924' maxlat='51.2402917' maxlon='7.164191' origin='CGImap 0.7.5 (15064 thorn-01.openstreetmap.org)' />
+  <bounds minlat='51.2394319' minlon='7.1641588' maxlat='51.2398551' maxlon='7.1650064' origin='CGImap 0.7.5 (12589 thorn-02.openstreetmap.org)' />
+  <bounds minlat='51.2393379' minlon='7.1604145' maxlat='51.2394924' maxlon='7.1614873' origin='CGImap 0.7.5 (16154 thorn-03.openstreetmap.org)' />
+  <bounds minlat='51.2389617' minlon='7.1594489' maxlat='51.2393916' maxlon='7.1602696' origin='CGImap 0.7.5 (15091 thorn-01.openstreetmap.org)' />
+  <node id='274402983' timestamp='2014-03-15T09:45:47Z' uid='503347' user='bilderhobbit' visible='true' version='6' changeset='21113676' lat='51.2404677' lon='7.1642379' />
+  <node id='274402987' timestamp='2011-06-13T15:55:50Z' uid='469881' user='Klaus Warmuth' visible='true' version='2' changeset='8426935' lat='51.239902' lon='7.1638461' />
+  <node id='274402988' timestamp='2011-06-13T15:55:50Z' uid='469881' user='Klaus Warmuth' visible='true' version='2' changeset='8426935' lat='51.2396157' lon='7.1634523' />
+  <node id='274402991' timestamp='2011-10-15T15:43:56Z' uid='105837' user='maxried' visible='true' version='3' changeset='9564552' lat='51.2391176' lon='7.1619947' />
+  <node id='274402996' timestamp='2011-10-15T15:43:56Z' uid='105837' user='maxried' visible='true' version='3' changeset='9564552' lat='51.2385576' lon='7.1603261' />
+  <node id='298512694' timestamp='2011-06-13T15:55:49Z' uid='469881' user='Klaus Warmuth' visible='true' version='3' changeset='8426935' lat='51.2395019' lon='7.1631398' />
+  <node id='298513309' timestamp='2011-10-15T15:43:57Z' uid='105837' user='maxried' visible='true' version='4' changeset='9564552' lat='51.2393665' lon='7.1627364' />
+  <node id='298513495' timestamp='2011-10-15T15:43:57Z' uid='105837' user='maxried' visible='true' version='5' changeset='9564552' lat='51.2392454' lon='7.1623755' />
+  <node id='298513790' timestamp='2011-10-15T15:43:57Z' uid='105837' user='maxried' visible='true' version='3' changeset='9564552' lat='51.2389587' lon='7.1615212' />
+  <node id='298514585' timestamp='2011-10-15T15:43:57Z' uid='105837' user='maxried' visible='true' version='4' changeset='9564552' lat='51.2388186' lon='7.1611038' />
+  <node id='298514587' timestamp='2011-10-15T15:43:57Z' uid='105837' user='maxried' visible='true' version='3' changeset='9564552' lat='51.238264' lon='7.1613605' />
+  <node id='298514597' timestamp='2012-03-06T14:15:58Z' uid='503347' user='bilderhobbit' visible='true' version='6' changeset='10889946' lat='51.2387062' lon='7.1607675' />
+  <node id='298515311' timestamp='2012-03-07T10:47:34Z' uid='503347' user='bilderhobbit' visible='true' version='5' changeset='10897142' lat='51.2394632' lon='7.1627754' />
+  <node id='298515314' timestamp='2011-10-15T15:43:57Z' uid='105837' user='maxried' visible='true' version='3' changeset='9564552' lat='51.2393983' lon='7.162831' />
+  <node id='506811099' timestamp='2011-10-15T15:43:57Z' uid='105837' user='maxried' visible='true' version='2' changeset='9564552' lat='51.2383429' lon='7.1602291' />
+  <node id='506811100' timestamp='2011-10-15T15:43:58Z' uid='105837' user='maxried' visible='true' version='2' changeset='9564552' lat='51.2382158' lon='7.1603354' />
+  <node id='506811101' timestamp='2011-10-15T15:43:58Z' uid='105837' user='maxried' visible='true' version='2' changeset='9564552' lat='51.2381982' lon='7.1597876' />
+  <node id='506811103' timestamp='2011-10-15T15:43:58Z' uid='105837' user='maxried' visible='true' version='2' changeset='9564552' lat='51.2380711' lon='7.1598939' />
+  <node id='616996551' timestamp='2019-03-03T19:46:53Z' uid='9494733' user='birkenlachs' visible='true' version='5' changeset='67745700' lat='51.2395742' lon='7.1631859'>
+    <tag k='highway' v='bus_stop' />
+    <tag k='name' v='Rainer-Gruenter-Straße' />
+    <tag k='operator' v='Wuppertaler Stadtwerke (WSW)' />
+    <tag k='shelter' v='no' />
+  </node>
+  <node id='616996555' timestamp='2019-03-03T19:46:53Z' uid='9494733' user='birkenlachs' visible='true' version='5' changeset='67745700' lat='51.2391383' lon='7.162162'>
+    <tag k='highway' v='bus_stop' />
+    <tag k='name' v='Rainer-Gruenter-Straße' />
+    <tag k='operator' v='Wuppertaler Stadtwerke (WSW)' />
+    <tag k='shelter' v='no' />
+    <tag k='wheelchair' v='yes' />
+  </node>
+  <node id='616996558' timestamp='2014-02-22T15:28:53Z' uid='40029' user='janmeese' visible='true' version='5' changeset='20715656' lat='51.2384227' lon='7.1609617'>
+    <tag k='highway' v='bus_stop' />
+    <tag k='name' v='Campus Freudenberg' />
+    <tag k='operator' v='Wuppertaler Stadtwerke (WSW)' />
+    <tag k='shelter' v='no' />
+    <tag k='wheelchair' v='yes' />
+  </node>
+  <node id='616996564' timestamp='2013-09-19T17:30:56Z' uid='290680' user='wheelmap_visitor' visible='true' version='2' changeset='17926072' lat='51.2389335' lon='7.1628338'>
+    <tag k='amenity' v='parking' />
+    <tag k='wheelchair' v='yes' />
+  </node>
+  <node id='616996567' timestamp='2013-09-19T17:30:51Z' uid='290680' user='wheelmap_visitor' visible='true' version='2' changeset='17926072' lat='51.2390644' lon='7.162984'>
+    <tag k='amenity' v='parking' />
+    <tag k='wheelchair' v='yes' />
+  </node>
+  <node id='616996574' timestamp='2018-07-19T19:10:59Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='60881636' lat='51.2395876' lon='7.1645531'>
+    <tag k='amenity' v='parking' />
+  </node>
+  <node id='616996652' timestamp='2011-06-13T15:55:51Z' uid='469881' user='Klaus Warmuth' visible='true' version='2' changeset='8426935' lat='51.2397445' lon='7.1636921' />
+  <node id='616996673' timestamp='2014-03-17T18:04:16Z' uid='503347' user='bilderhobbit' visible='true' version='4' changeset='21159799' lat='51.2393926' lon='7.1641103' />
+  <node id='616996676' timestamp='2011-10-15T15:43:58Z' uid='105837' user='maxried' visible='true' version='3' changeset='9564552' lat='51.2392673' lon='7.1642114' />
+  <node id='616996683' timestamp='2018-07-19T19:10:59Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='60881636' lat='51.2396488' lon='7.1649189' />
+  <node id='616996702' timestamp='2014-10-15T17:17:13Z' uid='53007' user='musekusz' visible='true' version='3' changeset='26100864' lat='51.2396878' lon='7.1602113' />
+  <node id='915595353' timestamp='2019-11-04T19:28:31Z' uid='8457538' user='Recoil16' visible='true' version='5' changeset='76610502' lat='51.2390371' lon='7.1641562' />
+  <node id='1323899280' timestamp='2012-05-04T23:34:52Z' uid='351730' user='rassss' visible='true' version='2' changeset='11503261' lat='51.238934' lon='7.1592863' />
+  <node id='1323899284' timestamp='2011-06-13T15:55:47Z' uid='469881' user='Klaus Warmuth' visible='true' version='1' changeset='8426935' lat='51.239012' lon='7.15902' />
+  <node id='1323899294' timestamp='2012-05-04T23:34:52Z' uid='351730' user='rassss' visible='true' version='2' changeset='11503261' lat='51.2389706' lon='7.1591611' />
+  <node id='1323899297' timestamp='2012-05-04T23:34:52Z' uid='351730' user='rassss' visible='true' version='2' changeset='11503261' lat='51.2386102' lon='7.1590554' />
+  <node id='1323899298' timestamp='2012-05-04T23:34:52Z' uid='351730' user='rassss' visible='true' version='2' changeset='11503261' lat='51.238689' lon='7.1587943' />
+  <node id='1468337598' timestamp='2011-10-15T15:43:49Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2380457' lon='7.1609438' />
+  <node id='1468337600' timestamp='2011-10-15T15:43:49Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2381259' lon='7.1611769' />
+  <node id='1468337603' timestamp='2011-10-15T15:43:49Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2382661' lon='7.1616551' />
+  <node id='1468337606' timestamp='2011-10-15T15:43:50Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2383443' lon='7.1618877' />
+  <node id='1468337609' timestamp='2011-10-15T15:43:50Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2385228' lon='7.1605251' />
+  <node id='1468337610' timestamp='2011-10-15T15:43:50Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.238603' lon='7.1607581' />
+  <node id='1468337614' timestamp='2011-10-15T15:43:50Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2387625' lon='7.1612292' />
+  <node id='1468337615' timestamp='2011-10-15T15:43:50Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2387632' lon='7.1620589' />
+  <node id='1468337617' timestamp='2011-10-15T15:43:50Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2388157' lon='7.1632912' />
+  <node id='1468337618' timestamp='2011-10-15T15:43:50Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2388407' lon='7.1614617' />
+  <node id='1468337620' timestamp='2011-10-15T15:43:50Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2388951' lon='7.1635301' />
+  <node id='1468337621' timestamp='2011-10-15T15:43:50Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2389038' lon='7.161939' />
+  <node id='1468337623' timestamp='2011-10-15T15:43:50Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2389578' lon='7.1626419' />
+  <node id='1468337624' timestamp='2011-10-15T15:43:50Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2390098' lon='7.1636615' />
+  <node id='1468337625' timestamp='2011-10-15T15:43:50Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2390151' lon='7.1637454' />
+  <node id='1468337626' timestamp='2011-10-15T15:43:50Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2390255' lon='7.1635373' />
+  <node id='1468337627' timestamp='2011-10-15T15:43:50Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.239056' lon='7.1640009' />
+  <node id='1468337628' timestamp='2011-10-15T15:43:50Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2390694' lon='7.163821' />
+  <node id='1468337629' timestamp='2011-10-15T15:43:51Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.23908' lon='7.161387' />
+  <node id='1468337631' timestamp='2011-10-15T15:43:51Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2390985' lon='7.1625221' />
+  <node id='1468337632' timestamp='2011-10-15T15:43:51Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2391291' lon='7.1638538' />
+  <node id='1468337633' timestamp='2011-10-15T15:43:51Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2391294' lon='7.1615351' />
+  <node id='1468337634' timestamp='2011-10-15T15:43:51Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2391354' lon='7.1642399' />
+  <node id='1468337636' timestamp='2011-10-15T15:43:51Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2391691' lon='7.1616489' />
+  <node id='1468337637' timestamp='2011-10-15T15:43:51Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2391856' lon='7.1614873' />
+  <node id='1468337638' timestamp='2011-10-15T15:43:51Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2392026' lon='7.1611134' />
+  <node id='1468337639' timestamp='2011-10-15T15:43:51Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2392192' lon='7.1617992' />
+  <node id='1468337641' timestamp='2011-10-15T15:43:51Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.239224' lon='7.1616022' />
+  <node id='1468337642' timestamp='2011-10-15T15:43:51Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2392394' lon='7.1614403' />
+  <node id='1468337643' timestamp='2011-10-15T15:43:51Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2392466' lon='7.1612452' />
+  <node id='1468337644' timestamp='2011-10-15T15:43:51Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2392776' lon='7.1615547' />
+  <node id='1468337645' timestamp='2011-10-15T15:43:51Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2392957' lon='7.1613924' />
+  <node id='1468337647' timestamp='2011-10-15T15:43:51Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.239315' lon='7.1628679' />
+  <node id='1468337648' timestamp='2011-10-15T15:43:51Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2393317' lon='7.1615086' />
+  <node id='1468337651' timestamp='2011-10-15T15:43:51Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2393758' lon='7.160966' />
+  <node id='1468337652' timestamp='2011-10-15T15:43:51Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2393824' lon='7.1616603' />
+  <node id='1468337654' timestamp='2011-10-15T15:43:51Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2393944' lon='7.1631068' />
+  <node id='1468337655' timestamp='2011-10-15T15:43:51Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2394249' lon='7.1617879' />
+  <node id='1468337656' timestamp='2011-10-15T15:43:51Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2394689' lon='7.161245' />
+  <node id='1468337657' timestamp='2011-10-15T15:43:52Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2395049' lon='7.1613612' />
+  <node id='1468337658' timestamp='2011-10-15T15:43:52Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2395553' lon='7.1635776' />
+  <node id='1468337660' timestamp='2011-10-15T15:43:52Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.239598' lon='7.1616405' />
+  <node id='1468337662' timestamp='2011-10-15T15:43:52Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2396347' lon='7.1638166' />
+  <node id='1468337663' timestamp='2011-10-15T15:43:52Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2396785' lon='7.1629685' />
+  <node id='1468337664' timestamp='2011-10-15T15:43:52Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2396979' lon='7.1638137' />
+  <node id='1468337666' timestamp='2011-10-15T15:43:52Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2397738' lon='7.1632476' />
+  <node id='1468337667' timestamp='2011-10-15T15:43:52Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2398075' lon='7.1632182' />
+  <node id='1468337668' timestamp='2011-10-15T15:43:52Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2398094' lon='7.1632864' />
+  <node id='1468337670' timestamp='2011-10-15T15:43:52Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2398259' lon='7.163272' />
+  <node id='1468337671' timestamp='2011-10-15T15:43:52Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2398375' lon='7.1633688' />
+  <node id='1468337672' timestamp='2011-10-15T15:43:52Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2399989' lon='7.1630516' />
+  <node id='1468337673' timestamp='2011-10-15T15:43:52Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.240043' lon='7.1626512' />
+  <node id='1468337674' timestamp='2011-10-15T15:43:52Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2400454' lon='7.1631878' />
+  <node id='1468337675' timestamp='2011-10-15T15:43:52Z' uid='105837' user='maxried' visible='true' version='1' changeset='9564552' lat='51.2401382' lon='7.1629304' />
+  <node id='1662408071' timestamp='2012-03-06T14:15:54Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10889946' lat='51.2383235' lon='7.161441' />
+  <node id='1662408078' timestamp='2012-03-06T14:15:54Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10889946' lat='51.2383907' lon='7.161447' />
+  <node id='1662408084' timestamp='2012-12-03T08:31:46Z' uid='368910' user='korpi' visible='true' version='2' changeset='14135744' lat='51.238431' lon='7.1614173' />
+  <node id='1662408100' timestamp='2012-03-06T14:15:55Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10889946' lat='51.2383085' lon='7.1610983' />
+  <node id='1662408115' timestamp='2012-03-06T14:15:56Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10889946' lat='51.2383605' lon='7.161447' />
+  <node id='1662408122' timestamp='2012-03-06T14:15:56Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10889946' lat='51.2382672' lon='7.1611844' />
+  <node id='1662408125' timestamp='2012-03-06T14:15:56Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10889946' lat='51.238285' lon='7.1611332' />
+  <node id='1662408134' timestamp='2012-03-06T14:15:56Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10889946' lat='51.2382554' lon='7.1613077' />
+  <node id='1662408139' timestamp='2012-03-06T14:15:56Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10889946' lat='51.2382866' lon='7.1613988' />
+  <node id='1662408150' timestamp='2012-03-06T14:15:57Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10889946' lat='51.2382547' lon='7.1612511' />
+  <node id='1664026468' timestamp='2012-03-07T09:03:30Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2379189' lon='7.1594702'>
+    <tag k='highway' v='turning_circle' />
+  </node>
+  <node id='1664041918' timestamp='2012-03-07T09:28:00Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2388097' lon='7.1595743' />
+  <node id='1664041919' timestamp='2012-03-07T09:28:00Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2381153' lon='7.1595775' />
+  <node id='1664041920' timestamp='2012-03-07T09:28:00Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.238433' lon='7.1604199' />
+  <node id='1664041922' timestamp='2012-03-07T09:28:00Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2382127' lon='7.1597223' />
+  <node id='1664041924' timestamp='2012-03-07T09:28:00Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2380717' lon='7.159548' />
+  <node id='1664041928' timestamp='2012-03-07T09:28:00Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2381422' lon='7.159615' />
+  <node id='1664041930' timestamp='2012-03-07T09:28:00Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.238033' lon='7.1595346' />
+  <node id='1664041931' timestamp='2012-03-07T09:28:00Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2385419' lon='7.1591322' />
+  <node id='1664041932' timestamp='2014-03-27T08:43:46Z' uid='2004369' user='Junias' visible='true' version='3' changeset='21340348' lat='51.2379877' lon='7.1594863'>
+    <tag k='barrier' v='cycle_barrier' />
+    <tag k='bicycle' v='yes' />
+    <tag k='foot' v='yes' />
+    <tag k='motor_vehicle' v='no' />
+  </node>
+  <node id='1664041933' timestamp='2012-03-07T09:28:00Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2381875' lon='7.159666' />
+  <node id='1664041944' timestamp='2012-03-07T09:28:01Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.238886' lon='7.1596296' />
+  <node id='1664041945' timestamp='2012-03-07T09:28:01Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2384848' lon='7.1593361' />
+  <node id='1664041946' timestamp='2012-03-07T09:28:01Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.238942' lon='7.1594324' />
+  <node id='1664041947' timestamp='2012-03-07T09:28:01Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2388657' lon='7.1593771' />
+  <node id='1664041948' timestamp='2012-03-07T09:28:01Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2379911' lon='7.1607523' />
+  <node id='1664064172' timestamp='2012-03-07T09:59:38Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2388198' lon='7.1599656' />
+  <node id='1664064174' timestamp='2012-03-07T09:59:38Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.239415' lon='7.1603961' />
+  <node id='1664064176' timestamp='2012-03-08T08:05:49Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='10906453' lat='51.2392485' lon='7.1601477' />
+  <node id='1664064178' timestamp='2012-03-07T09:59:38Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2393143' lon='7.1595372' />
+  <node id='1664064179' timestamp='2012-03-08T08:05:49Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='10906453' lat='51.2394636' lon='7.1589898' />
+  <node id='1664064180' timestamp='2012-03-08T08:05:49Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='10906453' lat='51.2392807' lon='7.1592047' />
+  <node id='1664064181' timestamp='2012-03-07T09:59:38Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2390689' lon='7.1589729' />
+  <node id='1664064182' timestamp='2012-03-08T08:05:49Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='10906453' lat='51.2393303' lon='7.1590939' />
+  <node id='1664064183' timestamp='2012-03-08T08:05:49Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='10906453' lat='51.2393713' lon='7.1596283' />
+  <node id='1664064184' timestamp='2012-03-07T09:59:38Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2391057' lon='7.1605775' />
+  <node id='1664064185' timestamp='2012-03-07T09:59:38Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2385889' lon='7.1601756' />
+  <node id='1664064186' timestamp='2012-03-07T10:19:34Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='10897142' lat='51.2386921' lon='7.1599964' />
+  <node id='1664064187' timestamp='2012-03-08T08:05:49Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='10906453' lat='51.2393662' lon='7.1600221' />
+  <node id='1664064188' timestamp='2012-03-07T09:59:38Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2393933' lon='7.1590357' />
+  <node id='1664064189' timestamp='2012-03-07T09:59:39Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2386309' lon='7.1600871' />
+  <node id='1664064190' timestamp='2012-03-07T09:59:39Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2391783' lon='7.1587058' />
+  <node id='1664064191' timestamp='2012-03-07T09:59:39Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2394017' lon='7.1597491' />
+  <node id='1664064200' timestamp='2012-03-07T09:59:39Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2394017' lon='7.1598967' />
+  <node id='1664064202' timestamp='2012-03-07T09:59:39Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2399944' lon='7.1594916' />
+  <node id='1664064203' timestamp='2012-03-07T09:59:39Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2394603' lon='7.1605299' />
+  <node id='1664064204' timestamp='2012-03-07T10:19:34Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='10897142' lat='51.2385738' lon='7.1602429' />
+  <node id='1664064205' timestamp='2012-03-07T09:59:39Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.239262' lon='7.1607015' />
+  <node id='1664064206' timestamp='2012-03-07T09:59:39Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2392166' lon='7.1605677' />
+  <node id='1664064207' timestamp='2012-03-08T08:05:49Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='10906453' lat='51.2393075' lon='7.160111' />
+  <node id='1664064208' timestamp='2012-03-07T09:59:39Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2395897' lon='7.1590008' />
+  <node id='1664064209' timestamp='2012-03-07T09:59:39Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2387577' lon='7.1599656' />
+  <node id='1664064210' timestamp='2012-03-07T09:59:39Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2387148' lon='7.1587089' />
+  <node id='1664064219' timestamp='2012-03-07T09:59:40Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2391068' lon='7.1588431' />
+  <node id='1664064221' timestamp='2012-03-07T09:59:40Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2392875' lon='7.1594434' />
+  <node id='1664064223' timestamp='2012-03-07T09:59:40Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2391825' lon='7.1601453' />
+  <node id='1664064224' timestamp='2012-03-07T09:59:40Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2390255' lon='7.1586763' />
+  <node id='1664064226' timestamp='2012-03-07T09:59:40Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2388954' lon='7.159987' />
+  <node id='1664064228' timestamp='2012-03-07T09:59:40Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2391128' lon='7.1586763' />
+  <node id='1664064230' timestamp='2012-03-07T09:59:40Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2389037' lon='7.1610037' />
+  <node id='1664064232' timestamp='2012-03-07T09:59:40Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2387528' lon='7.1585791' />
+  <node id='1664064234' timestamp='2012-03-07T09:59:40Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2391719' lon='7.1607797' />
+  <node id='1664064235' timestamp='2012-03-07T09:59:40Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2388375' lon='7.1608015' />
+  <node id='1664095993' timestamp='2012-03-07T10:19:33Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2386769' lon='7.159799' />
+  <node id='1664095994' timestamp='2012-03-07T10:19:33Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.238709' lon='7.1598136' />
+  <node id='1664095995' timestamp='2012-03-07T10:19:33Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2386242' lon='7.1597089' />
+  <node id='1664095996' timestamp='2012-03-07T10:19:33Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2386275' lon='7.159745' />
+  <node id='1664095997' timestamp='2012-03-07T10:19:33Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2386401' lon='7.1597724' />
+  <node id='1664095998' timestamp='2012-03-07T10:42:31Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='10897142' lat='51.2387518' lon='7.1598929' />
+  <node id='1664096008' timestamp='2012-03-07T10:19:34Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2386745' lon='7.1594809' />
+  <node id='1664096010' timestamp='2012-03-07T10:19:34Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2387415' lon='7.1598566' />
+  <node id='1664096012' timestamp='2012-03-07T10:19:34Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2386292' lon='7.1596633' />
+  <node id='1664096013' timestamp='2012-03-07T10:19:34Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2387258' lon='7.1598246' />
+  <node id='1664123116' timestamp='2012-03-07T10:47:33Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2395128' lon='7.1607117' />
+  <node id='1664123117' timestamp='2012-03-07T10:47:33Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2394961' lon='7.1628756' />
+  <node id='1664123118' timestamp='2012-03-07T10:47:33Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2393418' lon='7.1608548' />
+  <node id='1664123119' timestamp='2012-03-07T10:47:33Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2392028' lon='7.1619814' />
+  <node id='1664123120' timestamp='2012-03-07T10:47:33Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2396018' lon='7.1616475' />
+  <node id='1664123121' timestamp='2012-03-07T10:47:33Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.240066' lon='7.1623988' />
+  <node id='1664128195' timestamp='2012-03-07T10:51:26Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2389046' lon='7.1631365' />
+  <node id='1664128196' timestamp='2012-03-07T10:51:26Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142' lat='51.2383958' lon='7.162029' />
+  <node id='1665544601' timestamp='2012-03-08T08:05:49Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10906453' lat='51.2394544' lon='7.1589203' />
+  <node id='1665544606' timestamp='2012-03-08T08:05:49Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10906453' lat='51.2392688' lon='7.1593302' />
+  <node id='1665544607' timestamp='2012-03-08T08:05:49Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10906453' lat='51.2392313' lon='7.1593118' />
+  <node id='1665544608' timestamp='2012-03-08T08:05:49Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10906453' lat='51.2395254' lon='7.1589818' />
+  <node id='1665556699' timestamp='2012-03-08T08:18:30Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10906453' lat='51.2400004' lon='7.1639351' />
+  <node id='1665556700' timestamp='2012-03-08T08:18:30Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10906453' lat='51.2400011' lon='7.1636652' />
+  <node id='1665556701' timestamp='2018-03-04T12:20:55Z' uid='10927' user='Skywave' visible='true' version='3' changeset='56869286' lat='51.2402827' lon='7.1641421'>
+    <tag k='barrier' v='lift_gate' />
+    <tag k='bus' v='yes' />
+    <tag k='emergency' v='yes' />
+  </node>
+  <node id='1665556702' timestamp='2012-03-08T08:18:30Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10906453' lat='51.2391614' lon='7.1607817' />
+  <node id='1665556703' timestamp='2012-03-08T08:18:30Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10906453' lat='51.2401959' lon='7.1636733' />
+  <node id='1665556704' timestamp='2012-03-08T08:18:30Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10906453' lat='51.240283' lon='7.1637344' />
+  <node id='1665556705' timestamp='2012-03-08T08:18:30Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10906453' lat='51.240125' lon='7.1639309' />
+  <node id='1665556706' timestamp='2012-03-08T08:18:30Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10906453' lat='51.2391917' lon='7.1608676' />
+  <node id='1665556708' timestamp='2012-03-08T08:18:30Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10906453' lat='51.2399926' lon='7.1638072' />
+  <node id='1665556709' timestamp='2012-03-08T08:18:30Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10906453' lat='51.240033' lon='7.1635713' />
+  <node id='1665556710' timestamp='2012-03-08T08:18:30Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10906453' lat='51.2401555' lon='7.1640754' />
+  <node id='1665556711' timestamp='2012-03-08T08:18:31Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10906453' lat='51.2390553' lon='7.1608771' />
+  <node id='1665556712' timestamp='2012-03-08T08:18:31Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10906453' lat='51.2402122' lon='7.1639921' />
+  <node id='1665556713' timestamp='2012-03-08T08:18:31Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10906453' lat='51.2390842' lon='7.160956' />
+  <node id='1740886211' timestamp='2012-05-04T23:27:30Z' uid='351730' user='rassss' visible='true' version='1' changeset='11503229' lat='51.2395025' lon='7.1606341' />
+  <node id='1740886213' timestamp='2012-05-04T23:27:30Z' uid='351730' user='rassss' visible='true' version='1' changeset='11503229' lat='51.2388452' lon='7.1611829' />
+  <node id='1740887124' timestamp='2012-05-04T23:29:03Z' uid='351730' user='rassss' visible='true' version='1' changeset='11503235' lat='51.2392338' lon='7.1605124' />
+  <node id='1740887125' timestamp='2012-05-04T23:29:03Z' uid='351730' user='rassss' visible='true' version='1' changeset='11503235' lat='51.2392607' lon='7.1602508' />
+  <node id='1740887126' timestamp='2012-05-04T23:29:03Z' uid='351730' user='rassss' visible='true' version='1' changeset='11503235' lat='51.2391786' lon='7.1605906' />
+  <node id='1740887127' timestamp='2012-05-04T23:29:03Z' uid='351730' user='rassss' visible='true' version='1' changeset='11503235' lat='51.2391861' lon='7.1607031' />
+  <node id='1740887128' timestamp='2012-05-04T23:29:03Z' uid='351730' user='rassss' visible='true' version='1' changeset='11503235' lat='51.2392724' lon='7.1603796' />
+  <node id='1740887129' timestamp='2012-05-04T23:29:03Z' uid='351730' user='rassss' visible='true' version='1' changeset='11503235' lat='51.2392351' lon='7.1608573' />
+  <node id='1740887425' timestamp='2012-05-04T23:30:33Z' uid='351730' user='rassss' visible='true' version='1' changeset='11503243' lat='51.239531' lon='7.1596313' />
+  <node id='1740887426' timestamp='2012-05-04T23:30:33Z' uid='351730' user='rassss' visible='true' version='1' changeset='11503243' lat='51.2393876' lon='7.1596929' />
+  <node id='1740887428' timestamp='2012-05-04T23:30:33Z' uid='351730' user='rassss' visible='true' version='1' changeset='11503243' lat='51.2398752' lon='7.1600898' />
+  <node id='1740887802' timestamp='2012-05-04T23:31:47Z' uid='351730' user='rassss' visible='true' version='1' changeset='11503248' lat='51.2391784' lon='7.1612109' />
+  <node id='1740887804' timestamp='2014-03-17T18:06:25Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='21159836' lat='51.2390272' lon='7.1613388' />
+  <node id='1740887805' timestamp='2012-05-04T23:31:47Z' uid='351730' user='rassss' visible='true' version='1' changeset='11503248' lat='51.2393656' lon='7.1617395' />
+  <node id='1740887806' timestamp='2012-05-04T23:31:47Z' uid='351730' user='rassss' visible='true' version='1' changeset='11503248' lat='51.2392069' lon='7.1618654' />
+  <node id='1740887808' timestamp='2014-03-17T18:06:25Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='21159836' lat='51.2391189' lon='7.1616267' />
+  <node id='1740887810' timestamp='2014-03-17T18:06:25Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='21159836' lat='51.2390235' lon='7.1617157' />
+  <node id='2106010005' timestamp='2013-01-11T17:23:21Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='14612671' lat='51.2394932' lon='7.1634614'>
+    <tag k='amenity' v='bicycle_parking' />
+  </node>
+  <node id='2106010006' timestamp='2013-01-11T17:23:21Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='14612671' lat='51.2396796' lon='7.1627024'>
+    <tag k='amenity' v='bicycle_parking' />
+  </node>
+  <node id='2106010010' timestamp='2013-01-11T17:23:21Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='14612671' lat='51.2392799' lon='7.1627077'>
+    <tag k='amenity' v='bicycle_parking' />
+  </node>
+  <node id='2269939141' timestamp='2014-03-17T18:04:15Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='21159799' lat='51.2397544' lon='7.1645471' />
+  <node id='2269939146' timestamp='2014-03-17T18:04:15Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='21159799' lat='51.2399969' lon='7.1645403' />
+  <node id='2269939148' timestamp='2014-03-17T18:04:15Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='21159799' lat='51.2399915' lon='7.1643391' />
+  <node id='2269939149' timestamp='2013-04-16T20:16:19Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='15754990' lat='51.2393682' lon='7.1646737' />
+  <node id='2269939150' timestamp='2014-03-17T18:04:15Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='21159799' lat='51.2398289' lon='7.1643518' />
+  <node id='2269939151' timestamp='2013-04-16T20:16:19Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='15754990' lat='51.2399576' lon='7.1600819' />
+  <node id='2269939152' timestamp='2013-04-16T20:16:19Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='15754990' lat='51.240102' lon='7.1598217' />
+  <node id='2269939153' timestamp='2013-04-16T20:16:19Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='15754990' lat='51.2396402' lon='7.1650331' />
+  <node id='2269939154' timestamp='2013-04-16T20:16:19Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='15754990' lat='51.2396671' lon='7.1592182' />
+  <node id='2269939155' timestamp='2014-03-17T18:04:15Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='21159799' lat='51.2398165' lon='7.1645428' />
+  <node id='2269939156' timestamp='2014-03-17T18:04:15Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='21159799' lat='51.2399467' lon='7.1648104' />
+  <node id='2269939157' timestamp='2014-03-17T18:04:16Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='21159799' lat='51.2397488' lon='7.1641506' />
+  <node id='2269939158' timestamp='2013-04-16T20:16:20Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='15754990' lat='51.2395394' lon='7.1594811' />
+  <node id='2269939159' timestamp='2014-03-17T18:04:16Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='21159799' lat='51.2398239' lon='7.1648188' />
+  <node id='2269939160' timestamp='2014-03-17T18:04:16Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='21159799' lat='51.2399395' lon='7.1645443' />
+  <node id='2269939161' timestamp='2014-03-17T18:04:16Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='21159799' lat='51.2398262' lon='7.1641481' />
+  <node id='2269939163' timestamp='2013-04-16T20:16:20Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='15754990' lat='51.2395255' lon='7.1651405' />
+  <node id='2269939164' timestamp='2013-04-16T20:16:20Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='15754990' lat='51.2394869' lon='7.1645746' />
+  <node id='2271132044' timestamp='2013-04-17T21:16:33Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='15767440' lat='51.2382566' lon='7.1587832' />
+  <node id='2271132046' timestamp='2019-11-04T19:28:31Z' uid='8457538' user='Recoil16' visible='true' version='3' changeset='76610502' lat='51.2390682' lon='7.1642677' />
+  <node id='2271132048' timestamp='2013-04-17T21:16:33Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='15767440' lat='51.2388342' lon='7.1584828' />
+  <node id='2271132050' timestamp='2013-04-17T21:16:33Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='15767440' lat='51.2384238' lon='7.1594404' />
+  <node id='2271132051' timestamp='2014-10-15T17:17:13Z' uid='53007' user='musekusz' visible='true' version='2' changeset='26100864' lat='51.2395906' lon='7.1607625' />
+  <node id='2271132053' timestamp='2013-04-17T21:16:34Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='15767440' lat='51.2401239' lon='7.159899' />
+  <node id='2271132055' timestamp='2013-04-17T21:16:34Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='15767440' lat='51.2399375' lon='7.1648831' />
+  <node id='2271132056' timestamp='2013-04-17T21:16:34Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='15767440' lat='51.2392641' lon='7.1585794' />
+  <node id='2271132058' timestamp='2013-04-17T21:16:34Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='15767440' lat='51.2401037' lon='7.1622486' />
+  <node id='2271132059' timestamp='2013-04-17T21:16:34Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='15767440' lat='51.2384305' lon='7.162305' />
+  <node id='2271132061' timestamp='2013-04-17T21:16:34Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='15767440' lat='51.2401642' lon='7.1595557' />
+  <node id='2271132062' timestamp='2013-04-17T21:16:34Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='15767440' lat='51.2398149' lon='7.1590407' />
+  <node id='2271132064' timestamp='2013-04-17T21:16:34Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='15767440' lat='51.2406203' lon='7.1626161' />
+  <node id='2271132066' timestamp='2013-04-17T21:16:34Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='15767440' lat='51.2402102' lon='7.1643772' />
+  <node id='2271132067' timestamp='2013-04-17T21:16:34Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='15767440' lat='51.2377326' lon='7.1600707' />
+  <node id='2271132071' timestamp='2015-01-04T18:03:51Z' uid='111529' user='ReinerMeyer' visible='true' version='2' changeset='27916033' lat='51.2395233' lon='7.1652904' />
+  <node id='2271132072' timestamp='2013-04-17T21:16:34Z' uid='466903' user='Medevac71' visible='true' version='1' changeset='15767440' lat='51.2403455' lon='7.1638794' />
+  <node id='2423048739' timestamp='2014-09-07T12:56:59Z' uid='368910' user='korpi' visible='true' version='2' changeset='25286210' lat='51.2394017' lon='7.1627045'>
+    <tag k='barrier' v='lift_gate' />
+    <tag k='emergency' v='yes' />
+  </node>
+  <node id='2423048742' timestamp='2019-05-23T21:57:06Z' uid='8457538' user='Recoil16' visible='true' version='2' changeset='70567153' lat='51.2395308' lon='7.1626375' />
+  <node id='2723869855' timestamp='2014-03-17T18:04:12Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='21159799' lat='51.2394515' lon='7.1642512' />
+  <node id='2723869862' timestamp='2014-03-17T18:04:12Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='21159799' lat='51.2397514' lon='7.1643543' />
+  <node id='3131574302' timestamp='2014-10-15T17:17:11Z' uid='53007' user='musekusz' visible='true' version='1' changeset='26100864' lat='51.2394117' lon='7.1602566' />
+  <node id='3131574303' timestamp='2014-10-15T17:17:11Z' uid='53007' user='musekusz' visible='true' version='1' changeset='26100864' lat='51.2396214' lon='7.1598697' />
+  <node id='3131574308' timestamp='2014-10-15T17:17:12Z' uid='53007' user='musekusz' visible='true' version='1' changeset='26100864' lat='51.2399043' lon='7.1602666' />
+  <node id='4773334499' timestamp='2018-07-19T18:54:36Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='60881285' lat='51.2385273' lon='7.1599704' />
+  <node id='4773334500' timestamp='2018-07-19T18:54:36Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='60881285' lat='51.2384178' lon='7.1600646' />
+  <node id='4773334501' timestamp='2018-07-19T18:54:36Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='60881285' lat='51.2381916' lon='7.1593863' />
+  <node id='4773334502' timestamp='2018-07-19T18:54:36Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='60881285' lat='51.2382998' lon='7.1592932' />
+  <node id='4773334503' timestamp='2018-07-19T18:54:36Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='60881285' lat='51.2383146' lon='7.1597584' />
+  <node id='4773334504' timestamp='2018-07-19T18:54:36Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='60881285' lat='51.2382963' lon='7.1596967' />
+  <node id='4773334505' timestamp='2018-07-19T18:54:36Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='60881285' lat='51.2384056' lon='7.159607' />
+  <node id='4773334506' timestamp='2018-07-19T18:54:36Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='60881285' lat='51.2384236' lon='7.1596629' />
+  <node id='4773334507' timestamp='2018-07-19T18:54:36Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='60881285' lat='51.2383398' lon='7.1597367' />
+  <node id='4773334508' timestamp='2018-07-19T18:54:36Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='60881285' lat='51.2383196' lon='7.1596767' />
+  <node id='4773334509' timestamp='2018-07-19T18:54:36Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='60881285' lat='51.2383892' lon='7.1596212' />
+  <node id='4773334510' timestamp='2018-07-19T18:54:36Z' uid='503347' user='bilderhobbit' visible='true' version='2' changeset='60881285' lat='51.2384078' lon='7.1596765' />
+  <node id='5771490106' timestamp='2018-07-19T18:54:36Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881285' lat='51.2382346' lon='7.1597815' />
+  <node id='5771523494' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2398123' lon='7.163263' />
+  <node id='5771523495' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2397426' lon='7.16333' />
+  <node id='5771523496' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2397476' lon='7.1633488' />
+  <node id='5771523497' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2396265' lon='7.1634723' />
+  <node id='5771523498' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2396737' lon='7.1629317' />
+  <node id='5771523499' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2394896' lon='7.163103' />
+  <node id='5771523500' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2398316' lon='7.1627775' />
+  <node id='5771523501' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2397849' lon='7.162634' />
+  <node id='5771523502' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2394974' lon='7.1644941' />
+  <node id='5771523503' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2395066' lon='7.1643721' />
+  <node id='5771523504' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2394991' lon='7.1643077' />
+  <node id='5771523505' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2398358' lon='7.1641199' />
+  <node id='5771523506' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2393824' lon='7.1643452' />
+  <node id='5771523507' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2393681' lon='7.1643895' />
+  <node id='5771523508' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2393639' lon='7.1644364' />
+  <node id='5771523509' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2393681' lon='7.164478' />
+  <node id='5771523510' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2394025' lon='7.1646' />
+  <node id='5771523511' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2397283' lon='7.1644002' />
+  <node id='5771523512' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2396838' lon='7.1644016' />
+  <node id='5771523513' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2399197' lon='7.1643023' />
+  <node id='5771523514' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2398736' lon='7.1641467' />
+  <node id='5771523515' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2397921' lon='7.1641092' />
+  <node id='5771523516' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2396712' lon='7.1641213' />
+  <node id='5771523517' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636' lat='51.2395612' lon='7.1641561' />
+  <node id='6101756130' timestamp='2018-11-29T04:40:36Z' uid='1214027' user='axelr' visible='true' version='1' changeset='64995970' lat='51.238463' lon='7.1609224' />
+  <node id='6101756131' timestamp='2018-11-29T04:40:36Z' uid='1214027' user='axelr' visible='true' version='1' changeset='64995970' lat='51.2383619' lon='7.1610539'>
+    <tag k='bus' v='yes' />
+    <tag k='name' v='Campus Freudenberg' />
+    <tag k='public_transport' v='stop_position' />
+  </node>
+  <node id='6101756132' timestamp='2018-11-29T04:40:36Z' uid='1214027' user='axelr' visible='true' version='1' changeset='64995970' lat='51.2383342' lon='7.1610306' />
+  <node id='6314808939' timestamp='2019-03-03T19:43:31Z' uid='9494733' user='birkenlachs' visible='true' version='1' changeset='67745619' lat='51.2396636' lon='7.1600617' />
+  <node id='6314808940' timestamp='2019-03-03T19:43:31Z' uid='9494733' user='birkenlachs' visible='true' version='1' changeset='67745619' lat='51.2396873' lon='7.1600025' />
+  <node id='6314808941' timestamp='2019-03-03T19:43:31Z' uid='9494733' user='birkenlachs' visible='true' version='1' changeset='67745619' lat='51.239687' lon='7.1598391' />
+  <node id='6314817736' timestamp='2019-03-03T19:46:53Z' uid='9494733' user='birkenlachs' visible='true' version='1' changeset='67745700' lat='51.2391051' lon='7.1620662' />
+  <node id='6314817737' timestamp='2019-03-03T19:46:53Z' uid='9494733' user='birkenlachs' visible='true' version='1' changeset='67745700' lat='51.2391584' lon='7.1622256' />
+  <node id='6314817738' timestamp='2019-03-03T19:46:53Z' uid='9494733' user='birkenlachs' visible='true' version='1' changeset='67745700' lat='51.2395206' lon='7.1630426' />
+  <node id='6314817739' timestamp='2019-03-03T19:46:53Z' uid='9494733' user='birkenlachs' visible='true' version='1' changeset='67745700' lat='51.2395967' lon='7.1632461' />
+  <node id='6496384788' timestamp='2019-05-23T21:57:05Z' uid='8457538' user='Recoil16' visible='true' version='1' changeset='70567153' lat='51.2394197' lon='7.1627044'>
+    <tag k='direction' v='backward' />
+    <tag k='highway' v='stop' />
+  </node>
+  <node id='6496384789' timestamp='2019-05-23T21:57:05Z' uid='8457538' user='Recoil16' visible='true' version='1' changeset='70567153' lat='51.2392984' lon='7.1620338' />
+  <node id='6496384790' timestamp='2019-05-23T21:57:05Z' uid='8457538' user='Recoil16' visible='true' version='1' changeset='70567153' lat='51.239408' lon='7.1619447' />
+  <node id='6496384791' timestamp='2019-05-23T21:57:05Z' uid='8457538' user='Recoil16' visible='true' version='1' changeset='70567153' lat='51.2394235' lon='7.1619044' />
+  <node id='6496384792' timestamp='2019-05-23T21:57:05Z' uid='8457538' user='Recoil16' visible='true' version='1' changeset='70567153' lat='51.2397172' lon='7.1616595' />
+  <node id='6496384793' timestamp='2019-05-23T21:57:05Z' uid='8457538' user='Recoil16' visible='true' version='1' changeset='70567153' lat='51.2394546' lon='7.1609603' />
+  <node id='6496384794' timestamp='2019-05-23T21:57:05Z' uid='8457538' user='Recoil16' visible='true' version='1' changeset='70567153' lat='51.2396872' lon='7.1616335' />
+  <node id='6496384795' timestamp='2019-05-23T21:57:05Z' uid='8457538' user='Recoil16' visible='true' version='1' changeset='70567153' lat='51.2397438' lon='7.1616825' />
+  <node id='6496384796' timestamp='2019-05-23T21:57:05Z' uid='8457538' user='Recoil16' visible='true' version='1' changeset='70567153' lat='51.2394998' lon='7.1625456' />
+  <node id='6496384797' timestamp='2019-05-23T21:57:05Z' uid='8457538' user='Recoil16' visible='true' version='1' changeset='70567153' lat='51.2399027' lon='7.1622112' />
+  <node id='6496384798' timestamp='2019-05-23T21:57:05Z' uid='8457538' user='Recoil16' visible='true' version='1' changeset='70567153' lat='51.2394321' lon='7.1623447' />
+  <node id='6496384799' timestamp='2019-05-23T21:57:05Z' uid='8457538' user='Recoil16' visible='true' version='1' changeset='70567153' lat='51.2398387' lon='7.1619648' />
+  <node id='6496384800' timestamp='2019-05-23T21:57:05Z' uid='8457538' user='Recoil16' visible='true' version='1' changeset='70567153' lat='51.2398358' lon='7.1620104' />
+  <node id='6496384801' timestamp='2019-05-23T21:57:05Z' uid='8457538' user='Recoil16' visible='true' version='1' changeset='70567153' lat='51.2399437' lon='7.1623342' />
+  <node id='6496384802' timestamp='2019-05-23T21:57:05Z' uid='8457538' user='Recoil16' visible='true' version='1' changeset='70567153' lat='51.2399449' lon='7.1623966' />
+  <node id='6496384803' timestamp='2019-05-23T21:57:05Z' uid='8457538' user='Recoil16' visible='true' version='1' changeset='70567153' lat='51.2399374' lon='7.1624342' />
+  <node id='6496384804' timestamp='2019-05-23T21:57:05Z' uid='8457538' user='Recoil16' visible='true' version='1' changeset='70567153' lat='51.239641' lon='7.1626715' />
+  <node id='6496384805' timestamp='2019-05-23T21:57:05Z' uid='8457538' user='Recoil16' visible='true' version='1' changeset='70567153' lat='51.2395553' lon='7.1627104' />
+  <node id='6496384806' timestamp='2019-05-23T21:57:05Z' uid='8457538' user='Recoil16' visible='true' version='1' changeset='70567153' lat='51.2393656' lon='7.1621472' />
+  <node id='6496384807' timestamp='2019-05-23T21:57:05Z' uid='8457538' user='Recoil16' visible='true' version='1' changeset='70567153' lat='51.2397799' lon='7.1617911' />
+  <way id='41436459' timestamp='2017-04-03T17:42:36Z' uid='3022894' user='Lukas458' visible='true' version='6' changeset='47419818'>
+    <nd ref='506811099' />
+    <nd ref='506811101' />
+    <nd ref='506811103' />
+    <nd ref='506811100' />
+    <nd ref='506811099' />
+    <tag k='addr:city' v='Wuppertal' />
+    <tag k='addr:housename' v='FM' />
+    <tag k='addr:housenumber' v='40' />
+    <tag k='addr:postcode' v='42119' />
+    <tag k='addr:street' v='Rainer-Gruenter-Straße' />
+    <tag k='building' v='university' />
+    <tag k='operator' v='Bergische Universität Wuppertal' />
+  </way>
+  <way id='48575334' timestamp='2012-09-02T13:11:37Z' uid='852359' user='nthtry' visible='true' version='3' changeset='12954033'>
+    <nd ref='616996652' />
+    <nd ref='1468337664' />
+    <nd ref='616996673' />
+    <nd ref='616996676' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='20' />
+  </way>
+  <way id='48575335' timestamp='2018-07-19T19:10:59Z' uid='503347' user='bilderhobbit' visible='true' version='4' changeset='60881636'>
+    <nd ref='616996673' />
+    <nd ref='2723869855' />
+    <nd ref='5771523504' />
+    <nd ref='5771523503' />
+    <nd ref='5771523502' />
+    <nd ref='616996683' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='20' />
+  </way>
+  <way id='117530803' timestamp='2012-09-02T13:11:37Z' uid='852359' user='nthtry' visible='true' version='4' changeset='12954033'>
+    <nd ref='1323899294' />
+    <nd ref='1323899280' />
+    <nd ref='1323899297' />
+    <nd ref='1323899298' />
+    <nd ref='1323899284' />
+    <nd ref='1323899294' />
+    <nd ref='1665544607' />
+    <nd ref='1665544606' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='20' />
+  </way>
+  <way id='133389920' timestamp='2019-05-23T21:57:06Z' uid='8457538' user='Recoil16' visible='true' version='10' changeset='70567153'>
+    <nd ref='298512694' />
+    <nd ref='274402988' />
+    <nd ref='5771523497' />
+    <nd ref='616996652' />
+    <nd ref='274402987' />
+    <nd ref='1665556699' />
+    <nd ref='1665556710' />
+    <nd ref='1665556701' />
+    <nd ref='274402983' />
+    <tag k='foot' v='yes' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='30' />
+    <tag k='name' v='Rainer-Gruenter-Straße' />
+    <tag k='psv' v='yes' />
+    <tag k='source:maxspeed' v='DE:zone30' />
+  </way>
+  <way id='133389922' timestamp='2019-05-23T21:57:06Z' uid='8457538' user='Recoil16' visible='true' version='8' changeset='70567153'>
+    <nd ref='274402996' />
+    <nd ref='298514597' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='30' />
+    <tag k='name' v='Rainer-Gruenter-Straße' />
+    <tag k='source:maxspeed' v='DE:zone30' />
+  </way>
+  <way id='133389925' timestamp='2019-05-23T21:57:06Z' uid='8457538' user='Recoil16' visible='true' version='3' changeset='70567153'>
+    <nd ref='298512694' />
+    <nd ref='1468337626' />
+    <nd ref='1468337624' />
+    <nd ref='1468337625' />
+    <nd ref='1468337628' />
+    <nd ref='1468337632' />
+    <nd ref='274402988' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='30' />
+    <tag k='oneway' v='yes' />
+    <tag k='source:maxspeed' v='DE:zone30' />
+  </way>
+  <way id='133389926' timestamp='2017-04-03T17:42:37Z' uid='3022894' user='Lukas458' visible='true' version='3' changeset='47419818'>
+    <nd ref='1468337629' />
+    <nd ref='1468337633' />
+    <nd ref='1468337637' />
+    <nd ref='1468337641' />
+    <nd ref='1468337636' />
+    <nd ref='1468337639' />
+    <nd ref='1468337652' />
+    <nd ref='1468337648' />
+    <nd ref='1468337644' />
+    <nd ref='1468337642' />
+    <nd ref='1468337645' />
+    <nd ref='1468337643' />
+    <nd ref='1468337629' />
+    <tag k='addr:city' v='Wuppertal' />
+    <tag k='addr:country' v='DE' />
+    <tag k='addr:housenumber' v='20' />
+    <tag k='addr:postcode' v='42119' />
+    <tag k='addr:street' v='Rainer-Gruenter-Straße' />
+    <tag k='building' v='university' />
+  </way>
+  <way id='133389927' timestamp='2017-04-03T17:42:36Z' uid='3022894' user='Lukas458' visible='true' version='7' changeset='47419818'>
+    <nd ref='1468337614' />
+    <nd ref='1468337618' />
+    <nd ref='1468337606' />
+    <nd ref='1468337603' />
+    <nd ref='1468337614' />
+    <tag k='addr:city' v='Wuppertal' />
+    <tag k='addr:housename' v='FE' />
+    <tag k='addr:housenumber' v='21' />
+    <tag k='addr:postcode' v='42119' />
+    <tag k='addr:street' v='Rainer-Gruenter-Straße' />
+    <tag k='building' v='university' />
+    <tag k='operator' v='Bergische Universität Wuppertal' />
+    <tag k='wheelchair' v='yes' />
+    <tag k='wheelchair:description' v='Fahrtstuhl zu allen Etagen, am Eingang ist eine Treppe.Beim Hausmeister bekommt man einen Schlüssel für den Treppenlift.' />
+  </way>
+  <way id='133389929' timestamp='2017-04-03T17:42:37Z' uid='3022894' user='Lukas458' visible='true' version='6' changeset='47419818'>
+    <nd ref='1468337647' />
+    <nd ref='1468337654' />
+    <nd ref='1468337620' />
+    <nd ref='1468337617' />
+    <nd ref='1468337647' />
+    <tag k='addr:city' v='Wuppertal' />
+    <tag k='addr:housename' v='FD' />
+    <tag k='addr:housenumber' v='21' />
+    <tag k='addr:postcode' v='42119' />
+    <tag k='addr:street' v='Rainer-Gruenter-Straße' />
+    <tag k='building' v='university' />
+    <tag k='operator' v='Bergische Universität Wuppertal' />
+    <tag k='wheelchair' v='yes' />
+    <tag k='wheelchair:description' v='Fahrstuhl zu allen Etagen, am Eingang ist eine Treppe.Beim Hausmeister bekommt man einen Schlüssel für den Treppenlift.' />
+  </way>
+  <way id='133389932' timestamp='2017-04-03T17:42:36Z' uid='3022894' user='Lukas458' visible='true' version='6' changeset='47419818'>
+    <nd ref='1468337621' />
+    <nd ref='1468337631' />
+    <nd ref='1468337623' />
+    <nd ref='1468337615' />
+    <nd ref='1468337621' />
+    <tag k='addr:city' v='Wuppertal' />
+    <tag k='addr:housename' v='FME' />
+    <tag k='addr:housenumber' v='21' />
+    <tag k='addr:postcode' v='42119' />
+    <tag k='addr:street' v='Rainer-Gruenter-Straße' />
+    <tag k='building' v='university' />
+    <tag k='operator' v='Bergische Universität Wuppertal' />
+    <tag k='wheelchair' v='yes' />
+    <tag k='wheelchair:description' v='über einen Fahrstuhl sind alle Etagen erreichbar' />
+  </way>
+  <way id='133389933' timestamp='2017-04-03T17:42:37Z' uid='3022894' user='Lukas458' visible='true' version='6' changeset='47419818'>
+    <nd ref='1468337658' />
+    <nd ref='1468337662' />
+    <nd ref='1468337634' />
+    <nd ref='1468337627' />
+    <nd ref='1468337658' />
+    <tag k='addr:city' v='Wuppertal' />
+    <tag k='addr:housename' v='FC' />
+    <tag k='addr:housenumber' v='21' />
+    <tag k='addr:postcode' v='42119' />
+    <tag k='addr:street' v='Rainer-Gruenter-Straße' />
+    <tag k='building' v='university' />
+    <tag k='operator' v='Bergische Universität Wuppertal' />
+    <tag k='wheelchair' v='yes' />
+    <tag k='wheelchair:description' v='Fahrstuhl zu allen Etagen, am Eingang ist eine Treppe.Beim Hausmeister bekommt man einen Schlüssel für den Treppenlift.' />
+  </way>
+  <way id='133389936' timestamp='2017-05-01T16:51:42Z' uid='3022894' user='Lukas458' visible='true' version='7' changeset='48312555'>
+    <nd ref='1468337609' />
+    <nd ref='1468337610' />
+    <nd ref='1468337600' />
+    <nd ref='1468337598' />
+    <nd ref='1468337609' />
+    <tag k='addr:city' v='Wuppertal' />
+    <tag k='addr:housename' v='FG' />
+    <tag k='addr:housenumber' v='21' />
+    <tag k='addr:postcode' v='42119' />
+    <tag k='addr:street' v='Rainer-Gruenter-Straße' />
+    <tag k='building' v='university' />
+    <tag k='operator' v='Bergische Universität Wuppertal' />
+    <tag k='wheelchair' v='yes' />
+    <tag k='wheelchair:description' v='Fahrstuhl zu allen Etagen, am Eingang ist eine Treppe.Beim Hausmeister bekommt man einen Schlüssel für den Treppenlift.' />
+  </way>
+  <way id='133389937' timestamp='2017-04-03T17:42:37Z' uid='3022894' user='Lukas458' visible='true' version='4' changeset='47419818'>
+    <nd ref='1468337638' />
+    <nd ref='1468337643' />
+    <nd ref='1468337645' />
+    <nd ref='1468337656' />
+    <nd ref='1468337651' />
+    <nd ref='1468337638' />
+    <tag k='addr:housename' v='FO' />
+    <tag k='building' v='university' />
+  </way>
+  <way id='133389939' timestamp='2017-04-03T17:42:37Z' uid='3022894' user='Lukas458' visible='true' version='4' changeset='47419818'>
+    <nd ref='1468337648' />
+    <nd ref='1468337652' />
+    <nd ref='1468337655' />
+    <nd ref='1468337660' />
+    <nd ref='1468337657' />
+    <nd ref='1468337648' />
+    <tag k='addr:housename' v='FO' />
+    <tag k='building' v='university' />
+  </way>
+  <way id='133389940' timestamp='2017-04-03T17:42:37Z' uid='3022894' user='Lukas458' visible='true' version='6' changeset='47419818'>
+    <nd ref='1468337673' />
+    <nd ref='1468337675' />
+    <nd ref='1468337672' />
+    <nd ref='1468337667' />
+    <nd ref='1468337666' />
+    <nd ref='1468337663' />
+    <nd ref='1468337673' />
+    <tag k='addr:housename' v='FZH' />
+    <tag k='building' v='university' />
+    <tag k='operator' v='Bergische Universität Wuppertal' />
+    <tag k='wheelchair' v='yes' />
+    <tag k='wheelchair:description' v='Rollstuhlgerechte Toiletten' />
+  </way>
+  <way id='133389942' timestamp='2017-04-03T17:42:37Z' uid='3022894' user='Lukas458' visible='true' version='2' changeset='47419818'>
+    <nd ref='1468337672' />
+    <nd ref='1468337674' />
+    <nd ref='1468337671' />
+    <nd ref='1468337668' />
+    <nd ref='1468337670' />
+    <nd ref='1468337667' />
+    <nd ref='1468337672' />
+    <tag k='building' v='university' />
+  </way>
+  <way id='153589078' timestamp='2019-05-23T21:57:06Z' uid='8457538' user='Recoil16' visible='true' version='9' changeset='70567153'>
+    <nd ref='298514597' />
+    <nd ref='6101756131' />
+    <tag k='foot' v='yes' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='30' />
+    <tag k='psv' v='yes' />
+    <tag k='source:maxspeed' v='DE:zone30' />
+  </way>
+  <way id='153589081' timestamp='2019-05-23T21:57:06Z' uid='8457538' user='Recoil16' visible='true' version='10' changeset='70567153'>
+    <nd ref='6101756131' />
+    <nd ref='1662408100' />
+    <nd ref='1662408125' />
+    <nd ref='1662408122' />
+    <nd ref='1662408150' />
+    <nd ref='1662408134' />
+    <nd ref='298514587' />
+    <nd ref='1662408139' />
+    <nd ref='1662408071' />
+    <nd ref='1662408115' />
+    <nd ref='1662408078' />
+    <nd ref='1662408084' />
+    <nd ref='298514585' />
+    <tag k='foot' v='yes' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='30' />
+    <tag k='psv' v='yes' />
+    <tag k='source:maxspeed' v='DE:zone30' />
+  </way>
+  <way id='153759143' timestamp='2017-04-03T17:42:36Z' uid='3022894' user='Lukas458' visible='true' version='4' changeset='47419818'>
+    <nd ref='1664041947' />
+    <nd ref='1664041918' />
+    <nd ref='1664041945' />
+    <nd ref='1664041931' />
+    <nd ref='1664041947' />
+    <tag k='addr:city' v='Wuppertal' />
+    <tag k='addr:housename' v='FH' />
+    <tag k='addr:housenumber' v='21' />
+    <tag k='addr:postcode' v='42119' />
+    <tag k='addr:street' v='Rainer-Gruenter-Straße' />
+    <tag k='building' v='university' />
+    <tag k='wheelchair' v='yes' />
+    <tag k='wheelchair:description' v='Die Hörsäle im Gebäude sind voll rollstuhlgerecht, ebenso die Toiletten. Der ebenfalls im Gebäude untergebrachte Lehrstuhl für elektrische Maschinen ist nur teilweise rollstuhlgerecht.' />
+  </way>
+  <way id='153759144' timestamp='2018-07-19T18:55:26Z' uid='503347' user='bilderhobbit' visible='true' version='4' changeset='60881298'>
+    <nd ref='1664041920' />
+    <nd ref='5771490106' />
+    <nd ref='1664041922' />
+    <nd ref='1664041933' />
+    <nd ref='1664041928' />
+    <nd ref='1664041919' />
+    <nd ref='1664041924' />
+    <nd ref='1664041930' />
+    <nd ref='1664041932' />
+    <nd ref='1664026468' />
+    <tag k='bicycle' v='yes' />
+    <tag k='foot' v='yes' />
+    <tag k='highway' v='path' />
+    <tag k='incline' v='yes' />
+    <tag k='motor_vehicle' v='no' />
+    <tag k='surface' v='paved' />
+  </way>
+  <way id='153759145' timestamp='2012-03-07T09:28:01Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142'>
+    <nd ref='1664041946' />
+    <nd ref='1664041944' />
+    <nd ref='1664041918' />
+    <nd ref='1664041947' />
+    <nd ref='1664041946' />
+    <tag k='building' v='yes' />
+  </way>
+  <way id='153759146' timestamp='2019-05-23T21:57:06Z' uid='8457538' user='Recoil16' visible='true' version='6' changeset='70567153'>
+    <nd ref='1664041948' />
+    <nd ref='1664041920' />
+    <nd ref='274402996' />
+    <nd ref='1664064204' />
+    <nd ref='1664064185' />
+    <nd ref='1664064189' />
+    <nd ref='1664064186' />
+    <nd ref='1664064209' />
+    <nd ref='1664064172' />
+    <nd ref='1664064226' />
+    <nd ref='1664064223' />
+    <nd ref='1664064176' />
+    <nd ref='1664064207' />
+    <nd ref='1664064187' />
+    <nd ref='1664064200' />
+    <nd ref='1664064191' />
+    <nd ref='1740887426' />
+    <nd ref='1664064183' />
+    <nd ref='1664064178' />
+    <nd ref='1664064221' />
+    <nd ref='1665544606' />
+    <nd ref='1664064180' />
+    <nd ref='1664064182' />
+    <nd ref='1664064188' />
+    <nd ref='1664064179' />
+    <nd ref='1665544608' />
+    <nd ref='1664064208' />
+    <nd ref='1664064202' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='30' />
+    <tag k='name' v='Rainer-Gruenter-Straße' />
+    <tag k='source:maxspeed' v='DE:zone30' />
+  </way>
+  <way id='153761049' timestamp='2012-09-02T13:11:37Z' uid='852359' user='nthtry' visible='true' version='3' changeset='12954033'>
+    <nd ref='1664064224' />
+    <nd ref='1664064228' />
+    <nd ref='1664064190' />
+    <nd ref='1665544601' />
+    <nd ref='1665544608' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='20' />
+  </way>
+  <way id='153761050' timestamp='2017-04-03T17:42:36Z' uid='3022894' user='Lukas458' visible='true' version='4' changeset='47419818'>
+    <nd ref='1664064219' />
+    <nd ref='1664064232' />
+    <nd ref='1664064210' />
+    <nd ref='1664064181' />
+    <nd ref='1664064219' />
+    <tag k='addr:city' v='Wuppertal' />
+    <tag k='addr:housename' v='FK' />
+    <tag k='addr:housenumber' v='21' />
+    <tag k='addr:postcode' v='42119' />
+    <tag k='addr:street' v='Rainer-Gruenter-Straße' />
+    <tag k='building' v='university' />
+  </way>
+  <way id='153761051' timestamp='2014-03-27T09:02:25Z' uid='2004369' user='Junias' visible='true' version='5' changeset='21340592'>
+    <nd ref='1664064184' />
+    <nd ref='1664064234' />
+    <nd ref='1665556711' />
+    <nd ref='1664064230' />
+    <nd ref='1664064235' />
+    <nd ref='1664064184' />
+    <tag k='addr:city' v='Wuppertal' />
+    <tag k='addr:housename' v='FF' />
+    <tag k='addr:housenumber' v='21' />
+    <tag k='addr:postcode' v='42119' />
+    <tag k='addr:street' v='Rainer-Gruenter-Straße' />
+    <tag k='building' v='house' />
+  </way>
+  <way id='153761052' timestamp='2017-04-03T17:42:37Z' uid='3022894' user='Lukas458' visible='true' version='4' changeset='47419818'>
+    <nd ref='1664064174' />
+    <nd ref='1664064203' />
+    <nd ref='1664064205' />
+    <nd ref='1664064206' />
+    <nd ref='1664064174' />
+    <tag k='addr:housename' v='FTZ' />
+    <tag k='building' v='university' />
+  </way>
+  <way id='153762716' timestamp='2012-03-07T10:19:34Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142'>
+    <nd ref='1664096012' />
+    <nd ref='1664095995' />
+    <nd ref='1664095996' />
+    <nd ref='1664095997' />
+    <nd ref='1664095993' />
+    <nd ref='1664095994' />
+    <nd ref='1664096013' />
+    <nd ref='1664096010' />
+    <nd ref='1664095998' />
+    <nd ref='1664064209' />
+    <tag k='highway' v='footway' />
+  </way>
+  <way id='153762717' timestamp='2012-03-07T10:19:34Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10897142'>
+    <nd ref='1664096008' />
+    <nd ref='1664096012' />
+    <tag k='bridge' v='yes' />
+    <tag k='highway' v='footway' />
+  </way>
+  <way id='153769232' timestamp='2018-07-19T19:11:00Z' uid='503347' user='bilderhobbit' visible='true' version='8' changeset='60881636'>
+    <nd ref='1664123116' />
+    <nd ref='1664123121' />
+    <nd ref='5771523501' />
+    <nd ref='1664123117' />
+    <nd ref='298515311' />
+    <nd ref='1664123119' />
+    <nd ref='1664123120' />
+    <nd ref='1664123118' />
+    <nd ref='1664123116' />
+    <tag k='amenity' v='parking' />
+    <tag k='name' v='Campus Freudenberg' />
+    <tag k='wheelchair' v='yes' />
+  </way>
+  <way id='153770430' timestamp='2019-05-23T21:57:06Z' uid='8457538' user='Recoil16' visible='true' version='2' changeset='70567153'>
+    <nd ref='1664128196' />
+    <nd ref='298513790' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='30' />
+    <tag k='source:maxspeed' v='DE:zone30' />
+  </way>
+  <way id='153770431' timestamp='2019-05-23T21:57:07Z' uid='8457538' user='Recoil16' visible='true' version='3' changeset='70567153'>
+    <nd ref='1664128195' />
+    <nd ref='298513309' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='30' />
+    <tag k='source:maxspeed' v='DE:zone30' />
+  </way>
+  <way id='153942271' timestamp='2012-03-08T08:18:31Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='10906453'>
+    <nd ref='1665556706' />
+    <nd ref='1665556702' />
+    <nd ref='1665556711' />
+    <nd ref='1665556713' />
+    <nd ref='1665556706' />
+    <tag k='building' v='yes' />
+  </way>
+  <way id='153942272' timestamp='2014-10-15T17:21:46Z' uid='53007' user='musekusz' visible='true' version='4' changeset='26100941'>
+    <nd ref='1665556704' />
+    <nd ref='1665556712' />
+    <nd ref='1665556705' />
+    <nd ref='1665556703' />
+    <nd ref='1665556704' />
+    <tag k='addr:city' v='Wuppertal' />
+    <tag k='addr:country' v='DE' />
+    <tag k='addr:housename' v='FB' />
+    <tag k='addr:housenumber' v='60' />
+    <tag k='addr:postcode' v='42119' />
+    <tag k='addr:street' v='Am Freudenberg' />
+    <tag k='building' v='yes' />
+  </way>
+  <way id='153942273' timestamp='2012-09-02T13:11:38Z' uid='852359' user='nthtry' visible='true' version='2' changeset='12954033'>
+    <nd ref='1665556709' />
+    <nd ref='1665556700' />
+    <nd ref='1665556708' />
+    <nd ref='1665556699' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='20' />
+  </way>
+  <way id='162153759' timestamp='2012-09-02T13:11:37Z' uid='852359' user='nthtry' visible='true' version='3' changeset='12954033'>
+    <nd ref='1740886211' />
+    <nd ref='1740887129' />
+    <nd ref='1740886213' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='20' />
+  </way>
+  <way id='162153932' timestamp='2012-05-04T23:29:03Z' uid='351730' user='rassss' visible='true' version='1' changeset='11503235'>
+    <nd ref='1664064176' />
+    <nd ref='1740887125' />
+    <nd ref='1740887128' />
+    <nd ref='1740887124' />
+    <nd ref='1740887126' />
+    <nd ref='1740887127' />
+    <nd ref='1740887129' />
+    <tag k='highway' v='steps' />
+  </way>
+  <way id='162153951' timestamp='2019-03-03T19:43:31Z' uid='9494733' user='birkenlachs' visible='true' version='3' changeset='67745619'>
+    <nd ref='1740887428' />
+    <nd ref='6314808941' />
+    <nd ref='1740887425' />
+    <nd ref='1740887426' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='20' />
+  </way>
+  <way id='162153975' timestamp='2012-09-02T13:11:38Z' uid='852359' user='nthtry' visible='true' version='2' changeset='12954033'>
+    <nd ref='1740887810' />
+    <nd ref='1740887808' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='20' />
+  </way>
+  <way id='162153976' timestamp='2012-09-02T13:11:38Z' uid='852359' user='nthtry' visible='true' version='2' changeset='12954033'>
+    <nd ref='1740887802' />
+    <nd ref='1740887804' />
+    <nd ref='1740887808' />
+    <nd ref='1740887806' />
+    <nd ref='1740887805' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='20' />
+  </way>
+  <way id='193138673' timestamp='2019-05-23T21:57:07Z' uid='8457538' user='Recoil16' visible='true' version='8' changeset='70567153'>
+    <nd ref='298514585' />
+    <nd ref='1740886213' />
+    <nd ref='298513790' />
+    <nd ref='1740887810' />
+    <nd ref='274402991' />
+    <nd ref='298513495' />
+    <nd ref='298513309' />
+    <nd ref='298515314' />
+    <nd ref='5771523499' />
+    <nd ref='298512694' />
+    <tag k='foot' v='yes' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='30' />
+    <tag k='name' v='Rainer-Gruenter-Straße' />
+    <tag k='psv' v='yes' />
+    <tag k='source:maxspeed' v='DE:zone30' />
+  </way>
+  <way id='193138676' timestamp='2019-05-23T21:57:07Z' uid='8457538' user='Recoil16' visible='true' version='6' changeset='70567153'>
+    <nd ref='298514597' />
+    <nd ref='298514585' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='30' />
+    <tag k='name' v='Rainer-Gruenter-Straße' />
+    <tag k='psv' v='yes' />
+    <tag k='source:maxspeed' v='DE:zone30' />
+  </way>
+  <way id='217684834' timestamp='2017-04-03T17:42:37Z' uid='3022894' user='Lukas458' visible='true' version='4' changeset='47419818'>
+    <nd ref='2269939153' />
+    <nd ref='2269939164' />
+    <nd ref='2269939149' />
+    <nd ref='2269939163' />
+    <nd ref='2269939153' />
+    <tag k='addr:housename' v='FBZ' />
+    <tag k='amenity' v='library' />
+    <tag k='building' v='university' />
+    <tag k='name' v='Fachbibliothek' />
+    <tag k='wheelchair' v='yes' />
+    <tag k='wheelchair:description' v='Am Eingang ist eine Treppe.Beim Hausmeister bekommt man einen Schlüssel für den Treppenlift.' />
+  </way>
+  <way id='217684835' timestamp='2017-04-03T17:42:38Z' uid='3022894' user='Lukas458' visible='true' version='5' changeset='47419818'>
+    <nd ref='2269939150' />
+    <nd ref='2269939161' />
+    <nd ref='2269939157' />
+    <nd ref='2723869862' />
+    <nd ref='2269939150' />
+    <tag k='addr:city' v='Wuppertal' />
+    <tag k='addr:country' v='DE' />
+    <tag k='addr:housename' v='FA' />
+    <tag k='addr:housenumber' v='5' />
+    <tag k='addr:postcode' v='42119' />
+    <tag k='addr:street' v='Rainer-Gruenter-Straße' />
+    <tag k='building' v='yes' />
+    <tag k='name' v='Gästehaus' />
+    <tag k='operator' v='Bergische Universität Wuppertal' />
+  </way>
+  <way id='217684836' timestamp='2017-04-03T17:43:35Z' uid='3022894' user='Lukas458' visible='true' version='4' changeset='47419841'>
+    <nd ref='2269939152' />
+    <nd ref='2269939154' />
+    <nd ref='2269939158' />
+    <nd ref='2269939151' />
+    <nd ref='2269939152' />
+    <tag k='addr:city' v='Wuppertal' />
+    <tag k='addr:housename' v='FL' />
+    <tag k='addr:housenumber' v='21' />
+    <tag k='addr:postcode' v='42119' />
+    <tag k='addr:street' v='Rainer-Gruenter-Straße' />
+    <tag k='building' v='university' />
+    <tag k='operator' v='Bergische Universität Wuppertal' />
+  </way>
+  <way id='217809193' timestamp='2017-09-18T13:46:31Z' uid='3746603' user='Norbosm' visible='true' version='3' changeset='52145911'>
+    <nd ref='2271132061' />
+    <nd ref='2271132062' />
+    <nd ref='2271132056' />
+    <nd ref='2271132048' />
+    <nd ref='2271132044' />
+    <nd ref='2271132050' />
+    <nd ref='2271132067' />
+    <nd ref='2271132059' />
+    <nd ref='915595353' />
+    <nd ref='2271132046' />
+    <nd ref='2271132071' />
+    <nd ref='2271132055' />
+    <nd ref='2271132066' />
+    <nd ref='2271132072' />
+    <nd ref='2271132064' />
+    <nd ref='2271132058' />
+    <nd ref='2271132051' />
+    <nd ref='3131574302' />
+    <nd ref='3131574303' />
+    <nd ref='3131574308' />
+    <nd ref='2271132053' />
+    <nd ref='2271132061' />
+    <tag k='amenity' v='university' />
+    <tag k='name' v='Bergische Universität Wuppertal - Campus Freudenberg' />
+  </way>
+  <way id='233997781' timestamp='2019-07-19T06:04:03Z' uid='10154746' user='stadt-wuppertal_TR' visible='true' version='4' changeset='72414536'>
+    <nd ref='298513309' />
+    <nd ref='6496384788' />
+    <nd ref='2423048742' />
+    <tag k='access' v='customers' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='30' />
+    <tag k='oneway' v='no' />
+    <tag k='source:maxspeed' v='DE:zone30' />
+  </way>
+  <way id='266887594' timestamp='2017-04-03T17:42:38Z' uid='3022894' user='Lukas458' visible='true' version='3' changeset='47419818'>
+    <nd ref='2723869862' />
+    <nd ref='2269939141' />
+    <nd ref='2269939155' />
+    <nd ref='2269939159' />
+    <nd ref='2269939156' />
+    <nd ref='2269939160' />
+    <nd ref='2269939146' />
+    <nd ref='2269939148' />
+    <nd ref='2269939150' />
+    <nd ref='2723869862' />
+    <tag k='addr:city' v='Wuppertal' />
+    <tag k='addr:country' v='DE' />
+    <tag k='addr:housename' v='FA' />
+    <tag k='addr:housenumber' v='3' />
+    <tag k='addr:postcode' v='42119' />
+    <tag k='addr:street' v='Rainer-Gruenter-Straße' />
+    <tag k='building' v='yes' />
+    <tag k='name' v='Gästehaus' />
+    <tag k='operator' v='Bergische Universität Wuppertal' />
+  </way>
+  <way id='484584345' timestamp='2017-04-03T17:42:35Z' uid='3022894' user='Lukas458' visible='true' version='1' changeset='47419818'>
+    <nd ref='4773334499' />
+    <nd ref='4773334500' />
+    <nd ref='4773334503' />
+    <nd ref='4773334507' />
+    <nd ref='4773334508' />
+    <nd ref='4773334504' />
+    <nd ref='4773334501' />
+    <nd ref='4773334502' />
+    <nd ref='4773334505' />
+    <nd ref='4773334509' />
+    <nd ref='4773334510' />
+    <nd ref='4773334506' />
+    <nd ref='4773334499' />
+    <tag k='addr:housename' v='FMM' />
+    <tag k='building' v='university' />
+    <tag k='building:levels' v='3' />
+  </way>
+  <way id='609312037' timestamp='2018-07-19T19:10:58Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636'>
+    <nd ref='5771523497' />
+    <nd ref='5771523496' />
+    <nd ref='5771523495' />
+    <nd ref='5771523494' />
+    <tag k='highway' v='footway' />
+  </way>
+  <way id='609312038' timestamp='2018-07-19T19:10:59Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636'>
+    <nd ref='5771523498' />
+    <nd ref='5771523499' />
+    <tag k='highway' v='service' />
+  </way>
+  <way id='609312039' timestamp='2018-07-19T19:10:59Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636'>
+    <nd ref='5771523501' />
+    <nd ref='5771523500' />
+    <nd ref='5771523498' />
+    <tag k='highway' v='footway' />
+  </way>
+  <way id='609312040' timestamp='2018-07-19T19:10:59Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636'>
+    <nd ref='5771523510' />
+    <nd ref='5771523509' />
+    <nd ref='5771523508' />
+    <nd ref='5771523507' />
+    <nd ref='5771523506' />
+    <nd ref='2723869855' />
+    <tag k='highway' v='service' />
+  </way>
+  <way id='609312041' timestamp='2018-07-19T19:10:59Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636'>
+    <nd ref='5771523516' />
+    <nd ref='5771523512' />
+    <nd ref='5771523511' />
+  </way>
+  <way id='609312042' timestamp='2018-07-19T19:10:59Z' uid='503347' user='bilderhobbit' visible='true' version='1' changeset='60881636'>
+    <nd ref='2723869855' />
+    <nd ref='5771523517' />
+    <nd ref='5771523516' />
+    <nd ref='5771523515' />
+    <nd ref='5771523505' />
+    <nd ref='5771523514' />
+    <nd ref='5771523513' />
+    <tag k='highway' v='service' />
+  </way>
+  <way id='650431160' timestamp='2018-11-29T04:40:36Z' uid='1214027' user='axelr' visible='true' version='1' changeset='64995970'>
+    <nd ref='6101756130' />
+    <nd ref='616996558' />
+    <nd ref='6101756132' />
+    <tag k='name' v='Campus Freudenberg' />
+    <tag k='public_transport' v='platform' />
+  </way>
+  <way id='674290742' timestamp='2019-03-03T19:43:31Z' uid='9494733' user='birkenlachs' visible='true' version='1' changeset='67745619'>
+    <nd ref='616996702' />
+    <nd ref='6314808939' />
+    <nd ref='6314808940' />
+    <nd ref='6314808941' />
+    <tag k='highway' v='footway' />
+  </way>
+  <way id='674291522' timestamp='2019-03-03T19:46:53Z' uid='9494733' user='birkenlachs' visible='true' version='1' changeset='67745700'>
+    <nd ref='6314817736' />
+    <nd ref='616996555' />
+    <nd ref='6314817737' />
+    <tag k='name' v='Rainer-Gruenter-Straße' />
+    <tag k='public_transport' v='platform' />
+  </way>
+  <way id='674291523' timestamp='2019-03-03T19:46:53Z' uid='9494733' user='birkenlachs' visible='true' version='1' changeset='67745700'>
+    <nd ref='6314817738' />
+    <nd ref='616996551' />
+    <nd ref='6314817739' />
+    <tag k='name' v='Rainer-Gruenter-Straße' />
+    <tag k='public_transport' v='platform' />
+  </way>
+  <way id='692084407' timestamp='2019-07-19T06:04:03Z' uid='10154746' user='stadt-wuppertal_TR' visible='true' version='3' changeset='72414536'>
+    <nd ref='6496384791' />
+    <nd ref='1740887805' />
+    <tag k='access' v='customers' />
+    <tag k='highway' v='service' />
+  </way>
+  <way id='692084408' timestamp='2019-07-19T06:04:03Z' uid='10154746' user='stadt-wuppertal_TR' visible='true' version='3' changeset='72414536'>
+    <nd ref='6496384792' />
+    <nd ref='6496384791' />
+    <nd ref='6496384790' />
+    <nd ref='6496384789' />
+    <tag k='access' v='customers' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='30' />
+    <tag k='source:maxspeed' v='DE:zone30' />
+  </way>
+  <way id='692084409' timestamp='2019-07-19T06:04:03Z' uid='10154746' user='stadt-wuppertal_TR' visible='true' version='3' changeset='72414536'>
+    <nd ref='6496384807' />
+    <nd ref='6496384795' />
+    <nd ref='6496384792' />
+    <nd ref='6496384794' />
+    <nd ref='6496384793' />
+    <tag k='access' v='customers' />
+    <tag k='highway' v='service' />
+  </way>
+  <way id='692084410' timestamp='2019-05-23T21:57:06Z' uid='8457538' user='Recoil16' visible='true' version='1' changeset='70567153'>
+    <nd ref='6496384797' />
+    <nd ref='6496384796' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='30' />
+    <tag k='service' v='parking_aisle' />
+    <tag k='source:maxspeed' v='DE:zone30' />
+  </way>
+  <way id='692084411' timestamp='2019-05-23T21:57:06Z' uid='8457538' user='Recoil16' visible='true' version='1' changeset='70567153'>
+    <nd ref='6496384800' />
+    <nd ref='6496384798' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='30' />
+    <tag k='service' v='parking_aisle' />
+    <tag k='source:maxspeed' v='DE:zone30' />
+  </way>
+  <way id='692084412' timestamp='2019-07-19T06:04:03Z' uid='10154746' user='stadt-wuppertal_TR' visible='true' version='3' changeset='72414536'>
+    <nd ref='6496384807' />
+    <nd ref='6496384806' />
+    <nd ref='6496384798' />
+    <nd ref='6496384796' />
+    <nd ref='2423048742' />
+    <nd ref='6496384805' />
+    <nd ref='6496384804' />
+    <nd ref='6496384803' />
+    <nd ref='6496384802' />
+    <nd ref='6496384801' />
+    <nd ref='6496384797' />
+    <nd ref='6496384800' />
+    <nd ref='6496384799' />
+    <nd ref='6496384807' />
+    <tag k='access' v='customers' />
+    <tag k='highway' v='service' />
+    <tag k='maxspeed' v='30' />
+    <tag k='source:maxspeed' v='DE:zone30' />
+  </way>
+  <relation id='122648' timestamp='2019-02-02T15:29:46Z' uid='1214027' user='axelr' visible='true' version='143' changeset='66858137'>
+    <member type='node' ref='704235255' role='stop' />
+    <member type='way' ref='359335313' role='platform' />
+    <member type='node' ref='577582017' role='stop' />
+    <member type='way' ref='359335315' role='platform' />
+    <member type='node' ref='6101725237' role='stop' />
+    <member type='way' ref='650426480' role='platform' />
+    <member type='way' ref='650172993' role='platform' />
+    <member type='node' ref='443383210' role='platform' />
+    <member type='node' ref='681081050' role='platform' />
+    <member type='node' ref='6101725247' role='stop' />
+    <member type='way' ref='650426486' role='platform' />
+    <member type='node' ref='681081062' role='platform' />
+    <member type='node' ref='681081075' role='platform' />
+    <member type='node' ref='681081097' role='platform' />
+    <member type='node' ref='681080978' role='platform' />
+    <member type='node' ref='681081021' role='platform' />
+    <member type='node' ref='681081008' role='platform' />
+    <member type='node' ref='2618532137' role='stop' />
+    <member type='way' ref='648741765' role='platform' />
+    <member type='node' ref='2991468381' role='stop' />
+    <member type='way' ref='648741767' role='platform' />
+    <member type='node' ref='2991468395' role='stop' />
+    <member type='way' ref='648741770' role='platform' />
+    <member type='node' ref='2991468387' role='stop' />
+    <member type='way' ref='352833956' role='platform' />
+    <member type='node' ref='2047702969' role='stop' />
+    <member type='way' ref='243753886' role='platform' />
+    <member type='node' ref='439205764' role='stop' />
+    <member type='way' ref='197643763' role='platform' />
+    <member type='node' ref='6083168507' role='stop' />
+    <member type='relation' ref='8997168' role='platform' />
+    <member type='node' ref='2358704256' role='stop' />
+    <member type='way' ref='225722050' role='platform' />
+    <member type='node' ref='636869466' role='platform' />
+    <member type='node' ref='677518646' role='platform' />
+    <member type='node' ref='677518645' role='platform' />
+    <member type='node' ref='506811203' role='platform' />
+    <member type='node' ref='444718053' role='platform' />
+    <member type='node' ref='677518641' role='platform' />
+    <member type='node' ref='459648245' role='platform' />
+    <member type='node' ref='2387814154' role='platform' />
+    <member type='node' ref='6101756136' role='stop' />
+    <member type='way' ref='650431162' role='platform' />
+    <member type='node' ref='616996551' role='platform' />
+    <member type='node' ref='6101756131' role='stop' />
+    <member type='way' ref='650431160' role='platform' />
+    <member type='way' ref='362880435' role='' />
+    <member type='way' ref='8237925' role='' />
+    <member type='way' ref='33437393' role='' />
+    <member type='way' ref='540755869' role='' />
+    <member type='way' ref='56118564' role='' />
+    <member type='way' ref='667894031' role='' />
+    <member type='way' ref='56118569' role='' />
+    <member type='way' ref='24792835' role='' />
+    <member type='way' ref='370185238' role='' />
+    <member type='way' ref='370185244' role='' />
+    <member type='way' ref='9362179' role='' />
+    <member type='way' ref='174617232' role='' />
+    <member type='way' ref='45425727' role='' />
+    <member type='way' ref='25008647' role='' />
+    <member type='way' ref='175241717' role='' />
+    <member type='way' ref='175241720' role='' />
+    <member type='way' ref='540707008' role='' />
+    <member type='way' ref='56995649' role='' />
+    <member type='way' ref='5980341' role='' />
+    <member type='way' ref='240916398' role='' />
+    <member type='way' ref='256203250' role='' />
+    <member type='way' ref='5980822' role='' />
+    <member type='way' ref='5980810' role='' />
+    <member type='way' ref='545001916' role='' />
+    <member type='way' ref='240916399' role='' />
+    <member type='way' ref='254811355' role='' />
+    <member type='way' ref='254811357' role='' />
+    <member type='way' ref='53332735' role='' />
+    <member type='way' ref='254811356' role='' />
+    <member type='way' ref='35902044' role='' />
+    <member type='way' ref='194826686' role='' />
+    <member type='way' ref='35818648' role='' />
+    <member type='way' ref='35817747' role='' />
+    <member type='way' ref='41732737' role='' />
+    <member type='way' ref='5980688' role='' />
+    <member type='way' ref='35902048' role='' />
+    <member type='way' ref='35902046' role='' />
+    <member type='way' ref='254811361' role='' />
+    <member type='way' ref='35902047' role='' />
+    <member type='way' ref='35902037' role='' />
+    <member type='way' ref='242850259' role='' />
+    <member type='way' ref='199797766' role='' />
+    <member type='way' ref='254637033' role='' />
+    <member type='way' ref='35902051' role='' />
+    <member type='way' ref='35902050' role='' />
+    <member type='way' ref='545021638' role='' />
+    <member type='way' ref='199797770' role='' />
+    <member type='way' ref='258014812' role='' />
+    <member type='way' ref='495256364' role='' />
+    <member type='way' ref='241222018' role='' />
+    <member type='way' ref='199797769' role='' />
+    <member type='way' ref='495256367' role='' />
+    <member type='way' ref='241222019' role='' />
+    <member type='way' ref='107570338' role='' />
+    <member type='way' ref='107570345' role='' />
+    <member type='way' ref='107570344' role='' />
+    <member type='way' ref='170352828' role='' />
+    <member type='way' ref='107570343' role='' />
+    <member type='way' ref='107570334' role='' />
+    <member type='way' ref='5980381' role='' />
+    <member type='way' ref='40419641' role='' />
+    <member type='way' ref='210136547' role='' />
+    <member type='way' ref='40419625' role='' />
+    <member type='way' ref='40419621' role='' />
+    <member type='way' ref='202853110' role='' />
+    <member type='way' ref='388125693' role='' />
+    <member type='way' ref='225651758' role='' />
+    <member type='way' ref='588199992' role='' />
+    <member type='way' ref='614531558' role='' />
+    <member type='way' ref='647825831' role='' />
+    <member type='way' ref='477113654' role='' />
+    <member type='way' ref='647825823' role='' />
+    <member type='way' ref='647825824' role='' />
+    <member type='way' ref='477113655' role='' />
+    <member type='way' ref='647825825' role='' />
+    <member type='way' ref='647825831' role='' />
+    <member type='way' ref='588199993' role='' />
+    <member type='way' ref='613879142' role='' />
+    <member type='way' ref='225651758' role='' />
+    <member type='way' ref='241233267' role='' />
+    <member type='way' ref='107570342' role='' />
+    <member type='way' ref='107570341' role='' />
+    <member type='way' ref='293561462' role='' />
+    <member type='way' ref='496352904' role='' />
+    <member type='way' ref='129889746' role='' />
+    <member type='way' ref='40419654' role='' />
+    <member type='way' ref='498316729' role='' />
+    <member type='way' ref='37410844' role='' />
+    <member type='way' ref='590542306' role='' />
+    <member type='way' ref='192265890' role='' />
+    <member type='way' ref='504405524' role='' />
+    <member type='way' ref='508536292' role='' />
+    <member type='way' ref='40419669' role='' />
+    <member type='way' ref='24493325' role='' />
+    <member type='way' ref='119015149' role='' />
+    <member type='way' ref='194203559' role='' />
+    <member type='way' ref='495256349' role='' />
+    <member type='way' ref='403036337' role='' />
+    <member type='way' ref='286362494' role='' />
+    <member type='way' ref='286362486' role='' />
+    <member type='way' ref='293589079' role='' />
+    <member type='way' ref='188053237' role='' />
+    <member type='way' ref='225722055' role='' />
+    <member type='way' ref='254698519' role='' />
+    <member type='way' ref='225722056' role='' />
+    <member type='way' ref='5980565' role='' />
+    <member type='way' ref='5980166' role='' />
+    <member type='way' ref='303132412' role='' />
+    <member type='way' ref='241164198' role='' />
+    <member type='way' ref='129889748' role='' />
+    <member type='way' ref='509985338' role='' />
+    <member type='way' ref='241164196' role='' />
+    <member type='way' ref='535720053' role='' />
+    <member type='way' ref='154836077' role='' />
+    <member type='way' ref='225722059' role='' />
+    <member type='way' ref='225722058' role='' />
+    <member type='way' ref='254698521' role='' />
+    <member type='way' ref='92932747' role='' />
+    <member type='way' ref='549624386' role='' />
+    <member type='way' ref='194203563' role='' />
+    <member type='way' ref='5980398' role='' />
+    <member type='way' ref='254698522' role='' />
+    <member type='way' ref='549724856' role='' />
+    <member type='way' ref='196671479' role='' />
+    <member type='way' ref='230720380' role='' />
+    <member type='way' ref='92735742' role='' />
+    <member type='way' ref='230720372' role='' />
+    <member type='way' ref='58913273' role='' />
+    <member type='way' ref='5980255' role='' />
+    <member type='way' ref='45428137' role='' />
+    <member type='way' ref='5980386' role='' />
+    <member type='way' ref='93082822' role='' />
+    <member type='way' ref='27703824' role='' />
+    <member type='way' ref='133389920' role='' />
+    <member type='way' ref='193138673' role='' />
+    <member type='way' ref='193138676' role='' />
+    <member type='way' ref='153589078' role='' />
+    <tag k='from' v='Wuppertal Katernberg Am Eckbusch' />
+    <tag k='name' v='Bus 603: Katernberg =&gt; Campus Freudenberg' />
+    <tag k='network' v='VRR' />
+    <tag k='operator' v='WSW' />
+    <tag k='operator:wikidata' v='Q1729619' />
+    <tag k='public_transport:version' v='2' />
+    <tag k='ref' v='603' />
+    <tag k='route' v='bus' />
+    <tag k='start_date' v='2018-11-25' />
+    <tag k='to' v='Wuppertal Elberfeld Campus Freudenberg' />
+    <tag k='type' v='route' />
+  </relation>
+  <relation id='365510' timestamp='2019-02-02T15:29:47Z' uid='1214027' user='axelr' visible='true' version='105' changeset='66858137'>
+    <member type='node' ref='6101756131' role='stop' />
+    <member type='way' ref='650431160' role='platform' />
+    <member type='node' ref='616996555' role='platform' />
+    <member type='node' ref='6101756133' role='stop' />
+    <member type='way' ref='650431161' role='platform' />
+    <member type='node' ref='2387814153' role='platform' />
+    <member type='node' ref='420178490' role='platform' />
+    <member type='node' ref='419874827' role='stop' />
+    <member type='way' ref='371477678' role='platform' />
+    <member type='node' ref='419876002' role='stop' />
+    <member type='way' ref='371477656' role='platform' />
+    <member type='node' ref='4892640834' role='stop' />
+    <member type='way' ref='225722029' role='platform' />
+    <member type='node' ref='4892640833' role='stop' />
+    <member type='way' ref='403036338' role='platform' />
+    <member type='node' ref='6083168506' role='stop' />
+    <member type='relation' ref='8997167' role='platform' />
+    <member type='node' ref='2601152204' role='stop' />
+    <member type='way' ref='294547455' role='platform' />
+    <member type='node' ref='2047702970' role='stop' />
+    <member type='way' ref='202857385' role='platform' />
+    <member type='node' ref='2991468386' role='stop' />
+    <member type='way' ref='352833957' role='platform' />
+    <member type='node' ref='2991468395' role='stop' />
+    <member type='way' ref='648741771' role='platform' />
+    <member type='node' ref='2991468382' role='stop' />
+    <member type='way' ref='648741769' role='platform' />
+    <member type='node' ref='2991468377' role='stop' />
+    <member type='way' ref='648741764' role='platform' />
+    <member type='node' ref='681080989' role='stop' />
+    <member type='way' ref='248084564' role='platform' />
+    <member type='node' ref='681081015' role='platform' />
+    <member type='node' ref='681081034' role='platform' />
+    <member type='node' ref='681081040' role='platform' />
+    <member type='node' ref='681081104' role='platform' />
+    <member type='node' ref='681081112' role='platform' />
+    <member type='node' ref='681081068' role='platform' />
+    <member type='node' ref='681081091' role='platform' />
+    <member type='node' ref='6101725246' role='stop' />
+    <member type='way' ref='650426485' role='platform' />
+    <member type='node' ref='681081055' role='platform' />
+    <member type='node' ref='443382504' role='platform' />
+    <member type='way' ref='650172994' role='platform' />
+    <member type='node' ref='6101725236' role='stop' />
+    <member type='way' ref='650426479' role='platform' />
+    <member type='node' ref='577582018' role='stop' />
+    <member type='way' ref='359335314' role='platform' />
+    <member type='node' ref='704235255' role='stop_exit_only' />
+    <member type='way' ref='359335313' role='platform_exit_only' />
+    <member type='way' ref='153589081' role='' />
+    <member type='way' ref='193138673' role='' />
+    <member type='way' ref='133389920' role='' />
+    <member type='way' ref='27703824' role='' />
+    <member type='way' ref='93082822' role='' />
+    <member type='way' ref='93082825' role='' />
+    <member type='way' ref='45428137' role='' />
+    <member type='way' ref='93082843' role='' />
+    <member type='way' ref='34724135' role='' />
+    <member type='way' ref='38591935' role='' />
+    <member type='way' ref='154832889' role='' />
+    <member type='way' ref='174511647' role='' />
+    <member type='way' ref='241164198' role='' />
+    <member type='way' ref='303132412' role='' />
+    <member type='way' ref='5980166' role='' />
+    <member type='way' ref='5980565' role='' />
+    <member type='way' ref='225722056' role='' />
+    <member type='way' ref='254698519' role='' />
+    <member type='way' ref='225722055' role='' />
+    <member type='way' ref='188053237' role='' />
+    <member type='way' ref='293589079' role='' />
+    <member type='way' ref='286362495' role='' />
+    <member type='way' ref='286362494' role='' />
+    <member type='way' ref='403036337' role='' />
+    <member type='way' ref='495256349' role='' />
+    <member type='way' ref='194203559' role='' />
+    <member type='way' ref='119015149' role='' />
+    <member type='way' ref='24493325' role='' />
+    <member type='way' ref='40419669' role='' />
+    <member type='way' ref='508536292' role='' />
+    <member type='way' ref='504405525' role='' />
+    <member type='way' ref='118225233' role='' />
+    <member type='way' ref='186116683' role='' />
+    <member type='way' ref='254710940' role='' />
+    <member type='way' ref='40419666' role='' />
+    <member type='way' ref='388125693' role='' />
+    <member type='way' ref='225651758' role='' />
+    <member type='way' ref='588199992' role='' />
+    <member type='way' ref='614531558' role='' />
+    <member type='way' ref='647825829' role='' />
+    <member type='way' ref='647825822' role='' />
+    <member type='way' ref='647825830' role='' />
+    <member type='way' ref='647825832' role='' />
+    <member type='way' ref='647825824' role='' />
+    <member type='way' ref='647825823' role='' />
+    <member type='way' ref='477113654' role='' />
+    <member type='way' ref='647825831' role='' />
+    <member type='way' ref='588199993' role='' />
+    <member type='way' ref='613879142' role='' />
+    <member type='way' ref='225651758' role='' />
+    <member type='way' ref='241233267' role='' />
+    <member type='way' ref='107570342' role='' />
+    <member type='way' ref='107570341' role='' />
+    <member type='way' ref='293561462' role='' />
+    <member type='way' ref='496352904' role='' />
+    <member type='way' ref='129889746' role='' />
+    <member type='way' ref='40419654' role='' />
+    <member type='way' ref='498316729' role='' />
+    <member type='way' ref='24520232' role='' />
+    <member type='way' ref='292209659' role='' />
+    <member type='way' ref='40419675' role='' />
+    <member type='way' ref='522523489' role='' />
+    <member type='way' ref='495256351' role='' />
+    <member type='way' ref='40419677' role='' />
+    <member type='way' ref='495256354' role='' />
+    <member type='way' ref='495256357' role='' />
+    <member type='way' ref='216247271' role='' />
+    <member type='way' ref='495256361' role='' />
+    <member type='way' ref='321280426' role='' />
+    <member type='way' ref='37410846' role='' />
+    <member type='way' ref='154996522' role='' />
+    <member type='way' ref='590542316' role='' />
+    <member type='way' ref='254811361' role='' />
+    <member type='way' ref='35902046' role='' />
+    <member type='way' ref='35902048' role='' />
+    <member type='way' ref='5980688' role='' />
+    <member type='way' ref='41732737' role='' />
+    <member type='way' ref='35817747' role='' />
+    <member type='way' ref='35818648' role='' />
+    <member type='way' ref='194826686' role='' />
+    <member type='way' ref='35902044' role='' />
+    <member type='way' ref='254811356' role='' />
+    <member type='way' ref='53332735' role='' />
+    <member type='way' ref='254811357' role='' />
+    <member type='way' ref='254811355' role='' />
+    <member type='way' ref='240916399' role='' />
+    <member type='way' ref='545001916' role='' />
+    <member type='way' ref='5980810' role='' />
+    <member type='way' ref='5980822' role='' />
+    <member type='way' ref='256203250' role='' />
+    <member type='way' ref='240916398' role='' />
+    <member type='way' ref='5980341' role='' />
+    <member type='way' ref='56995649' role='' />
+    <member type='way' ref='540707008' role='' />
+    <member type='way' ref='175241720' role='' />
+    <member type='way' ref='175241717' role='' />
+    <member type='way' ref='25008647' role='' />
+    <member type='way' ref='45425727' role='' />
+    <member type='way' ref='174617232' role='' />
+    <member type='way' ref='9362179' role='' />
+    <member type='way' ref='370185244' role='' />
+    <member type='way' ref='370185238' role='' />
+    <member type='way' ref='24792835' role='' />
+    <member type='way' ref='56118569' role='' />
+    <member type='way' ref='667894031' role='' />
+    <member type='way' ref='56118564' role='' />
+    <member type='way' ref='540755869' role='' />
+    <member type='way' ref='33437393' role='' />
+    <member type='way' ref='8237925' role='' />
+    <member type='way' ref='8237812' role='' />
+    <member type='way' ref='650426487' role='' />
+    <member type='way' ref='362254791' role='' />
+    <member type='way' ref='361559831' role='' />
+    <member type='way' ref='195132290' role='' />
+    <member type='way' ref='9260268' role='' />
+    <tag k='from' v='Wuppertal Elberfeld Campus Freudenberg' />
+    <tag k='name' v='Bus 603: Campus Freudenberg =&gt; Katernberg' />
+    <tag k='network' v='VRR' />
+    <tag k='operator' v='WSW' />
+    <tag k='operator:wikidata' v='Q1729619' />
+    <tag k='public_transport:version' v='2' />
+    <tag k='ref' v='603' />
+    <tag k='route' v='bus' />
+    <tag k='start_date' v='2018-11-25' />
+    <tag k='to' v='Wuppertal Katernberg Am Eckbusch' />
+    <tag k='type' v='route' />
+  </relation>
+  <relation id='2614548' timestamp='2019-02-01T08:21:31Z' uid='1214027' user='axelr' visible='true' version='43' changeset='66825669'>
+    <member type='node' ref='6101756131' role='stop' />
+    <member type='way' ref='650431160' role='platform' />
+    <member type='node' ref='616996555' role='platform' />
+    <member type='node' ref='420178490' role='platform' />
+    <member type='node' ref='677518648' role='stop' />
+    <member type='way' ref='525608028' role='platform' />
+    <member type='node' ref='2047210934' role='stop' />
+    <member type='way' ref='265697385' role='platform' />
+    <member type='node' ref='674527445' role='platform' />
+    <member type='node' ref='530163040' role='stop_exit_only' />
+    <member type='way' ref='352835838' role='platform_exit_only' />
+    <member type='way' ref='153589078' role='' />
+    <member type='way' ref='153589081' role='' />
+    <member type='way' ref='193138673' role='' />
+    <member type='way' ref='133389920' role='' />
+    <member type='way' ref='27703824' role='' />
+    <member type='way' ref='93082822' role='' />
+    <member type='way' ref='93082825' role='' />
+    <member type='way' ref='45428137' role='' />
+    <member type='way' ref='154836083' role='' />
+    <member type='way' ref='154836082' role='' />
+    <member type='way' ref='254698524' role='' />
+    <member type='way' ref='154834435' role='' />
+    <member type='way' ref='510519091' role='' />
+    <member type='way' ref='225722060' role='' />
+    <member type='way' ref='535720053' role='' />
+    <member type='way' ref='241164196' role='' />
+    <member type='way' ref='509985338' role='' />
+    <member type='way' ref='129889748' role='' />
+    <member type='way' ref='241164198' role='' />
+    <member type='way' ref='303132412' role='' />
+    <member type='way' ref='5980166' role='' />
+    <member type='way' ref='254698525' role='' />
+    <member type='way' ref='303132135' role='' />
+    <member type='way' ref='145222888' role='' />
+    <member type='way' ref='105613179' role='' />
+    <member type='way' ref='145222886' role='' />
+    <member type='way' ref='5980156' role='' />
+    <member type='way' ref='129889750' role='' />
+    <member type='way' ref='406609871' role='' />
+    <member type='way' ref='252682756' role='' />
+    <member type='way' ref='62081368' role='' />
+    <member type='way' ref='362817609' role='' />
+    <member type='way' ref='55950584' role='' />
+    <member type='way' ref='293445140' role='' />
+    <member type='way' ref='293445139' role='' />
+    <member type='way' ref='362660221' role='' />
+    <member type='way' ref='552800033' role='' />
+    <member type='way' ref='252682755' role='' />
+    <member type='way' ref='254811336' role='' />
+    <tag k='from' v='Wuppertal Campus Freudenberg' />
+    <tag k='name' v='Bus E860: Campus Freudenberg =&gt; historische Stadthalle' />
+    <tag k='network' v='VRR' />
+    <tag k='operator' v='WSW' />
+    <tag k='operator:wikidata' v='Q1729619' />
+    <tag k='public_transport:version' v='2' />
+    <tag k='ref' v='E860' />
+    <tag k='route' v='bus' />
+    <tag k='to' v='Wuppertal historische Stadthalle' />
+    <tag k='type' v='route' />
+  </relation>
+  <relation id='2614549' timestamp='2019-02-01T08:21:31Z' uid='1214027' user='axelr' visible='true' version='33' changeset='66825669'>
+    <member type='node' ref='2358704256' role='stop_entry_only' />
+    <member type='way' ref='225722050' role='platform_entry_only' />
+    <member type='node' ref='636869466' role='platform' />
+    <member type='node' ref='567931868' role='platform' />
+    <member type='node' ref='419876003' role='platform' />
+    <member type='node' ref='419874826' role='platform' />
+    <member type='node' ref='485634711' role='stop' />
+    <member type='way' ref='225722119' role='platform' />
+    <member type='node' ref='444718053' role='platform' />
+    <member type='node' ref='677518641' role='platform' />
+    <member type='node' ref='459648245' role='platform' />
+    <member type='node' ref='616996551' role='platform' />
+    <member type='node' ref='6101756131' role='stop' />
+    <member type='way' ref='650431160' role='platform' />
+    <member type='way' ref='403036337' role='' />
+    <member type='way' ref='286362494' role='' />
+    <member type='way' ref='286362486' role='' />
+    <member type='way' ref='293589079' role='' />
+    <member type='way' ref='188053237' role='' />
+    <member type='way' ref='225722055' role='' />
+    <member type='way' ref='254698519' role='' />
+    <member type='way' ref='225722056' role='' />
+    <member type='way' ref='5980565' role='' />
+    <member type='way' ref='184395327' role='' />
+    <member type='way' ref='303132134' role='' />
+    <member type='way' ref='225722030' role='' />
+    <member type='way' ref='241164197' role='' />
+    <member type='way' ref='154832888' role='' />
+    <member type='way' ref='154832346' role='' />
+    <member type='way' ref='38591935' role='' />
+    <member type='way' ref='154834440' role='' />
+    <member type='way' ref='174511648' role='' />
+    <member type='way' ref='154834439' role='' />
+    <member type='way' ref='154834436' role='' />
+    <member type='way' ref='154834438' role='' />
+    <member type='way' ref='104138918' role='' />
+    <member type='way' ref='490725464' role='' />
+    <member type='way' ref='667627120' role='' />
+    <member type='way' ref='490725465' role='' />
+    <member type='way' ref='667627121' role='' />
+    <member type='way' ref='225722034' role='' />
+    <member type='way' ref='104138926' role='' />
+    <member type='way' ref='104138925' role='' />
+    <member type='way' ref='492854039' role='' />
+    <member type='way' ref='225722033' role='' />
+    <member type='way' ref='535727180' role='' />
+    <member type='way' ref='535727176' role='' />
+    <member type='way' ref='104138922' role='' />
+    <member type='way' ref='225722032' role='' />
+    <member type='way' ref='254698516' role='' />
+    <member type='way' ref='92932749' role='' />
+    <member type='way' ref='549624386' role='' />
+    <member type='way' ref='194203563' role='' />
+    <member type='way' ref='5980398' role='' />
+    <member type='way' ref='254698522' role='' />
+    <member type='way' ref='549724856' role='' />
+    <member type='way' ref='196671479' role='' />
+    <member type='way' ref='230720380' role='' />
+    <member type='way' ref='92735742' role='' />
+    <member type='way' ref='230720372' role='' />
+    <member type='way' ref='58913273' role='' />
+    <member type='way' ref='5980255' role='' />
+    <member type='way' ref='45428137' role='' />
+    <member type='way' ref='5980386' role='' />
+    <member type='way' ref='93082822' role='' />
+    <member type='way' ref='27703824' role='' />
+    <member type='way' ref='133389920' role='' />
+    <member type='way' ref='193138673' role='' />
+    <member type='way' ref='193138676' role='' />
+    <member type='way' ref='153589078' role='' />
+    <tag k='from' v='Wuppertal historische Stadthalle' />
+    <tag k='name' v='Bus E860: historische Stadthalle =&gt; Campus Freudenberg' />
+    <tag k='network' v='VRR' />
+    <tag k='operator' v='WSW' />
+    <tag k='operator:wikidata' v='Q1729619' />
+    <tag k='public_transport:version' v='2' />
+    <tag k='ref' v='E860' />
+    <tag k='route' v='bus' />
+    <tag k='to' v='Wuppertal Campus Freudenberg' />
+    <tag k='type' v='route' />
+  </relation>
+  <relation id='2614551' timestamp='2017-06-22T23:34:09Z' uid='1214027' user='axelr' visible='true' version='6' changeset='49758916'>
+    <member type='relation' ref='2614548' role='' />
+    <member type='relation' ref='2614549' role='' />
+    <tag k='name' v='Bus E860' />
+    <tag k='network' v='VRR' />
+    <tag k='operator' v='WSW' />
+    <tag k='operator:wikidata' v='Q1729619' />
+    <tag k='ref' v='E860' />
+    <tag k='route_master' v='bus' />
+    <tag k='type' v='route_master' />
+  </relation>
+  <relation id='2622673' timestamp='2015-07-26T12:28:54Z' uid='105462' user='Weide' visible='true' version='2' changeset='32888254'>
+    <member type='node' ref='616996555' role='platform' />
+    <member type='node' ref='616996551' role='platform' />
+    <tag k='name' v='Rainer-Gruenter-Straße' />
+    <tag k='network' v='VRR' />
+    <tag k='operator' v='WSW' />
+    <tag k='public_transport' v='stop_area' />
+    <tag k='type' v='public_transport' />
+  </relation>
+  <relation id='2628919' timestamp='2016-05-30T00:10:10Z' uid='311102' user='Reclus' visible='true' version='4' changeset='39653170'>
+    <member type='relation' ref='122648' role='' />
+    <member type='relation' ref='365510' role='' />
+    <tag k='name' v='Bus 603' />
+    <tag k='network' v='VRR' />
+    <tag k='operator' v='WSW' />
+    <tag k='operator:wikidata' v='Q1729619' />
+    <tag k='ref' v='603' />
+    <tag k='route_master' v='bus' />
+    <tag k='type' v='route_master' />
+  </relation>
+  <relation id='3251118' timestamp='2019-02-01T08:21:35Z' uid='1214027' user='axelr' visible='true' version='8' changeset='66825669'>
+    <member type='node' ref='6101756131' role='stop' />
+    <member type='way' ref='650431160' role='platform' />
+    <member type='node' ref='616996555' role='platform' />
+    <member type='node' ref='2387814153' role='platform' />
+    <member type='node' ref='420178490' role='platform' />
+    <member type='node' ref='485634711' role='stop' />
+    <member type='way' ref='225722119' role='platform' />
+    <member type='way' ref='153589081' role='' />
+    <member type='way' ref='193138673' role='' />
+    <member type='way' ref='133389920' role='' />
+    <member type='way' ref='27703824' role='' />
+    <member type='way' ref='93082822' role='' />
+    <member type='way' ref='93082825' role='' />
+    <member type='way' ref='45428137' role='' />
+    <member type='way' ref='154836083' role='' />
+    <member type='way' ref='154836082' role='' />
+    <member type='way' ref='254698524' role='' />
+    <member type='way' ref='154834439' role='' />
+    <member type='way' ref='154834436' role='' />
+    <member type='way' ref='154834438' role='' />
+    <member type='way' ref='104138918' role='' />
+    <member type='way' ref='490725464' role='' />
+    <member type='way' ref='667627120' role='' />
+    <member type='way' ref='490725465' role='' />
+    <tag k='from' v='Wuppertal Campus Freudenberg' />
+    <tag k='name' v='Bus Campus Bus: Freudenberg =&gt; Grifflenberg' />
+    <tag k='network' v='VRR' />
+    <tag k='operator' v='WSW' />
+    <tag k='public_transport:version' v='2' />
+    <tag k='ref' v='Campus Bus' />
+    <tag k='route' v='bus' />
+    <tag k='to' v='Wuppertal Grifflenberg Universität' />
+    <tag k='type' v='route' />
+  </relation>
+  <relation id='3251119' timestamp='2019-02-01T08:21:36Z' uid='1214027' user='axelr' visible='true' version='11' changeset='66825669'>
+    <member type='node' ref='485634711' role='stop' />
+    <member type='way' ref='225722119' role='platform' />
+    <member type='node' ref='444718053' role='platform' />
+    <member type='node' ref='677518641' role='platform' />
+    <member type='node' ref='459648245' role='platform' />
+    <member type='node' ref='2387814154' role='platform' />
+    <member type='node' ref='616996551' role='platform' />
+    <member type='node' ref='6101756131' role='stop' />
+    <member type='way' ref='650431160' role='platform' />
+    <member type='way' ref='667627121' role='' />
+    <member type='way' ref='225722034' role='' />
+    <member type='way' ref='104138926' role='' />
+    <member type='way' ref='104138925' role='' />
+    <member type='way' ref='492854039' role='' />
+    <member type='way' ref='225722033' role='' />
+    <member type='way' ref='535727180' role='' />
+    <member type='way' ref='535727176' role='' />
+    <member type='way' ref='104138922' role='' />
+    <member type='way' ref='225722032' role='' />
+    <member type='way' ref='254698516' role='' />
+    <member type='way' ref='92932749' role='' />
+    <member type='way' ref='549624386' role='' />
+    <member type='way' ref='194203563' role='' />
+    <member type='way' ref='5980398' role='' />
+    <member type='way' ref='254698522' role='' />
+    <member type='way' ref='549724856' role='' />
+    <member type='way' ref='196671479' role='' />
+    <member type='way' ref='230720380' role='' />
+    <member type='way' ref='92735742' role='' />
+    <member type='way' ref='230720372' role='' />
+    <member type='way' ref='58913273' role='' />
+    <member type='way' ref='5980255' role='' />
+    <member type='way' ref='45428137' role='' />
+    <member type='way' ref='5980386' role='' />
+    <member type='way' ref='93082822' role='' />
+    <member type='way' ref='27703824' role='' />
+    <member type='way' ref='133389920' role='' />
+    <member type='way' ref='193138673' role='' />
+    <member type='way' ref='193138676' role='' />
+    <member type='way' ref='153589078' role='' />
+    <tag k='from' v='Wuppertal Grifflenberg Universität' />
+    <tag k='name' v='Bus Campus Bus: Grifflenberg =&gt; Freudenberg' />
+    <tag k='network' v='VRR' />
+    <tag k='operator' v='WSW' />
+    <tag k='public_transport:version' v='2' />
+    <tag k='ref' v='Campus Bus' />
+    <tag k='route' v='bus' />
+    <tag k='to' v='Wuppertal Campus Freudenberg' />
+    <tag k='type' v='route' />
+  </relation>
+  <relation id='3251120' timestamp='2013-10-07T09:47:36Z' uid='368910' user='korpi' visible='true' version='1' changeset='18226342'>
+    <member type='relation' ref='3251118' role='' />
+    <member type='relation' ref='3251119' role='' />
+    <tag k='name' v='Bus Campus Bus' />
+    <tag k='network' v='VRR' />
+    <tag k='operator' v='WSW' />
+    <tag k='ref' v='Campus Bus' />
+    <tag k='route_master' v='bus' />
+    <tag k='type' v='route_master' />
+  </relation>
+  <relation id='3907741' timestamp='2019-06-28T20:48:20Z' uid='309382' user='Diego Sanguinetti' visible='true' version='41' changeset='71721758'>
+    <member type='relation' ref='2973533' role='' />
+    <member type='relation' ref='2623069' role='' />
+    <member type='relation' ref='3169872' role='' />
+    <member type='relation' ref='2623068' role='' />
+    <member type='relation' ref='3296033' role='' />
+    <member type='relation' ref='3282418' role='' />
+    <member type='relation' ref='3251415' role='' />
+    <member type='relation' ref='1667462' role='' />
+    <member type='relation' ref='3862492' role='' />
+    <member type='relation' ref='3919792' role='' />
+    <member type='relation' ref='3837755' role='' />
+    <member type='relation' ref='3913132' role='' />
+    <member type='relation' ref='3864400' role='' />
+    <member type='relation' ref='3823099' role='' />
+    <member type='relation' ref='3823102' role='Remscheid' />
+    <member type='relation' ref='2623070' role='' />
+    <member type='relation' ref='3912566' role='' />
+    <member type='relation' ref='3334554' role='' />
+    <member type='relation' ref='3295987' role='' />
+    <member type='relation' ref='3862493' role='' />
+    <member type='relation' ref='3393500' role='' />
+    <member type='relation' ref='2615165' role='' />
+    <member type='relation' ref='3920605' role='' />
+    <member type='relation' ref='3920604' role='' />
+    <member type='relation' ref='3920718' role='' />
+    <member type='relation' ref='3920719' role='' />
+    <member type='relation' ref='3345085' role='' />
+    <member type='relation' ref='3920720' role='' />
+    <member type='relation' ref='3297496' role='' />
+    <member type='relation' ref='3919793' role='' />
+    <member type='relation' ref='2623071' role='' />
+    <member type='relation' ref='3342963' role='' />
+    <member type='relation' ref='1667530' role='' />
+    <member type='relation' ref='3913133' role='' />
+    <member type='relation' ref='3862179' role='' />
+    <member type='relation' ref='3296021' role='' />
+    <member type='relation' ref='3296330' role='' />
+    <member type='relation' ref='3296301' role='' />
+    <member type='relation' ref='3297892' role='' />
+    <member type='relation' ref='3251202' role='' />
+    <member type='relation' ref='3913134' role='' />
+    <member type='relation' ref='3920607' role='' />
+    <member type='relation' ref='3296736' role='' />
+    <member type='relation' ref='3297940' role='' />
+    <member type='relation' ref='3393509' role='' />
+    <member type='relation' ref='3392756' role='' />
+    <member type='relation' ref='3920721' role='' />
+    <member type='relation' ref='3920606' role='' />
+    <member type='relation' ref='3254122' role='' />
+    <member type='relation' ref='3342964' role='' />
+    <member type='relation' ref='3920608' role='' />
+    <member type='relation' ref='3296782' role='' />
+    <member type='relation' ref='3297492' role='' />
+    <member type='relation' ref='2622670' role='' />
+    <member type='relation' ref='3920609' role='' />
+    <member type='relation' ref='3911601' role='' />
+    <member type='relation' ref='3282419' role='' />
+    <member type='relation' ref='3912572' role='' />
+    <member type='relation' ref='3912573' role='' />
+    <member type='relation' ref='3859637' role='' />
+    <member type='relation' ref='3569865' role='' />
+    <member type='relation' ref='3919794' role='' />
+    <member type='relation' ref='3296389' role='' />
+    <member type='relation' ref='3913135' role='' />
+    <member type='relation' ref='3837756' role='' />
+    <member type='relation' ref='3862182' role='' />
+    <member type='relation' ref='3334582' role='' />
+    <member type='relation' ref='2622671' role='' />
+    <member type='relation' ref='3297501' role='' />
+    <member type='relation' ref='3912575' role='' />
+    <member type='relation' ref='3930865' role='' />
+    <member type='relation' ref='3931608' role='' />
+    <member type='relation' ref='3912576' role='' />
+    <member type='relation' ref='3859643' role='' />
+    <member type='relation' ref='3859644' role='' />
+    <member type='relation' ref='2622672' role='' />
+    <member type='relation' ref='2615166' role='' />
+    <member type='relation' ref='3914467' role='' />
+    <member type='relation' ref='3282420' role='' />
+    <member type='relation' ref='3919796' role='' />
+    <member type='relation' ref='3297672' role='' />
+    <member type='relation' ref='3334579' role='' />
+    <member type='relation' ref='3837759' role='' />
+    <member type='relation' ref='3837760' role='' />
+    <member type='relation' ref='3920610' role='' />
+    <member type='relation' ref='2615204' role='' />
+    <member type='relation' ref='3921749' role='' />
+    <member type='relation' ref='3920611' role='' />
+    <member type='relation' ref='3920612' role='' />
+    <member type='relation' ref='2615167' role='' />
+    <member type='relation' ref='3912580' role='' />
+    <member type='relation' ref='3342965' role='' />
+    <member type='relation' ref='3296373' role='' />
+    <member type='relation' ref='3296530' role='' />
+    <member type='relation' ref='2615132' role='' />
+    <member type='relation' ref='3920722' role='' />
+    <member type='relation' ref='3393367' role='' />
+    <member type='relation' ref='1514291' role='' />
+    <member type='relation' ref='3823109' role='' />
+    <member type='relation' ref='3913360' role='' />
+    <member type='relation' ref='3919798' role='' />
+    <member type='relation' ref='2973534' role='' />
+    <member type='relation' ref='3919799' role='' />
+    <member type='relation' ref='3911602' role='' />
+    <member type='relation' ref='3295884' role='' />
+    <member type='relation' ref='3297660' role='' />
+    <member type='relation' ref='3920613' role='' />
+    <member type='relation' ref='3297657' role='' />
+    <member type='relation' ref='3916506' role='' />
+    <member type='relation' ref='3920614' role='' />
+    <member type='relation' ref='3930866' role='' />
+    <member type='relation' ref='3252328' role='' />
+    <member type='relation' ref='3295999' role='' />
+    <member type='relation' ref='3254174' role='' />
+    <member type='relation' ref='2973535' role='' />
+    <member type='relation' ref='3913136' role='' />
+    <member type='relation' ref='3295809' role='' />
+    <member type='relation' ref='3295699' role='' />
+    <member type='relation' ref='3919801' role='' />
+    <member type='relation' ref='3913137' role='' />
+    <member type='relation' ref='3930867' role='' />
+    <member type='relation' ref='3282421' role='' />
+    <member type='relation' ref='3296630' role='' />
+    <member type='relation' ref='3569866' role='' />
+    <member type='relation' ref='3921750' role='' />
+    <member type='relation' ref='3920615' role='' />
+    <member type='relation' ref='3919802' role='' />
+    <member type='relation' ref='3342966' role='' />
+    <member type='relation' ref='2653489' role='' />
+    <member type='relation' ref='3297462' role='' />
+    <member type='relation' ref='3297691' role='' />
+    <member type='relation' ref='3295993' role='' />
+    <member type='relation' ref='3296379' role='' />
+    <member type='relation' ref='3296217' role='' />
+    <member type='relation' ref='1515596' role='' />
+    <member type='relation' ref='3862498' role='' />
+    <member type='relation' ref='2639101' role='' />
+    <member type='relation' ref='3345087' role='' />
+    <member type='relation' ref='3345088' role='' />
+    <member type='relation' ref='2639099' role='' />
+    <member type='relation' ref='3931609' role='' />
+    <member type='relation' ref='3921751' role='' />
+    <member type='relation' ref='3297481' role='' />
+    <member type='relation' ref='3920724' role='' />
+    <member type='relation' ref='2615256' role='' />
+    <member type='relation' ref='3297607' role='' />
+    <member type='relation' ref='3920616' role='' />
+    <member type='relation' ref='3907739' role='' />
+    <member type='relation' ref='3907738' role='Schwelm' />
+    <member type='relation' ref='3911603' role='' />
+    <member type='relation' ref='2623072' role='' />
+    <member type='relation' ref='2622673' role='' />
+    <member type='relation' ref='3345091' role='' />
+    <member type='relation' ref='3500790' role='' />
+    <member type='relation' ref='3297668' role='' />
+    <member type='relation' ref='3296955' role='' />
+    <member type='relation' ref='2623073' role='' />
+    <member type='relation' ref='3254126' role='' />
+    <member type='relation' ref='3913138' role='' />
+    <member type='relation' ref='3920617' role='' />
+    <member type='relation' ref='3837763' role='' />
+    <member type='relation' ref='3297470' role='' />
+    <member type='relation' ref='3295989' role='' />
+    <member type='relation' ref='1515594' role='' />
+    <member type='relation' ref='2615205' role='' />
+    <member type='relation' ref='3911604' role='' />
+    <member type='relation' ref='3393370' role='' />
+    <member type='relation' ref='3282422' role='' />
+    <member type='relation' ref='3297935' role='' />
+    <member type='relation' ref='2615168' role='' />
+    <member type='relation' ref='3919804' role='' />
+    <member type='relation' ref='2622674' role='' />
+    <member type='relation' ref='3297681' role='' />
+    <member type='relation' ref='3862500' role='' />
+    <member type='relation' ref='3295833' role='' />
+    <member type='relation' ref='3862501' role='' />
+    <member type='relation' ref='2622675' role='' />
+    <member type='relation' ref='3911605' role='' />
+    <member type='relation' ref='3296679' role='' />
+    <member type='relation' ref='3295753' role='' />
+    <member type='relation' ref='3862502' role='' />
+    <member type='relation' ref='3297852' role='' />
+    <member type='relation' ref='2615169' role='' />
+    <member type='relation' ref='2615170' role='' />
+    <member type='relation' ref='3237465' role='' />
+    <member type='relation' ref='3296020' role='' />
+    <member type='relation' ref='3295721' role='' />
+    <member type='relation' ref='2615133' role='' />
+    <member type='relation' ref='3295849' role='' />
+    <member type='relation' ref='3859659' role='' />
+    <member type='relation' ref='3334569' role='' />
+    <member type='relation' ref='2973536' role='' />
+    <member type='relation' ref='3296671' role='' />
+    <member type='relation' ref='3297511' role='' />
+    <member type='relation' ref='1514223' role='' />
+    <member type='relation' ref='3862184' role='' />
+    <member type='relation' ref='3297824' role='' />
+    <member type='relation' ref='2622676' role='' />
+    <member type='relation' ref='3862185' role='' />
+    <member type='relation' ref='2973537' role='' />
+    <member type='relation' ref='2623074' role='' />
+    <member type='relation' ref='2623076' role='' />
+    <member type='relation' ref='1668132' role='' />
+    <member type='relation' ref='2615801' role='' />
+    <member type='relation' ref='2614550' role='' />
+    <member type='relation' ref='2615803' role='' />
+    <member type='relation' ref='2615802' role='' />
+    <member type='relation' ref='3562455' role='' />
+    <member type='relation' ref='3399662' role='' />
+    <member type='relation' ref='2999479' role='' />
+    <member type='relation' ref='3399663' role='' />
+    <member type='relation' ref='3562454' role='' />
+    <member type='relation' ref='3342967' role='' />
+    <member type='relation' ref='2973519' role='' />
+    <member type='relation' ref='3334595' role='' />
+    <member type='node' ref='6512750295' role='' />
+    <member type='node' ref='4615713225' role='' />
+    <member type='relation' ref='9731912' role='' />
+    <member type='relation' ref='9731925' role='' />
+    <tag k='name' v='Haltestellenverzeichnis Wuppertal' />
+    <tag k='network' v='stop_area' />
+    <tag k='type' v='network' />
+  </relation>
+  <relation id='9058996' timestamp='2018-11-29T04:40:36Z' uid='1214027' user='axelr' visible='true' version='1' changeset='64995970'>
+    <member type='node' ref='6101756131' role='stop' />
+    <member type='way' ref='650431160' role='platform' />
+    <member type='node' ref='616996558' role='platform' />
+    <tag k='name' v='Campus Freudenberg' />
+    <tag k='network' v='VRR' />
+    <tag k='operator' v='WSW' />
+    <tag k='public_transport' v='stop_area' />
+    <tag k='type' v='public_transport' />
+  </relation>
+</osm>
