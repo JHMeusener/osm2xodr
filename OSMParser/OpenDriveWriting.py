@@ -10,9 +10,13 @@ Created on Wed Nov  6 14:14:34 2019
 import numpy as np
 
 def writeOdrive():
-    string= '''<?xml version="1.0" standalone="yes"?>
+    string= '''<?xml version="1.0" encoding="UTF-8"?>
 <OpenDRIVE>
-    <header revMajor="1" revMinor="1" name="" version="1.00" date="Tue Mar 11 08:53:30 2014" north="0.0000000000000000e+00" south="0.0000000000000000e+00" east="0.0000000000000000e+00" west="0.0000000000000000e+00" maxRoad="3" maxJunc="0" maxPrg="0">
+    <header revMajor="1" revMinor="4" name="" version="1" date="2019-02-18T13:36:12" north="0.0000000000000000e+00" south="0.0000000000000000e+00" east="0.0000000000000000e+00" west="0.0000000000000000e+00" vendor="">
+    <geoReference><![CDATA[+lat_0=4.9000000000000000e+1 +lon_0=8.0000000000000000e+0]]></geoReference>
+        <userData>
+            <vectorScene program="" version=""/>
+        </userData>
     </header>
     '''
     for road in openDriveRoad.roaddictionary.values():
@@ -127,19 +131,15 @@ class openDriveRoad:
             <elevation s="0.0" a="{0}" b="{1}" c="0.00" d="0.00"/>
         </elevationProfile>'''.format(self.heighta, self.heightb)
 
-        try: speed = '''
+        speed = '''
         <type s="0.0" type="town">
-             <speed max="{0}" unit="m/s"/>
-        </type>'''.format(float(self.speed)/3.6) #km/h to m/s
-        except: speed = '''
-        <type s="0.0" type="town">
-             <speed max="1.0" unit="m/s"/>
-        </type>'''
+             <speed max="{0}" unit="mph"/>
+        </type>'''.format(float(self.speed)*2.23694/3.6) #km/h to m/s to mph
 
         string =  '''    
         <road name="{3}" length="{0}" id="{1}" junction="{2}">
             <link>
-                '''.format(self.length, self.id, self.odriveJunction, self.name) + '''
+                '''.format(self.length, self.id, self.odriveJunction, "Road "+str(self.id)) + '''
                 {0}
                 {1}'''.format(roadlinksPre,roadlinksSuc) + '''
             </link>
@@ -151,6 +151,7 @@ class openDriveRoad:
              </planView>
              {3}
              <lanes>
+                <laneOffset s="0.0" a="0.0" b="0.0" c="0.0" d="0.0"/>
                 <laneSection s="0.0">
                     <left>{0}
                     </left>
@@ -171,7 +172,7 @@ class openDriveLane:
         self.road = OpendriveRoad
         self.road.lanes[self.id] = self
         self.type = 'driving'
-        self.width = "2.75e+00"
+        self.width = "4.00e+00"
         self.roadmark = "broken"
         self.linksPredecessor = {} #roadId gives Connecting Lanenumber - lanelink trägt sich hier ein
         self.linksSuccessor = {} # roadId gives Connecting Lanenumber - lanelink trägt sich hier ein
@@ -191,13 +192,22 @@ class openDriveLane:
             for sucroad, val in self.linksSuccessor.items():
                 if len(val) == 1:
                     successor = val[0].giveODriveString(self,self.road)
-        return '''
-                        <lane id="{0}" type="driving" level= "0">
+        drivinglaneString = '''
+                        <lane id="{0}" type="driving" level="false">
                             <link>{1}{2}
                             </link>
                             <width sOffset="0.0" a="{3}" b="0.0" c="0.00" d="0.00"/>
-                            <roadMark sOffset="0.00" type="{4}" weight="standard" color="standard" width="1.30e-01"/>
-                        </lane>'''.format(self.id, predecessor, successor, self.width, self.roadmark)
+                            <roadMark sOffset="0.00" type="{4}" material="standard" color="white" laneChange="none"/>
+                            <userData>
+                                <vectorLane travelDir="{5}"/>
+                            </userData>
+                        </lane>'''.format(self.id, predecessor, successor, self.width, self.roadmark, "backward" if self.id > 0 else "forward")
+        centerlaneString = '''
+                        <lane id="{0}" type="none" level="false">
+                            <roadMark sOffset="0.00" type="{1}" material="standard" color="white" width="1.2500000000000000e-1" laneChange="none"/>
+                        </lane>'''.format(self.id, self.roadmark)
+
+        return centerlaneString if self.id == 0 else drivinglaneString
 
 
 class openDriveRoadMark:
@@ -218,7 +228,7 @@ class openDriveJunction:
         else:
             j = openDriveJunction(OSMWay, OSMNode)
             return j
-    
+
     @staticmethod
     def reset():
         openDriveJunction.junctionids = 1
@@ -226,8 +236,8 @@ class openDriveJunction:
     
     def __init__(self, OSMWay, rNode):
         '''One Junction for every Way in a JunctionNode'''
-        self.id = str(openDriveJunction.junctionids)
-        openDriveJunction.junctionids += 1
+        self.id = str(openDriveRoad.roadids)
+        openDriveRoad.roadids += 1
         self.OSMWay = OSMWay
         self.openDriveRoads = []
         self.openDriveRoadLinks = []
@@ -278,6 +288,15 @@ class openDriveLaneLink:
                 self.predecessorIsSuccessorsPredecessor = True
         self.predecessorLane = PredecessorLane
         self.successorLane = SuccessorLane
+        #sanitycheck for non-existant Lanes in this connection
+        if PredecessorLane not in self.predecessor.lanes.keys():
+            print("Sanity Check for Laneconnection: Connecting to non existant predecessor lane! (roadID= {}) Changing laneconnection.".format(self.predecessor.id))
+            self.predecessorLane = -self.predecessorLane
+            if self.predecessorLane not in self.predecessor.lanes.keys(): self.predecessorLane = self.predecessor.lanes.keys()[0]
+        if SuccessorLane not in self.successor.lanes.keys():
+            print("Sanity Check for Laneconnection: Connecting to non existant predecessor lane! (roadID= {}) Changing laneconnection.".format(self.successor.id))
+            self.successorLane = -self.successorLane
+            if self.successorLane not in self.successor.lanes.keys():self.successorLane = self.successor.lanes.keys()[0]
         if self.successorIsPredecessorsSuccessor:
             try: self.predecessor.lanes[PredecessorLane].linksSuccessor[SuccessorRoad].append(self)
             except: 
@@ -299,24 +318,25 @@ class openDriveLaneLink:
     def giveODriveString(self, questionLane, questionRoad):
         if questionRoad == self.predecessor:
             if questionLane.id == self.predecessorLane:
-                return '''
-                \t\t<successor id ="{0}"/>
-                '''.format(self.successorLane)
+                if self.successor.odriveJunction == '-1':
+                    return '''
+                    \t\t<successor id ="{0}"/>
+                    '''.format(self.successorLane)
         if questionRoad == self.successor:
             if questionLane.id == self.successorLane:
-                return '''
-                \t\t<predecessor id="{0}"/>
-                '''.format(self.predecessorLane)
-        else:
-            return ""
+                if self.predecessor.odriveJunction == '-1':
+                    return '''
+                    \t\t<predecessor id="{0}"/>
+                    '''.format(self.predecessorLane)
+        return ""
 
     def giveOdriveJunctionString(self, oDriveRoad):
         try: oDriveRoad = oDriveRoad.id
         except: pass
-        if oDriveRoad == self.predecessor.id:
+        if oDriveRoad == self.successor.id:
             return '''\t<laneLink from="{0}" to="{1}"/>
                 '''.format(str(self.predecessorLane),str(self.successorLane))
-        if oDriveRoad == self.successor.id:
+        if oDriveRoad == self.predecessor.id:
             return '''\t<laneLink from="{0}" to="{1}"/>
                 '''.format(str(self.successorLane),str(self.predecessorLane))
         return ""

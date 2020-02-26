@@ -6,7 +6,7 @@ Created on Wed Nov  6 10:27:12 2019
 @author: jhm
 """
 import uuid
-from .utils import getCurves, convertLongitudeLatitude, giveHeading, convertTopoMap, giveHeight
+from .utils import getCurves, convertLongitudeLatitude, giveHeading, convertTopoMap, giveHeight, setHeights
 import numpy as np
 from osmread import parse_file, Way, Node
 import copy
@@ -20,7 +20,7 @@ class rNode:
     def reset():
         rNode.allrNodes = {}
     
-    def __init__(self,entity, register = True, debug=False):
+    def __init__(self,entity, register = True, debug=False, substractMin=None):
         if debug:
             self.id = str(uuid.uuid1())
             if register: rNode.allrNodes[self.id] = self
@@ -32,6 +32,10 @@ class rNode:
         except: self.x,self.y = entity.x, entity.y
         try: self.height = giveHeight(self.x, self.y)
         except: self.height = 0.0
+        if substractMin is not None:
+            self.x -= substractMin[0]
+            self.y -= substractMin[2]
+
         self.Junction = ""
         self.wayList = []
         self._PreWayIdList = []
@@ -208,32 +212,31 @@ class rNode:
         else:
             return str(Way2)+'#'+str(Way)
 
-    def createOpenDriveElements(self):
+    def createOpenDriveElements(self, r=8):
         '''creates OpendriveElements for all Ways of the Node'''
         for way1 in self.incomingWays:
             for way2 in self.outgoingWays:
-                self._createOpenDriveElements(way1, way2)
+                self._createOpenDriveElements(way1, way2, r=r)
             for way2 in self.incomingWays:
                 if way1 != way2:
-                    self._createOpenDriveElements(way1, way2)
+                    self._createOpenDriveElements(way1, way2, r=r)
         for way1 in self.outgoingWays:
             for way2 in self.incomingWays:
-                self._createOpenDriveElements(way1, way2)
+                self._createOpenDriveElements(way1, way2, r=r)
             for way2 in self.outgoingWays:
                 if way1 != way2:
-                    self._createOpenDriveElements(way1, way2)
+                    self._createOpenDriveElements(way1, way2, r=r)
         if len(self.outgoingWays+self.incomingWays) == 1:  # Enden
             for way in self.incomingWays:
-                self._createOpenDriveElements(way, None)
+                self._createOpenDriveElements(way, None, r=r)
             for way in self.outgoingWays:
-                self._createOpenDriveElements(None, way)
+                self._createOpenDriveElements(None, way, r=r)
 
     def connectOpenDriveLanes(self):
         self._createJunctionrelevantOpenDriveLaneConnections()
         self.createOpenDriveExternalRoadLinks()
 
-    def _createOpenDriveElements(self, Way,Way2):
-        global minimalCurveRadius
+    def _createOpenDriveElements(self, Way,Way2, r=8):
         ''' für jede Way Way2 / Way2 Way Verbindung einmal r1rNode, r1Way, r1WayDirection, r1, r2, r3, r4, r4WayDirection, r4Way, r4rNode   in self.openDriveElements[WayWay2]'''
         if Way is None and Way2 is None:
             return
@@ -269,8 +272,8 @@ class rNode:
             hdg = giveHeading(self.x, self.y, xend, yend)
             l2length = ((self.x-xend)**2+(self.y-yend)**2)**0.5
             r4 = openDriveRoad(l2length, self.x, self.y, hdg, endWayDirection, geoparam = None, OSMWayTags= Way2.tags)
-            r4.heighta = str(giveHeight(self.x,self.y))
-            r4.heightb = str(-(giveHeight(xend,yend) - int(giveHeight(self.x,self.y)))/l2length)
+            r4.heighta = str(giveHeight(self.x,self.y, minRemoved = True))
+            r4.heightb = str(-(giveHeight(xend,yend, minRemoved = True) - giveHeight(self.x,self.y, minRemoved = True))/l2length)
             self.openDriveElements[self._connectionID(Way2,None)] = [None,None,beginningWayDirection,None,None,None,r4,endWayDirection,Way2,rNode2]
             return
 
@@ -278,12 +281,12 @@ class rNode:
             hdg = giveHeading(xstart,ystart, self.x, self.y)
             l1length = ((xstart-self.x)**2+(ystart-self.y)**2)**0.5
             r1 = openDriveRoad(l1length, xstart, ystart, hdg, beginningWayDirection, geoparam = None, OSMWayTags= Way.tags)
-            r1.heighta = str(giveHeight(self.x,self.y))
-            r1.heightb = str((giveHeight(xstart,ystart) - int(giveHeight(self.x,self.y)))/l1length)
+            r1.heighta = str(giveHeight(self.x,self.y, minRemoved = True))
+            r1.heightb = str((giveHeight(xstart,ystart, minRemoved = True) - giveHeight(self.x,self.y, minRemoved = True))/l1length)
             self.openDriveElements[self._connectionID(Way,None)] = [rNode1,Way,beginningWayDirection,r1,None,None,None,endWayDirection,None,None]
             return
         
-        line1x,line1y, phi, C1start,C1param, C1Heading, lengthC, C2start,C2param, C2Heading, line2x,line2y,theta = getCurves([xstart,self.x,xend],[ystart, self.y, yend], r=minimalCurveRadius)
+        line1x,line1y, phi, C1start,C1param, C1Heading, lengthC, C2start,C2param, C2Heading, line2x,line2y,theta = getCurves([xstart,self.x,xend],[ystart, self.y, yend], r=r)
         while phi < 0:        # bringe Heading ins positive
             phi += np.pi*2
         while theta < 0:
@@ -304,14 +307,14 @@ class rNode:
         r3 = openDriveRoad(lengthC, C1start[0], C1start[1], C2Heading, endWayDirection, geoparam = C2param, OSMWayTags= Way2.tags)
         r4 = openDriveRoad(l2length, line2x[0], line2y[0], phi-theta, endWayDirection, geoparam = None, OSMWayTags= Way2.tags)
 
-        r1.heighta = str(giveHeight(xstart, ystart))
-        r1.heightb = str(-(giveHeight(xstart,ystart) - int(giveHeight(line1x[1],line1y[1])))/l1length)
-        r2.heighta = str(giveHeight(C1start[0], C1start[1]))
-        r2.heightb = str(-(giveHeight(C1start[0], C1start[1]) - int(giveHeight(line1x[1],line1y[1])))/lengthC)
-        r3.heighta = str(giveHeight(C1start[0], C1start[1]))
-        r3.heightb = str(-(giveHeight(C1start[0], C1start[1]) - int(giveHeight(line2x[0], line2y[0])))/lengthC)
-        r4.heighta = str(giveHeight( line2x[0], line2y[0]))
-        r4.heightb = str(-(giveHeight( line2x[0], line2y[0]) - int(giveHeight(xend, yend)))/l2length)
+        r1.heighta = str(giveHeight(xstart, ystart, minRemoved = True))
+        r1.heightb = str(-(giveHeight(xstart,ystart, minRemoved = True) - giveHeight(line1x[1],line1y[1], minRemoved = True))/l1length)
+        r2.heighta = str(giveHeight(C1start[0], C1start[1], minRemoved = True))
+        r2.heightb = str(-(giveHeight(C1start[0], C1start[1], minRemoved = True) - giveHeight(line1x[1],line1y[1], minRemoved = True))/lengthC)
+        r3.heighta = str(giveHeight(C1start[0], C1start[1], minRemoved = True))
+        r3.heightb = str(-(giveHeight(C1start[0], C1start[1], minRemoved = True) - giveHeight(line2x[0], line2y[0], minRemoved = True))/lengthC)
+        r4.heighta = str(giveHeight( line2x[0], line2y[0], minRemoved = True))
+        r4.heightb = str(-(giveHeight( line2x[0], line2y[0], minRemoved = True) - giveHeight(xend, yend, minRemoved = True))/l2length)
 
         if len(self.wayList) > 1:  # junction
             junction = openDriveJunction.giveJunction(Way, self)
@@ -727,28 +730,19 @@ class OSMWay:
         self.laneNumberDirection = laneNumberDirection
         self.laneNumberOpposite = laneNumberOpposite
 
-def parseAll(pfad, bildpfad = None, minCurveRadius = 9):
-    global minimalCurveRadius
-    minimalCurveRadius = minCurveRadius
-    convertTopoMap(bildpfad, pfad)
-    x_1 = -1
-    y_1 = -1
+def parseAll(pfad, bildpfad = None, substractMin=True, minimumHeight = 0.0, maximumHeight = 100.0, curveRadius=8):
+    global topoParameter
+    setHeights(minimumHeight, maximumHeight)
+    topoParameter = convertTopoMap(bildpfad, pfad)
+    minLongitude = -1
+    maxLongitude = 9
+    minLatitude = -1
+    maxLatitude = 55
     #create rNodedict with counter
     for entity in parse_file(pfad):
         if isinstance(entity, Node):
-            x,y = convertLongitudeLatitude(entity.lon, entity.lat)
-            if x_1 == -1:
-                x_1 = x
-            elif  not x_1-15000 < x < x_1+15000:
-                print("Node {0} too far away (x= {1}) from the first seen Node (x={2})".format(str(entity.id),str(x),str(x_1)))
-                continue
-            if y_1 == -1:
-                y_1 = y
-            elif  not y_1-15000 < y < y_1+15000:
-                print("Node {0} too far away (y= {1}) from the first seen Node (y={2})".format(str(entity.id),str(y),str(y_1)))
-                continue
             #if minLongitude <entity.lon< maxLongitude and minLatitude <entity.lat< maxLatitude:   # approximate longitude and latitude of Wuppertal
-            rNode(entity)
+                 rNode(entity, substractMin=topoParameter)
     #create streetrNodedict and count rNodeuse
     for entity in parse_file(pfad):
         if isinstance(entity, Way):
@@ -763,7 +757,7 @@ def parseAll(pfad, bildpfad = None, minCurveRadius = 9):
         for way in node.outgoingWays:
             node.createConnections(way)
     for node in rNode.allrNodes.values():
-        node.createOpenDriveElements()
+        node.createOpenDriveElements(r=curveRadius)
         node.createOpenDriveLanesAndInternalRoadConnections() 
     for node in rNode.allrNodes.values():
         node.connectOpenDriveLanes()
@@ -782,7 +776,7 @@ def _test_nodes(nodes, ways):
         for way in node.outgoingWays:
             node.createConnections(way)
     for node in rNode.allrNodes.values():
-        node.createOpenDriveElements()
+        node.createOpenDriveElements(r=curveRadius)
         node.createOpenDriveLanesAndInternalRoadConnections() 
     for node in rNode.allrNodes.values():
         node.connectOpenDriveLanes()
