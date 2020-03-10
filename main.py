@@ -1,12 +1,16 @@
-from OSMParser.Parsing import rNode, parseAll
-from OSMParser.OpenDriveWriting import writeOdrive
+from math import floor, pi
 import numpy as np
+from OSMParser.testing import TestEntity, _test_nodes, testSimpleRoad, test_3WayTCrossing2
+from OSMParser.osmParsing import parseAll,rNode, OSMWay,JunctionRoad, OSMWayEndcap, createOSMJunctionRoadLine, createOSMWayNodeList2XODRRoadLine
+from OSMParser.xodrWriting import startBasicXODRFile,fillNormalRoads,fillJunctionRoads
 
-osmPfad = '/home/jhm/Downloads/osm2xodr/map.osm'
-topographieKartenPfad = '/home/jhm/Downloads/osm2xodr/topomap.png'
-xodrPfad = '/home/jhm/Downloads//osm2xodr/output.xodr'
+osmPfad = '/home/jhm/Downloads/osm2xodr-master/map.osm'
+topographieKartenPfad = '/home/jhm/Downloads/osm2xodr-master/topomap.png'
+xodrPfad = '/home/jhm/Downloads/osm2xodr-master/output.xodr'
 
 parseAll(osmPfad, bildpfad=topographieKartenPfad, minimumHeight = 163.0, maximumHeight= 192.0, curveRadius=12)
 
-with open(xodrPfad,'w') as f:
-        f.write(writeOdrive())
+startBasicXODRFile(xodrPfad)
+fillNormalRoads(xodrPfad)
+fillJunctionRoads(xodrPfad)
+
