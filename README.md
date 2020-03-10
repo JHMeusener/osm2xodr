@@ -5,7 +5,7 @@ just adjust the filenames/paths in the main.py and run it.
 
 The requirements are osmread, numpy, PIL and pyproj
 
-If a topographymap is used it should be in the int32 format and the max/min latitudes/longitudes of the map should match the points in the osm-file.
+If a topographymap is used it should be in 16bit integer format and the max/min latitudes/longitudes of the map should match the points in the osm-file.
 
 
 
