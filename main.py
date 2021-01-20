@@ -4,9 +4,9 @@ from OSMParser.testing import TestEntity, _test_nodes, testSimpleRoad, test_3Way
 from OSMParser.osmParsing import parseAll,rNode, OSMWay,JunctionRoad, OSMWayEndcap, createOSMJunctionRoadLine, createOSMWayNodeList2XODRRoadLine
 from OSMParser.xodrWriting import startBasicXODRFile,fillNormalRoads,fillJunctionRoads
 
-osmPfad = '/home/jhm/Downloads/osm2xodr-master/map.osm'
-topographieKartenPfad = '/home/jhm/Downloads/osm2xodr-master/topomap.png'
-xodrPfad = '/home/jhm/Downloads/osm2xodr-master/output.xodr'
+osmPfad = 'map.osm'
+topographieKartenPfad = 'topomap.png'
+xodrPfad = 'output.xodr'
 
 parseAll(osmPfad, bildpfad=topographieKartenPfad, minimumHeight = 163.0, maximumHeight= 192.0, curveRadius=12)
 

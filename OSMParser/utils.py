@@ -149,9 +149,9 @@ def giveHeight(x,y,minRemoved = False):
 #Cell
 def giveMaxMinLongLat(osmpath, trustOSMHeaderMinMax = False):
         minlat = 999999.0
-        maxlat = 0.0
+        maxlat = -999999.0
         minlon = 999999.0
-        maxlon = 0.0
+        maxlon = -999999.0
         for entity in parse_file(osmpath):
                 if isinstance(entity, Node):
                         if minlat > entity.lat:
