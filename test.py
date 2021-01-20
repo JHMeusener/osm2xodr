@@ -5,19 +5,7 @@ Created on Mon Nov 11 14:59:36 2019
 
 @author: jhm
 """
-from OSMParser.Parsing import rNode, _test_nodes, parseAll
-from OSMParser.OpenDriveWriting import writeOdrive
-import numpy as np
-import pathlib
-
-
-class TestEntity:
-    def __init__(self, idn, tags, lon=0, lat=0, nodes=0):
-        self.id = idn
-        self.tags = tags
-        self.lon = lon
-        self.lat = lat
-        self.nodes = nodes
+from OSMParser.testing import _test_nodes, TestEntity
         
 def test_simple3Way2LaneTCrossing():
     nodes = [TestEntity(1,None,lon=1, lat=1, nodes=0), 
@@ -135,17 +123,11 @@ def testSimpleRoad():
         ways = [TestEntity(1,{"highway":"residential","lanes":"5", "lanes:forward":"3", "lanes:backward":"2","oneway":"no"}, nodes=[1,2,3,4])]
         _test_nodes(nodes, ways)
 
-p = '/home/jhm/Desktop/Arbeit/campusFreudenberg.osm'
-im = '/home/jhm/Desktop/Arbeit/OSM2XODR/osm2xodr/topomap.png'
-parseAll(p, bildpfad=im)
-
-#test_2WayTCrossing2()
-#test_2WayTCrossing4()
-#test_2WayTCrossing2()
-#test_2WayTCrossing3()
-#test_3WayTCrossing2()
-#test_simple3WayoneWayLaneTCrossing2()
-#test_merge3to2()
-#test_simple3WayoneWayLaneTCrossing()
-with open('/home/jhm/Desktop/Arbeit/testout.xodr','w') as f:
-        f.write(writeOdrive())
+test_2WayTCrossing2()
+test_2WayTCrossing4()
+test_2WayTCrossing2()
+test_2WayTCrossing3()
+test_3WayTCrossing2()
+test_simple3WayoneWayLaneTCrossing2()
+test_merge3to2()
+test_simple3WayoneWayLaneTCrossing()

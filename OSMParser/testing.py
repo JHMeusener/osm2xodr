@@ -25,13 +25,13 @@ def _test_nodes(nodes, ways):
     OSMWayEndcap.reset()
     global topoParameter
     setHeights(0.0, 100.0)
-    osmPfad = '/home/jhm/Downloads/campusFreudenbergEinheitlich.osm'
-    topographieKartenPfad = '/home/jhm/Downloads/campusTerrain.png'
+    osmPfad = 'map.osm'
+    topographieKartenPfad = 'topomap.png'
     topoParameter = convertTopoMap(topographieKartenPfad, osmPfad)
     minlat = 999999.0
-    maxlat = 0.0
+    maxlat = -999999.0
     minlon = 999999.0
-    maxlon = 0.0
+    maxlon = -999999.0
     for entity in nodes:
                         if minlat > entity.lat:
                                 minlat = entity.lat
@@ -63,6 +63,7 @@ def _test_nodes(nodes, ways):
     startBasicXODRFile()
     fillNormalRoads()
     fillJunctionRoads()
+    print("New Outputfile written. Look into it to see if it is as expected.")
 
                                     #Comes from 02_parsing.ipynb, cell
 def test_3WayTCrossing2():

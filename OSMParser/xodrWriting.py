@@ -11,7 +11,7 @@ from .osmParsing import parseAll,rNode, OSMWay,JunctionRoad, OSMWayEndcap, creat
 #from osm2xods.testing import TestEntity, _test_nodes, testSimpleRoad, test_3WayTCrossing2
 
 #Cell
-def startBasicXODRFile(path = '/home/jhm/Downloads/Test.xodr'):
+def startBasicXODRFile(path = 'Test.xodr'):
     with open(path,'w') as f:
         f.write('''<?xml version="1.0" encoding="UTF-8"?>
 <OpenDRIVE>
@@ -25,7 +25,7 @@ def startBasicXODRFile(path = '/home/jhm/Downloads/Test.xodr'):
     ''')
 
 #Cell
-def fillNormalRoads(path = '/home/jhm/Downloads/Test.xodr'):
+def fillNormalRoads(path = 'Test.xodr'):
     filedata = ""
     with open(path, 'r') as file:
           filedata = file.read()
@@ -115,7 +115,7 @@ def fillNormalRoads(path = '/home/jhm/Downloads/Test.xodr'):
         f.write("<!-- nextRoad -->".join(parts))
 
 #Cell
-def fillJunctionRoads(path = '/home/jhm/Downloads/Test.xodr'):
+def fillJunctionRoads(path = 'Test.xodr'):
     filedata = ""
     with open(path, 'r') as file:
           filedata = file.read()
