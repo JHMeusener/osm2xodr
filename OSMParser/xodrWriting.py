@@ -5,24 +5,27 @@ __all__ = ['startBasicXODRFile', 'fillNormalRoads', 'fillJunctionRoads']
 #Cell
 from math import floor, pi
 import numpy as np
-from .utils import giveHeading, distance,schnittpunkt,getXYPositionFromLineLength
+from .utils import giveHeading, distance,schnittpunkt,getXYPositionFromLineLength, giveReferences
 from .arcCurves import giveHeading,getArcEndposition,distance,schnittpunkt,getArcCurvatureAndLength,getXYPositionFromLineLength,getArcCurvatureAndLength2Point,endTurn2LaneStreet
 from .osmParsing import parseAll,rNode, OSMWay,JunctionRoad, OSMWayEndcap, createOSMJunctionRoadLine, createOSMWayNodeList2XODRRoadLine, JunctionRoad, createEndCap
 #from osm2xods.testing import TestEntity, _test_nodes, testSimpleRoad, test_3WayTCrossing2
 
 #Cell
 def startBasicXODRFile(path = 'Test.xodr'):
+    referenceLon, referenceLat, topoParameter = giveReferences()
+    xmin, xmax, ymin, ymax = topoParameter
     with open(path,'w') as f:
         f.write('''<?xml version="1.0" encoding="UTF-8"?>
 <OpenDRIVE>
-    <header revMajor="1" revMinor="4" name="" version="1" date="2019-02-18T13:36:12" north="0.0000000000000000e+00" south="0.0000000000000000e+00" east="0.0000000000000000e+00" west="0.0000000000000000e+00">
+    <header revMajor="1" revMinor="4" name="" version="1" date="2019-02-18T13:36:12" north="{0}" south="{1}" east="{2}" west="{3}">
+    <geoReference><![CDATA[+proj=utm +ellps=GRS80 +units=m +lat_0={4} +lon_0={5} +x_0=0 +y_0=0 +datum=WGS84 +units=m +vunits=m +no_defs ]]></geoReference>
     </header>
     <!-- Roads -->
     <!-- nextRoad -->
     <!-- Junctions -->
     <!-- nextJunction -->
 </OpenDRIVE>
-    ''')
+    '''.format(ymax-ymin, 0.0, xmax-xmin, 0.0, referenceLat, referenceLon))
 
 #Cell
 def fillNormalRoads(path = 'Test.xodr'):
