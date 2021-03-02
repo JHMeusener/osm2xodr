@@ -11,8 +11,10 @@ from osmread import parse_file, Way, Node
 
 
 crs_4326  = CRS.from_epsg(4326) # epsg 4326 is wgs84
-crs_25832  = CRS.from_epsg(25832) # epsg 25832 is etrs89
-transformer = Transformer.from_crs(crs_4326, crs_25832)
+#crs_25832  = CRS.from_epsg(25832) # epsg 25832 is etrs89
+crs_3395 = CRS.from_epsg(3395) #epsg 3395 is pseudo Mercator for tiled Maps (Streetview, GoogleMaps etc.)
+global transformer
+transformer = None#Transformer.from_crs(crs_4326, crs_3395)
 
 
 #Cell
@@ -154,6 +156,7 @@ def giveHeight(x,y,minRemoved = True):
 def giveMaxMinLongLat(osmpath, trustOSMHeaderMinMax = False):
         global referenceLat
         global referenceLon
+        global transformer
         minlat = 999999.0
         maxlat = -999999.0
         minlon = 999999.0
@@ -192,6 +195,10 @@ def giveMaxMinLongLat(osmpath, trustOSMHeaderMinMax = False):
         if referenceLat is None:
             referenceLat =  minlat
             referenceLon = minlon
+        #initialize the projectionTransformer with the found referenceprojections
+        uproj = CRS.from_proj4("+proj=tmerc +lat_0={0} +lon_0={1} +x_0=0 +y_0=0 +ellps=GRS80 +units=m".format(referenceLat, referenceLon))
+        transformer = Transformer.from_crs(crs_4326, uproj)
+        
         xmin,ymin = convertLongitudeLatitude(minlon,minlat)
         xmax,ymax = convertLongitudeLatitude(maxlon,maxlat)
         return xmin, xmax, ymin, ymax
