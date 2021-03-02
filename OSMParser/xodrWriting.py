@@ -18,7 +18,7 @@ def startBasicXODRFile(path = 'Test.xodr'):
         f.write('''<?xml version="1.0" encoding="UTF-8"?>
 <OpenDRIVE>
     <header revMajor="1" revMinor="4" name="" version="1" date="2019-02-18T13:36:12" north="{0}" south="{1}" east="{2}" west="{3}">
-    <geoReference><![CDATA[+proj=utm +ellps=GRS80 +units=m +lat_0={4} +lon_0={5} +x_0=0 +y_0=0 +datum=WGS84 +units=m +vunits=m +no_defs ]]></geoReference>
+    <geoReference><![CDATA[+proj=tmerc +ellps=GRS80 +units=m +lat_0={4} +lon_0={5} +datum=WGS84 +units=m +vunits=m +no_defs ]]></geoReference>
     </header>
     <!-- Roads -->
     <!-- nextRoad -->

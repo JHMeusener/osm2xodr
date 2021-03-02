@@ -524,7 +524,7 @@ def parseAll(pfad, bildpfad = None, minimumHeight = 0.0, maximumHeight = 100.0, 
     if bildpfad is not None:
         topoParameter = convertTopoMap(bildpfad, pfad)
     else:
-        topoParameter = giveMaxMinLongLat(pfad)
+        topoParameter = convertTopoMap(None, pfad)
     #create rNodedict with counter
     for entity in parse_file(pfad):
         if isinstance(entity, Node):

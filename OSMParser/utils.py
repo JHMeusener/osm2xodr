@@ -105,15 +105,18 @@ referenceLon = None
 
 global topoParameter
 global topomap
+topomap = None
+topoParameter = None
 def convertTopoMap(topomappath, osmpath):
         global topomap
         global topoParameter
-        try:
-                topomap =  np.array(Image.open(topomappath))[:,:,0] #y,x,rgba
-        except:
-                topomap =  np.array(Image.open(topomappath))[:,:] #y,x,rgba
-        topomap=np.rot90(topomap)
-        topomap=np.rot90(topomap)
+        if topomappath is not None:
+                try:
+                        topomap =  np.array(Image.open(topomappath))[:,:,0] #y,x,rgba
+                except:
+                        topomap =  np.array(Image.open(topomappath))[:,:] #y,x,rgba
+                topomap=np.rot90(topomap)
+                topomap=np.rot90(topomap)
         topoParameter = giveMaxMinLongLat(osmpath)
         return topoParameter
 
@@ -131,17 +134,20 @@ def giveHeight(x,y,minRemoved = True):
                 global topoParameter
                 global topomap
                 global maximumheight, minimumheight
-                if not minRemoved:
-                        x_lookup= int(topomap.shape[1]*(x-topoParameter[0])/(topoParameter[1]-topoParameter[0]))
-                        y_lookup = int(topomap.shape[0]*(1.0-(y-topoParameter[2])/(topoParameter[3]-topoParameter[2])))
+                if topomap is not None:
+                        if not minRemoved:
+                                x_lookup= int(topomap.shape[1]*(x-topoParameter[0])/(topoParameter[1]-topoParameter[0]))
+                                y_lookup = int(topomap.shape[0]*(1.0-(y-topoParameter[2])/(topoParameter[3]-topoParameter[2])))
+                        else:
+                                x_lookup= int(topomap.shape[1]*x/(topoParameter[1]-topoParameter[0]))
+                                y_lookup = int(topomap.shape[0]*(1.0-(y/(topoParameter[3]-topoParameter[2]))))
+                        x_lookup = min(max(topomap.shape[1]-x_lookup-1,0),topomap.shape[1]-1)
+                        y_lookup = min(max(topomap.shape[0]-1-y_lookup,0),topomap.shape[0]-1)
+                        height = topomap[y_lookup,x_lookup]-np.min(topomap)
+                        height = height/np.max(topomap)
+                        height = height * (maximumheight-minimumheight) + minimumheight
                 else:
-                        x_lookup= int(topomap.shape[1]*x/(topoParameter[1]-topoParameter[0]))
-                        y_lookup = int(topomap.shape[0]*(1.0-(y/(topoParameter[3]-topoParameter[2]))))
-                x_lookup = min(max(topomap.shape[1]-x_lookup-1,0),topomap.shape[1]-1)
-                y_lookup = min(max(topomap.shape[0]-1-y_lookup,0),topomap.shape[0]-1)
-                height = topomap[y_lookup,x_lookup]-np.min(topomap)
-                height = height/np.max(topomap)
-                height = height * (maximumheight-minimumheight) + minimumheight
+                        height = 0.0
                 return height
 
 #Cell
