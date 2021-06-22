@@ -14,7 +14,7 @@ from .osmParsing import parseAll,rNode, OSMWay,JunctionRoad, OSMWayEndcap, creat
 def startBasicXODRFile(path = 'Test.xodr'):
     referenceLon, referenceLat, topoParameter = giveReferences()
     xmin, xmax, ymin, ymax = topoParameter
-    with open(path,'w') as f:
+    with open(path,'w',encoding='utf-8') as f:
         f.write('''<?xml version="1.0" encoding="UTF-8"?>
 <OpenDRIVE>
     <header revMajor="1" revMinor="4" name="" version="1" date="2019-02-18T13:36:12" north="{0}" south="{1}" east="{2}" west="{3}">
@@ -30,7 +30,7 @@ def startBasicXODRFile(path = 'Test.xodr'):
 #Cell
 def fillNormalRoads(path = 'Test.xodr'):
     filedata = ""
-    with open(path, 'r') as file:
+    with open(path,'r',encoding='utf-8') as file:
           filedata = file.read()
     parts = filedata.split("<!-- nextRoad -->")
     for road in OSMWay.allWays.values():
@@ -114,13 +114,13 @@ def fillNormalRoads(path = 'Test.xodr'):
             </lanes>
         </road>
         '''
-    with open(path,'w') as f:
+    with open(path,'w',encoding='utf-8') as f:
         f.write("<!-- nextRoad -->".join(parts))
 
 #Cell
 def fillJunctionRoads(path = 'Test.xodr'):
     filedata = ""
-    with open(path, 'r') as file:
+    with open(path,'r',encoding='utf-8') as file:
           filedata = file.read()
     parts = filedata.split("<!-- nextRoad -->")
     secondsplits = parts[1].split("<!-- nextJunction -->")
@@ -210,5 +210,5 @@ def fillJunctionRoads(path = 'Test.xodr'):
     parts[0] = "<!-- nextRoad -->".join([parts[0],parts[1]])
     whole = "<!-- nextJunction -->".join([parts[0],parts[2]])
 
-    with open(path,'w') as f:
+    with open(path,'w',encoding='utf-8') as f:
             f.write(whole)
