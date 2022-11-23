@@ -238,15 +238,15 @@ def schnittpunkt(x1,y1,hdg1,x2,y2,hdg2):
     #r1 ersetzen
     #y1 + np.sin(hdg1) * (x2-x2 + np.cos(hdg2) * r2) /(np.cos(hdg1)) = y2 + np.sin(hdg2) * r2
     if abs(np.sin(hdg1) * np.cos(hdg2) - np.sin(hdg2) *np.cos(hdg1)) < 0.02:
-        r2 = ( y1*np.cos(hdg1) + np.sin(hdg1) * (x2-x2)-y2*np.cos(hdg1)) /((np.sin(hdg2)*np.cos(hdg1) - np.sin(hdg1) *np.cos(hdg2) ))
+        r2 = ( y1*np.cos(hdg1) + np.sin(hdg1) * (x2-x1)-y2*np.cos(hdg1)) /((np.sin(hdg2)*np.cos(hdg1) - np.sin(hdg1) *np.cos(hdg2) ))
         if abs(abs(hdg1) -np.pi/2.0) < 0.2:
             r1 = (y2-y1 + np.sin(hdg2) * r2) /(np.sin(hdg1))
         else:
-            r1 =   (x2-x2 + np.cos(hdg2) * r2) /(np.cos(hdg1))
+            r1 = (x2-x1 + np.cos(hdg2) * r2) /(np.cos(hdg1))
     else:
         r1 = (-y1*np.cos(hdg2)+ y2*np.cos(hdg2) + np.sin(hdg2) *x1-np.sin(hdg2) *x2 )/(np.sin(hdg1) * np.cos(hdg2) - np.sin(hdg2) *np.cos(hdg1))
         if abs(abs(hdg2) -np.pi/2.0) < 0.2:
-            r2 = (y1 -y2+ np.sin(hdg1) * r1 )/np.sin(hdg2)
+            r2 = (y1-y2 + np.sin(hdg1) * r1 )/np.sin(hdg2)
         else:
             r2 = (x1-x2 + np.cos(hdg1) * r1)/np.cos(hdg2)
     x_s = x1 + np.cos(hdg1) * r1
